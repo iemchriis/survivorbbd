@@ -3,7 +3,7 @@ name: Test, Build, and Deploy with GameCI
 on:
  push:
  branches:
- — develop
+ — master
  paths:
  — ‘Assets/**’
  — ‘Packages/**’
