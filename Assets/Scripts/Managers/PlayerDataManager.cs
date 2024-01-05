@@ -1,18 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using LitJson;
 public class PlayerDataManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public string initJson;
+    public PlayerStats playerStats;
+
+    private void Start()
     {
-        
+        InitializeData();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void InitializeData()
     {
-        
+        JsonData data;
+        data = JsonMapper.ToObject(initJson);
+        playerStats.health = int.Parse(data[0]["player_life"].ToString());
+        playerStats.movementSpeed = float.Parse(data[0]["player_speed"].ToString());
     }
+
+
+
+    public int GetPlayerHealth()
+    {
+        return playerStats.health;
+    }
+
+    public float GetPlayerSpeed()
+    {
+        return playerStats.movementSpeed;
+    }
+
+}
+
+
+
+
+
+[System.Serializable]
+public class PlayerStats
+{
+    public int health;
+    public float movementSpeed;
 }
