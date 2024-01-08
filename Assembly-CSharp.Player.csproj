@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Helpers\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyDataManager.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Base\CharacterBase.cs" />
@@ -667,6 +668,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
       <Project>{937246A7-3493-8E94-E249-A96EC8A2A767}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Player.csproj">
+      <Project>{A55F71F6-DFF5-D39B-8220-A5A89D46DECD}</Project>
+      <Name>Unity.AI.Navigation.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{587CF416-8C90-66FF-6D7B-DBF2A8A7AA43}</Project>
