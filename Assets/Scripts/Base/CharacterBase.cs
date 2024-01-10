@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class CharacterBase : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string id;
+    public int health;
+
+    bool isDead;
+
+    public GameObject damageFX;
+
+    public bool IsDead()
     {
-        
+        return isDead;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public virtual void TakeDamage()
     {
-        
+        GameObject go = Instantiate(damageFX, transform);
+        Destroy(go, 1);
+    }
+
+    public virtual void Death()
+    {
+        isDead = true;
+    }
+
+
+    public virtual void OnTriggerEnter(Collider other)
+    {
+
     }
 }
