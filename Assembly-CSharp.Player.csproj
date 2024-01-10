@@ -77,6 +77,7 @@
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <None Include="Assets\Extensions\LitJson\LitJson.dll" />
     <None Include="Assets\Extensions\Low Poly Assault Troop\Read Me.txt" />
     <None Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\Shaders\sh_SOLID_standardWithVC.shader" />

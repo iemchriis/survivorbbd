@@ -997,13 +997,13 @@
       <Project>{435FA4A9-EF5F-A166-4709-B633CCBD05CD}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{624678EB-2CB7-F527-2A3F-5FA2C8E67B78}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
       <Project>{778359C5-E60A-2BE0-BD7F-79971DDA3AF9}</Project>
       <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{624678EB-2CB7-F527-2A3F-5FA2C8E67B78}</Project>
+      <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
       <Project>{A52C1F7C-E68D-C897-AD98-BD70D8F8F925}</Project>
