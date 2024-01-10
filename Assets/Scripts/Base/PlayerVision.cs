@@ -7,22 +7,24 @@ public class PlayerVision : MonoBehaviour
 {
     public List<EnemyScript> targets;
 
-    
+    public BaseWeapon weapon;    
     public GameObject nearestEnemy;
-
-
-   
 
 
     public void CalculateNearest()
     {
         if (targets.Count <= 0)
+        {
+            weapon.canFire = false;
             return;
+        }
+           
 
         targets.Sort((x,y) => Vector3.Distance(transform.position, x.transform.position).CompareTo(Vector3.Distance(transform.position, y.transform.position)));
 
 
         nearestEnemy = targets[0].gameObject;
+        weapon.canFire = true;
     }
 
 
