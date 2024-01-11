@@ -6,6 +6,7 @@ public class EnemyScript : CharacterBase
 {
     private Transform target;
     private NavMeshAgent navmesh;
+    public GameObject exp;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyScript : CharacterBase
     {
         if(health <=0 && !IsDead())
         {
+            GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             base.Death();
             navmesh.isStopped = true;
             PlayerVision vision = FindObjectOfType<PlayerVision>();

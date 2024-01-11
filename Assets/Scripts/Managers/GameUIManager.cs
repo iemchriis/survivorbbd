@@ -7,7 +7,28 @@ public class GameUIManager : MonoBehaviour
     public Text timerText;
     public float totalTime = 0;  // Set the total time in seconds
 
+    public Slider expSlider;
+
     private float elapsedTime;
+
+    public GameObject UpgradePanel;
+
+    public BaseWeapon weapon;
+
+    public static GameUIManager Instance { get; set; }
+
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -30,5 +51,36 @@ public class GameUIManager : MonoBehaviour
 
         // Update the Text UI element
         timerText.text = $"{minutes}:{seconds}";
+    }
+
+
+    public void UpdateExp()
+    {
+        expSlider.value += 0.2f;
+        if(expSlider.value == 1)
+        {
+            UpgradePanel.SetActive(true);
+            expSlider.value = 0;
+            Time.timeScale = 0;
+        }
+    }
+
+
+    public void Upgrade(int i)
+    {
+
+        switch(i)
+        {
+            case 0:
+
+                break;
+
+            case 1:
+                weapon.rateOfFire -= 0.10f;
+                break;
+        }
+
+        UpgradePanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }

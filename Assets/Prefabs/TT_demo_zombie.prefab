@@ -116,6 +116,7 @@ MonoBehaviour:
   id: 
   health: 2
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
 --- !u!195 &8911974493853456521
 NavMeshAgent:
   m_ObjectHideFlags: 0
