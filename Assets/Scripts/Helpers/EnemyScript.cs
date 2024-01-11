@@ -26,8 +26,13 @@ public class EnemyScript : CharacterBase
         if(health <=0 && !IsDead())
         {
             base.Death();
+            navmesh.isStopped = true;
+            PlayerVision vision = FindObjectOfType<PlayerVision>();
+            vision.nearestEnemy = null;
+            vision.targets.Remove(this);
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
+
         }
 
     }

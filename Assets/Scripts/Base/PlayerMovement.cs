@@ -24,9 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
     void LookAtEnemy()
     {
-        if (vision.nearestEnemy.transform.position == null)
+        if (vision.nearestEnemy == null)
         {
-            transform.LookAt(Vector3.forward);
+            transform.LookAt(transform.forward);
         }
         else
         {
