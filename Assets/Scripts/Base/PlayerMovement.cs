@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if(!GetComponent<PlayerHealth>().IsDead())
+            MovePlayer();
     }
 
     void LookAtEnemy()

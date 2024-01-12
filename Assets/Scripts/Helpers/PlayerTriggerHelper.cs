@@ -11,5 +11,6 @@ public class PlayerTriggerHelper : MonoBehaviour
             GameUIManager.Instance.UpdateExp();
             Destroy(other.gameObject);
         }
+       
     }
 }

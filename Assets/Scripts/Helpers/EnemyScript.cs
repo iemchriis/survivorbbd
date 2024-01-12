@@ -49,6 +49,14 @@ public class EnemyScript : CharacterBase
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
+        }
+    }
+
 
 
 

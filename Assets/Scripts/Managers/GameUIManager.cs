@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameUIManager : MonoBehaviour
 {
     public Text timerText;
@@ -12,6 +13,7 @@ public class GameUIManager : MonoBehaviour
     private float elapsedTime;
 
     public GameObject UpgradePanel;
+    public GameObject gameOverPanel;
 
     public BaseWeapon weapon;
 
@@ -82,5 +84,17 @@ public class GameUIManager : MonoBehaviour
 
         UpgradePanel.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void ShowGameOver()
+    {
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
     }
 }

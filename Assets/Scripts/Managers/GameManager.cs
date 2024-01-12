@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(enemyCount <= 0)
+        if (enemyCount <= 0)
         {
             enemyCount = spawner.spawnCount;
             StartCoroutine(spawner.CoSpawnWave());
