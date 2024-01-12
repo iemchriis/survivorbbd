@@ -32,6 +32,7 @@ public class EnemyScript : CharacterBase
             PlayerVision vision = FindObjectOfType<PlayerVision>();
             vision.nearestEnemy = null;
             vision.targets.Remove(this);
+            GameManager.Instance.enemyCount--;
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
 

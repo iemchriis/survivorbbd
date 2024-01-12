@@ -54,7 +54,7 @@ public class PlayerVision : MonoBehaviour
 
             if (enemy != null)
             {
-                targets.Remove(enemy);
+                //targets.Remove(enemy);
             }
 
         }
