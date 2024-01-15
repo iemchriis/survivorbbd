@@ -29,15 +29,7 @@ public class EnemyScript : CharacterBase
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             base.Death();
             navmesh.isStopped = true;
-
             GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
-
-            PlayerVision vision = FindObjectOfType<PlayerVision>();
-            vision.nearestEnemy = null;
-            vision.targets.Remove(this);
-            navmesh.velocity = Vector3.zero;
-        
-
             GameManager.Instance.enemyCount--;
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
@@ -46,14 +38,7 @@ public class EnemyScript : CharacterBase
 
     }
 
-    public override void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Bullet" && !IsDead())
-        {
-           
-            Destroy(other.gameObject);
-        }
-    }
+   
 
     private void OnCollisionEnter(Collision collision)
     {
