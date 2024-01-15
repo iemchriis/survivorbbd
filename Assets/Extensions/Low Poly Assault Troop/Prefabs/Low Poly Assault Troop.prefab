@@ -1131,6 +1131,7 @@ GameObject:
   - component: {fileID: 5142345151447362875}
   - component: {fileID: 5807709595835562624}
   - component: {fileID: 8586832286395966611}
+  - component: {fileID: 158575885409839571}
   m_Layer: 0
   m_Name: Low Poly Assault Troop
   m_TagString: Player
@@ -1159,7 +1160,7 @@ Transform:
   - {fileID: 8023330449178096076}
   - {fileID: 2043344644114304818}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7055119664244295851
 Rigidbody:
@@ -1186,7 +1187,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!65 &818385481340116285
 BoxCollider:
@@ -1222,6 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vision: {fileID: 5080467095155614570}
+  animator: {fileID: 0}
   rb: {fileID: 7055119664244295851}
   joystick: {fileID: 0}
   moveSpeed: 5
@@ -1258,6 +1260,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9b2486d38dd4540b7410d22d8b7e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &158575885409839571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e79f41f46a635418f9f06d95bd3f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  health: 10
+  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
 --- !u!1 &950946900047574717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2043344644114304818}
   - component: {fileID: 3171874980224382366}
+  - component: {fileID: 6781510883080847287}
   m_Layer: 0
   m_Name: GunPoint
   m_TagString: Untagged
@@ -1307,6 +1325,20 @@ MonoBehaviour:
   firePos: {fileID: 2043344644114304818}
   rateOfFire: 0.5
   canFire: 0
+--- !u!114 &6781510883080847287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950946900047574717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443db07352d6fde48b766fe89f5000ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDamage: 1
+  weaponType: 
 --- !u!1 &3023263893664466490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1385,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
