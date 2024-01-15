@@ -32,6 +32,8 @@ public class EnemyScript : CharacterBase
             PlayerVision vision = FindObjectOfType<PlayerVision>();
             vision.nearestEnemy = null;
             vision.targets.Remove(this);
+            navmesh.velocity = Vector3.zero;
+        
             GameManager.Instance.enemyCount--;
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
@@ -63,7 +65,6 @@ public class EnemyScript : CharacterBase
     // Update is called once per frame
     void Update()
     {
-
 
         if (target != null && !IsDead())
         {

@@ -25,6 +25,7 @@ public class CharacterBase : MonoBehaviour
 
     public virtual void Death()
     {
+        GetComponent<BoxCollider>().enabled = false;    
         isDead = true;
     }
 
