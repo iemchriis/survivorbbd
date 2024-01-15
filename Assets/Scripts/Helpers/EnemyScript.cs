@@ -15,10 +15,10 @@ public class EnemyScript : CharacterBase
     }
 
 
-    public override void TakeDamage()
+    public override void TakeDamage(int damage)
     {
-        base.TakeDamage();
-        health--;
+        base.TakeDamage(damage);
+        health -= damage;
         Death();
     }
 
@@ -29,9 +29,7 @@ public class EnemyScript : CharacterBase
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             base.Death();
             navmesh.isStopped = true;
-            PlayerVision vision = FindObjectOfType<PlayerVision>();
-            vision.nearestEnemy = null;
-            vision.targets.Remove(this);
+            GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
             GameManager.Instance.enemyCount--;
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
@@ -44,7 +42,7 @@ public class EnemyScript : CharacterBase
     {
         if(other.tag == "Bullet" && !IsDead())
         {
-            TakeDamage();
+           
             Destroy(other.gameObject);
         }
     }
@@ -53,7 +51,7 @@ public class EnemyScript : CharacterBase
     {
         if(collision.transform.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
         }
     }
 

@@ -27,6 +27,12 @@ public class PlayerVision : MonoBehaviour
         weapon.canFire = true;
     }
 
+    public void RemoveFromTargetList(EnemyScript enemy)
+    {
+        targets.Remove(enemy);
+        nearestEnemy = null;
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {

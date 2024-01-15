@@ -17,7 +17,7 @@ public class CharacterBase : MonoBehaviour
     }
 
     
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int damage)
     {
         GameObject go = Instantiate(damageFX, transform);
         Destroy(go, 1);

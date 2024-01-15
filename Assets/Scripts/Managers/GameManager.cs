@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private StageSpawner spawner;
 
+    public PlayerVision playerTargeting;
     public int enemyCount;
 
     private void Awake()
@@ -18,12 +18,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (enemyCount <= 0)
-        {
-            enemyCount = spawner.spawnCount;
-            StartCoroutine(spawner.CoSpawnWave());
-        }
-    }
+    
 }

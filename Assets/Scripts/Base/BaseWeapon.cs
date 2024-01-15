@@ -10,7 +10,6 @@ public class BaseWeapon : MonoBehaviour
     public float rateOfFire;
 
     private float fireTime = 0;
-
     public bool canFire;
 
     private void Start()
@@ -32,9 +31,10 @@ public class BaseWeapon : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public virtual void Shoot()
     {
         GameObject bullet  = Instantiate(bulletPrefab, firePos.position,firePos.rotation);
+        bullet.GetComponent<BaseProjectile>().SetDamage(GetComponent<WeaponHolder>().GetWeaponDamage());
         bullet.GetComponent<BaseProjectile>().ShootProjectTile(transform.forward);
     }
 

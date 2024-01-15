@@ -6,7 +6,13 @@ using UnityEngine;
 public class BaseProjectile : MonoBehaviour
 {
     private Rigidbody rb;
+    private int canPierce;
+    private int pierceCount;
+
     [SerializeField] private float projectileVelocity;
+
+    private int damage;
+
 
     private void Awake()
     {
@@ -15,11 +21,18 @@ public class BaseProjectile : MonoBehaviour
         projectileVelocity = 30f;
 
         Destroy(gameObject, 10f);
+
+        //damage = GetComponent<WeaponHolder>().GetWeaponDamage();
     }
 
 
-    public void ShootProjectTile(Vector3 direction)
+    public void SetDamage(int dmg)
     {
+        damage = dmg;
+    }
+
+    public void ShootProjectTile(Vector3 direction)
+    {   
         rb.AddForce(direction * projectileVelocity, ForceMode.Impulse);
     }
 
@@ -29,6 +42,7 @@ public class BaseProjectile : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
             Debug.Log("Enemy Hit");
+            other.GetComponent<EnemyScript>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

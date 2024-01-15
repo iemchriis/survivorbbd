@@ -5,12 +5,10 @@ using UnityEngine;
 public class PlayerHealth : CharacterBase
 {
     
-
-
-    public override void TakeDamage()
+    public override void TakeDamage(int damage)
     {
-        base.TakeDamage();
-        health--;
+        base.TakeDamage(damage);
+        health -=damage;
         if(health <= 0)
         {
             Death();
