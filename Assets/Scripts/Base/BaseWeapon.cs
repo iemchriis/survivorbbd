@@ -8,8 +8,8 @@ public class BaseWeapon : MonoBehaviour
 
     public Transform firePos;
     public float rateOfFire;
-
     private float fireTime = 0;
+
     public bool canFire;
 
     private void Start()
