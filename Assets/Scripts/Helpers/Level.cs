@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool isLevelEnded;
+    public GameObject[] Door;
+
+    private void Start()
     {
-        
+        GameManager.Instance.SetCurrentLevel(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLevelEnded(bool ended)
     {
-        
+        isLevelEnded = ended;
+    }
+
+
+    public void NewLevel()
+    {
+        foreach (GameObject go in Door)
+        {
+            go.SetActive(true);
+        }
+     //   Door.SetActive(true);
+    }
+
+    public bool LevelEnded()
+    {
+        return isLevelEnded;
     }
 }

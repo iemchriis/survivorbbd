@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class PlayerTriggerHelper : MonoBehaviour
 {
+
+    private Vector3 initialPosition;
+
+    private void Start()
+    {
+        initialPosition = transform.position;
+    }
+
+
+    public void GoToInitPosition()
+    {
+        transform.position = initialPosition;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "EXP" && gameObject.tag == "Player")

@@ -31,6 +31,7 @@ public class EnemyScript : CharacterBase
             navmesh.isStopped = true;
             GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
             GameManager.Instance.enemyCount--;
+            GameManager.Instance.CheckEnemyCount();
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
 

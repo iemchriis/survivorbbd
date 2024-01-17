@@ -5,10 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
-
     public PlayerVision playerTargeting;
     public int enemyCount;
+
+
+    private Level currentLevel;
 
     private void Awake()
     {
@@ -16,6 +17,26 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+
+    public void CheckEnemyCount()
+    {
+        if(enemyCount <= 0)
+        {
+            currentLevel.NewLevel();
+        }
+    }
+
+    public void DeleteLevel()
+    {
+        Destroy(currentLevel.gameObject);
+    }
+
+
+    public void SetCurrentLevel(Level level)
+    {
+        currentLevel = level;
     }
 
     
