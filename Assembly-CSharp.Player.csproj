@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Base\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\Helpers\StageSpawner.cs" />
     <Compile Include="Assets\Scripts\Helpers\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\Managers\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyDataManager.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\Helpers\PlayerTriggerHelper.cs" />
@@ -76,15 +77,19 @@
     <Compile Include="Assets\Scripts\Base\PlayerVision.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\Managers.cs" />
+    <Compile Include="Assets\Scripts\Base\DroneTargeting.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectSnap.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Level.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerDataManager.cs" />
     <Compile Include="Assets\Scripts\Base\BaseWeapon.cs" />
+    <Compile Include="Assets\Scripts\Base\DroneMovement.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectGridRepositioneer.cs" />
     <Compile Include="Assets\Scripts\Managers\SceneLoaders.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\Interface\ITargeting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
