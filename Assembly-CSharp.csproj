@@ -89,6 +89,7 @@
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectGridRepositioneer.cs" />
     <Compile Include="Assets\Scripts\Managers\SceneLoaders.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Scripts\Base\PiercingBallistic.cs" />
     <Compile Include="Assets\Scripts\Interface\ITargeting.cs" />
   </ItemGroup>
   <ItemGroup>

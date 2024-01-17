@@ -5,13 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BaseProjectile : MonoBehaviour
 {
-    private Rigidbody rb;
-    private int canPierce;
-    private int pierceCount;
+    protected Rigidbody rb;
 
-    [SerializeField] private float projectileVelocity;
+    [SerializeField] protected  float projectileVelocity;
 
-    private int damage;
+    protected int damage;
 
 
     private void Awake()
@@ -22,22 +20,22 @@ public class BaseProjectile : MonoBehaviour
 
         Destroy(gameObject, 10f);
 
-        //damage = GetComponent<WeaponHolder>().GetWeaponDamage();
+        
     }
 
 
-    public void SetDamage(int dmg)
+    public virtual void SetDamage(int dmg)
     {
         damage = dmg;
     }
 
-    public void ShootProjectTile(Vector3 direction)
+    public virtual void ShootProjectTile(Vector3 direction)
     {   
         rb.AddForce(direction * projectileVelocity, ForceMode.Impulse);
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Enemy"))
         {
