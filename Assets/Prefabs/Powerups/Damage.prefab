@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5910241872962545591}
   - component: {fileID: 6643640167514964037}
   - component: {fileID: -8104759432174275858}
+  - component: {fileID: 7315489473578493773}
   m_Layer: 0
   m_Name: Damage
   m_TagString: Untagged
@@ -119,3 +120,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+--- !u!114 &7315489473578493773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547352508413978104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0913e7571a8b3c241a62b78e1a5d6bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupID: 0
