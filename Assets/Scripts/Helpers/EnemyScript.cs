@@ -32,6 +32,7 @@ public class EnemyScript : CharacterBase
             GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
             GameManager.Instance.enemyCount--;
             GameManager.Instance.CheckEnemyCount();
+            LevelGenerator.Instance.SpawnPowerup(transform);
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
 
