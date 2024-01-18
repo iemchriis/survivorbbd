@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BaseWeapon : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] protected GameObject bulletPrefab;
 
     public Transform firePos;
     public float rateOfFire;
-    private float fireTime = 0;
+    public float fireTime = 0;
 
     public bool canFire;
 

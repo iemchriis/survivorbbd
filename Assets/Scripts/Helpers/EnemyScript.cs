@@ -7,13 +7,17 @@ public class EnemyScript : CharacterBase
     private Transform target;
     private NavMeshAgent navmesh;
     public GameObject exp;
-    // Start is called before the first frame update
+    
+    public bool hasStatusEffect;
+    [SerializeField]private float debuffDuration;
+
     void Start()
     {
         target = GameObject.FindObjectOfType<PlayerMovement>().transform;
         navmesh = GetComponent <NavMeshAgent>();
     }
 
+   
 
     public override void TakeDamage(int damage)
     {
@@ -22,6 +26,31 @@ public class EnemyScript : CharacterBase
         Death();
     }
 
+    
+
+    public override void TakeDamageOverTime(int damage, float duration, int tickTime)
+    {
+       debuffDuration = duration;
+       
+       StartCoroutine(DOT(damage, duration, tickTime));
+    }
+
+
+    IEnumerator DOT(int damage, float duration, int tickTime)
+    {
+        hasStatusEffect = true;
+        while (debuffDuration > 0)
+        {         
+            
+            health -= damage;
+            yield return new WaitForSeconds(tickTime);
+        }
+        
+        yield return null;
+    }
+
+    
+
     public override void Death()
     {
         if(health <=0 && !IsDead())
@@ -29,9 +58,9 @@ public class EnemyScript : CharacterBase
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             base.Death();
             navmesh.isStopped = true;
-            GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
+            //GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
             GameManager.Instance.enemyCount--;
-            GameManager.Instance.CheckEnemyCount();
+            //GameManager.Instance.CheckEnemyCount();
             LevelGenerator.Instance.SpawnPowerup(transform);
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
@@ -50,7 +79,14 @@ public class EnemyScript : CharacterBase
         }
     }
 
-
+    void StartTime()
+    {
+        debuffDuration -= Time.deltaTime;
+        if(debuffDuration <= 0)
+        {
+            hasStatusEffect = false;
+        }
+    }
 
 
     // Update is called once per frame
@@ -62,6 +98,11 @@ public class EnemyScript : CharacterBase
             navmesh.destination = target.position;
             transform.LookAt(target.position);
           //  transform.position = Vector3.MoveTowards(transform.position, target.position, 1 * Time.deltaTime);
+        }
+       
+        if(hasStatusEffect)
+        {
+            StartTime();
         }
     }
 }

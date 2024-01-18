@@ -23,6 +23,11 @@ public class CharacterBase : MonoBehaviour
         Destroy(go, 1);
     }
 
+    public virtual void TakeDamageOverTime(int damage, float duration, int tickTime)
+    {
+
+    }
+
     public virtual void Death()
     {
         GetComponent<BoxCollider>().enabled = false;    
