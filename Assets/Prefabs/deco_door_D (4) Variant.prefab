@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42372405cabb1144cade6d36e0fc4ff5, type: 2}
+  - {fileID: 2100000, guid: c5918b03b8b70a74a99073643cd538cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -163,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6aaa216cabe5bec4a831eea5a3d4fcb0, type: 2}
     - target: {fileID: -927199367670048503, guid: f5947ee2da434e94a8be1ff2f22ada42, type: 3}
       propertyPath: m_Name
-      value: deco_door_C (4) Variant
+      value: deco_door_D (4) Variant
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: f5947ee2da434e94a8be1ff2f22ada42, type: 3}
       propertyPath: m_StaticEditorFlags
