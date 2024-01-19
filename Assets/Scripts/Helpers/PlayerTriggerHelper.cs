@@ -44,9 +44,14 @@ public class PlayerTriggerHelper : MonoBehaviour
                 break;
 
             case 1:
+                GetComponent<PlayerInventory>().AddHealth();
                 break;
 
             case 2:
+                GetComponent<PlayerInventory>().AddSpeed();
+                break;
+            case 3:
+                GetComponent<PlayerInventory>().EnableShield();
                 break;
         }
     }
