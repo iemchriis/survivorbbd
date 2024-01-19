@@ -25,7 +25,7 @@ public class PlayerTriggerHelper : MonoBehaviour
             GameUIManager.Instance.UpdateExp();
             Destroy(other.gameObject);
         }
-        if(other.tag == "PU")
+        if(other.tag == "PU" && gameObject.tag == "Player")
         {
             CheckPowerupTrigger(other.gameObject);
         }
