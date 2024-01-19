@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\Managers\SceneLoaders.cs" />
     <Compile Include="Assets\Scripts\Helpers\DoorTrigger.cs" />
     <Compile Include="Assets\Scripts\Helpers\PowerupTrigger.cs" />
+    <Compile Include="Assets\Scripts\Base\EnemyProjectile.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\Base\PiercingBallistic.cs" />
