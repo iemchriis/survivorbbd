@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public PlayerVision playerTargeting;
+
+    public PlayerVision targeting;
+    public BaseWeapon currentWeapon;
+    public WeaponHolder playerWeaponHolder;
     public int enemyCount;
 
 
@@ -17,6 +20,27 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void SelectBallisticWeapon()
+    {
+        playerWeaponHolder.gameObject.AddComponent<BaseWeapon>();
+        currentWeapon = (BaseWeapon)playerWeaponHolder.gameObject.GetComponent<BaseWeapon>();
+        GameUIManager.Instance.selectionPanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void SelectLaserWeapon()
+    {
+        playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
+        currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
+        GameUIManager.Instance.selectionPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
 

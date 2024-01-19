@@ -14,6 +14,7 @@ public class GameUIManager : MonoBehaviour
 
     public GameObject UpgradePanel;
     public GameObject gameOverPanel;
+    public GameObject selectionPanel;
 
     public BaseWeapon weapon;
 

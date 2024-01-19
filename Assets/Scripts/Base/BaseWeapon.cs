@@ -4,18 +4,34 @@ using UnityEngine;
 
 public class BaseWeapon : MonoBehaviour
 {
+    public WeaponHolder holder;
     [SerializeField] protected GameObject bulletPrefab;
 
     public Transform firePos;
+    public int damage;
     public float rateOfFire;
     public float fireTime = 0;
 
     public bool canFire;
 
-    private void Start()
+    
+
+    
+    void OnEnable()
     {
+        firePos = this.transform;
+        holder = GetComponent<WeaponHolder>();
+
+        bulletPrefab = holder.GetProjectile();
+
+        damage = holder.GetWeaponDamage();
+        rateOfFire = holder.GetWeaponROF();
         fireTime = rateOfFire;
+
+        FindObjectOfType<PlayerVision>().weapon = this;
+        
     }
+
 
     private void Update()
     {
@@ -34,7 +50,7 @@ public class BaseWeapon : MonoBehaviour
     public virtual void Shoot()
     {
         GameObject bullet  = Instantiate(bulletPrefab, firePos.position,firePos.rotation);
-        bullet.GetComponent<BaseProjectile>().SetDamage(GetComponent<WeaponHolder>().GetWeaponDamage());
+        bullet.GetComponent<BaseProjectile>().SetDamage(damage);
         bullet.GetComponent<BaseProjectile>().ShootProjectTile(transform.forward);
     }
 

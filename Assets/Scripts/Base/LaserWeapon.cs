@@ -5,24 +5,32 @@ using UnityEngine;
 public class LaserWeapon : BaseWeapon
 {
     
-    public float gunRange = 50f;
+    private float gunRange = 100f;
     public float laserDuration = 0.1f;
 
     private LineRenderer laserLine;
 
-    private int damage;
-    private float burnDuration;
-    private int burnTick;
+    
+    private float burnDuration = 10f;
+    private int burnTick = 2;
 
    
 
-    void Awake()
+    void OnEnable()
     {
+        holder = GetComponent<WeaponHolder>();
         laserLine = GetComponent<LineRenderer>();
+
+        firePos = this.transform;
+
+        rateOfFire =holder.GetWeaponROF();
         fireTime = rateOfFire;
-        damage = GetComponent<WeaponHolder>().GetWeaponDamage();
+        damage = holder.GetWeaponDamage();
+
+        GameManager.Instance.targeting.weapon = this;
     }
 
+   
     void Update()
     {
         if(canFire)
@@ -52,6 +60,7 @@ public class LaserWeapon : BaseWeapon
             {
                 Debug.Log(hit.transform.name);
                 var enemy = hit.transform.GetComponent<EnemyScript>();
+                enemy.TakeDamage(damage);
                 enemy.TakeDamageOverTime(damage, 10f, 2);
             }
 

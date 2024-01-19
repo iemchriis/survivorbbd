@@ -9,6 +9,7 @@ public class EnemyScript : CharacterBase
     public GameObject exp;
     
     public bool hasStatusEffect;
+    [SerializeField] private GameObject burnEffect;
     [SerializeField]private float debuffDuration;
 
     void Start()
@@ -22,6 +23,7 @@ public class EnemyScript : CharacterBase
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
+        Debug.Log("Hit");
         health -= damage;
         Death();
     }
@@ -39,13 +41,15 @@ public class EnemyScript : CharacterBase
     IEnumerator DOT(int damage, float duration, int tickTime)
     {
         hasStatusEffect = true;
+        //burnEffect.SetActive(true);
         while (debuffDuration > 0)
         {         
             
             health -= damage;
+            Debug.Log("Burning");
             yield return new WaitForSeconds(tickTime);
         }
-        
+        //burnEffect.SetActive(false);
         yield return null;
     }
 
@@ -58,9 +62,9 @@ public class EnemyScript : CharacterBase
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             base.Death();
             navmesh.isStopped = true;
-            //GameManager.Instance.playerTargeting.RemoveFromTargetList(this);
+            GameManager.Instance.targeting.RemoveFromTargetList(this);
             GameManager.Instance.enemyCount--;
-            //GameManager.Instance.CheckEnemyCount();
+            GameManager.Instance.CheckEnemyCount();
             LevelGenerator.Instance.SpawnPowerup(transform);
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);

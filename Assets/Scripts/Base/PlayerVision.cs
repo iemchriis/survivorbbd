@@ -68,6 +68,7 @@ public class PlayerVision : MonoBehaviour
 
     private void Update()
     {
-        CalculateNearest();
+        if(weapon != null)
+            CalculateNearest();
     }
 }
