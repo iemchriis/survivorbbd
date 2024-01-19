@@ -41,7 +41,7 @@ public class EnemyScript : CharacterBase
     IEnumerator DOT(int damage, float duration, int tickTime)
     {
         hasStatusEffect = true;
-        //burnEffect.SetActive(true);
+        burnEffect.SetActive(true);
         while (debuffDuration > 0)
         {         
             
@@ -49,7 +49,7 @@ public class EnemyScript : CharacterBase
             Debug.Log("Burning");
             yield return new WaitForSeconds(tickTime);
         }
-        //burnEffect.SetActive(false);
+        burnEffect.SetActive(false);
         yield return null;
     }
 
