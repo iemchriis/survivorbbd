@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour
 
     public void SelectBallisticWeapon()
     {
-        playerWeaponHolder.gameObject.AddComponent<BaseWeapon>();
-        currentWeapon = (BaseWeapon)playerWeaponHolder.gameObject.GetComponent<BaseWeapon>();
+        playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
+        currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
         GameUIManager.Instance.selectionPanel.SetActive(false);
         Time.timeScale = 1;
     }

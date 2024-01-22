@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (vision.nearestEnemy == null)
         {
-            transform.LookAt(transform.forward);
+            LookDirection();
+            //transform.LookAt(transform.forward);
         }
         else
         {
@@ -58,6 +59,18 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunning", false);
         }
 
+
+        LookDirection();
+         
+
+    }
+
+    void LookDirection()
+    {
+        if(joystick.Horizontal != 0 || joystick.Vertical != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(rb.velocity);
+        }
     }
 
 
