@@ -62,15 +62,16 @@
     <Compile Include="Assets\Scripts\Helpers\WeaponHolder.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\Scripts\Base\LaserWeapon.cs" />
     <Compile Include="Assets\Scripts\Base\BaseProjectile.cs" />
     <Compile Include="Assets\Scripts\Helpers\StageSpawner.cs" />
     <Compile Include="Assets\Scripts\Helpers\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\Managers\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyDataManager.cs" />
+    <Compile Include="Assets\Scripts\Base\Weapons\BallisticWeapon.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\Scripts\Interface\IDebuff.cs" />
+    <Compile Include="Assets\Scripts\Base\Weapons\DroneWeapon.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\Helpers\RotateScript.cs" />
     <Compile Include="Assets\Scripts\Helpers\PlayerTriggerHelper.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\Base\PlayerMovement.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Base\Weapons\BaseWeapon.cs" />
     <Compile Include="Assets\Scripts\Base\CharacterBase.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerVision.cs" />
     <Compile Include="Assets\Scripts\Helpers\ProjectileBoss.cs" />
@@ -95,7 +97,7 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\Helpers\Level.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerDataManager.cs" />
-    <Compile Include="Assets\Scripts\Base\BaseWeapon.cs" />
+    <Compile Include="Assets\Scripts\Base\Weapons\LaserWeapon.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Scripts\Base\DroneMovement.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectGridRepositioneer.cs" />

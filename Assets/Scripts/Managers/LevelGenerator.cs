@@ -9,7 +9,7 @@ public class LevelGenerator : MonoBehaviour
 
     public GameObject[] levelPrefabs;
     public GameObject[] Powerups;
-    public GameObject bossLevel;
+    public GameObject bossLevel, Popup;
     private int currentPowerup;
     private int currentLevel;
     public int stagesBeforeBoss;
@@ -49,7 +49,7 @@ public class LevelGenerator : MonoBehaviour
         if (GameManager.Instance.enemyCount <= 0)
         {
             GameObject powerup = Powerups[currentPowerup];
-
+            Popup.SetActive(true);
             GameObject go = Instantiate(powerup, position.position, Quaternion.identity);
             go.transform.position = new Vector3(position.position.x, 1, position.position.z);
             
