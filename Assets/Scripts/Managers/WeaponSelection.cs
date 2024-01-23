@@ -9,7 +9,16 @@ public class WeaponSelection : MonoBehaviour
 
     private void Awake()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
+
+        if (PlayerDataManager.Instance.currentWeapon == 0)
+        {
+            SelectBallisticWeapon();
+        }
+        else
+        {
+            SelectLaserWeapon();
+        }
         
     }
 

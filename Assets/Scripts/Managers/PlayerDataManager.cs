@@ -7,7 +7,21 @@ public class PlayerDataManager : MonoBehaviour
 
     public string initJson;
     public PlayerStats playerStats;
+    public int currentWeapon;
+    public static PlayerDataManager Instance { get; set; }
 
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Start()
     {
         InitializeData();
