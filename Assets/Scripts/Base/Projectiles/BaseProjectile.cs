@@ -7,26 +7,24 @@ public class BaseProjectile : MonoBehaviour
 {
     protected Rigidbody rb;
 
-    [SerializeField] protected  float projectileVelocity;
+    [SerializeField] protected float projectileVelocity;
 
     protected int damage;
+    
 
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
 
-        projectileVelocity = 30f;
-
-        Destroy(gameObject, 10f);
-
-        
+        Destroy(gameObject, 10f);      
     }
 
 
-    public virtual void SetDamage(int dmg)
+    public virtual void SetProjectileStats(int dmg, float projVelocity)
     {
         damage = dmg;
+        projectileVelocity = projVelocity;
     }
 
     public virtual void ShootProjectTile(Vector3 direction)

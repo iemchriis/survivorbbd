@@ -9,12 +9,9 @@ public class PiercingBallistic : BaseProjectile
     [SerializeField] private int pierceLevel;
 
 
-    private void Awake()
+    protected override void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        projectileVelocity = 30f;
-        Destroy(gameObject, 10f);
-
+        base.Awake();
 
         pierceCount = 3;
 

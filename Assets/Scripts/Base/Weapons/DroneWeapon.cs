@@ -6,6 +6,7 @@ public class DroneWeapon : BaseWeapon
 {
     [SerializeField] private GameObject bulletPrefab;
 
+
     void OnEnable()
     {
         firePos = this.transform;
@@ -31,7 +32,7 @@ public class DroneWeapon : BaseWeapon
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
-        bullet.SetDamage(damage);
+        bullet.SetProjectileStats(damage,projectileSpeed);
         bullet.ShootProjectTile(transform.forward);
     }
 }

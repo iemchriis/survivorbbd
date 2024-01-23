@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class WeaponHolder : MonoBehaviour
 {
+
+    [Header("Weapon Stats")]
     [SerializeField] private int weaponDamage;
     [SerializeField] private string weaponType;
     [SerializeField] private float weaponROF;
-
+    [Space]
+    [Header("Projectile Stats")]
     [SerializeField] private GameObject bulletProjectile;
+    [SerializeField] private float projectileSpeed;
 
 
     public void SetWeaponStats(int _weaponDamage, string _weaponType)
     {
         weaponDamage = _weaponDamage;
         weaponType = _weaponType;
+        
     }
 
     public int GetWeaponDamage()
@@ -30,5 +35,10 @@ public class WeaponHolder : MonoBehaviour
     public GameObject GetProjectile()
     {
         return bulletProjectile;
+    }
+
+    public float GetProjectileSpeed()
+    {
+        return projectileSpeed;
     }
 }

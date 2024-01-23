@@ -9,6 +9,7 @@ public class BaseWeapon : MonoBehaviour
     public Transform firePos;
     public int damage;
     public float rateOfFire;
+    public float projectileSpeed;
     [SerializeField]protected float fireTime = 0;
 
     public bool canFire;

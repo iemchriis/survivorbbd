@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public PlayerVision targeting;
-    public BaseWeapon currentWeapon;
-    public WeaponHolder playerWeaponHolder;
     public int enemyCount;
 
 
@@ -27,21 +25,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void SelectBallisticWeapon()
-    {
-        playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
-        currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
-        GameUIManager.Instance.selectionPanel.SetActive(false);
-        Time.timeScale = 1;
-    }
-
-    public void SelectLaserWeapon()
-    {
-        playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
-        currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
-        GameUIManager.Instance.selectionPanel.SetActive(false);
-        Time.timeScale = 1;
-    }
+  
 
 
     public void CheckEnemyCount()
