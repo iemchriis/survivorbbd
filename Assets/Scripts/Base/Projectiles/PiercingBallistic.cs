@@ -12,7 +12,7 @@ public class PiercingBallistic : BaseProjectile
     protected override void Awake()
     {
         base.Awake();
-
+        AudioManager.Instance.PlaySFX("Gunshot");
         pierceCount = 3;
 
     }

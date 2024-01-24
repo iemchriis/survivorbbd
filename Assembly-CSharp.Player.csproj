@@ -60,6 +60,8 @@
   <ItemGroup>
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Scripts\Helpers\WeaponHolder.cs" />
+    <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\EnemyProjectile.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\Helpers\RotateScript.cs" />
     <Compile Include="Assets\Scripts\Helpers\PlayerTriggerHelper.cs" />
+    <Compile Include="Assets\Scripts\Base\Projectiles\SlowProjectile.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\Scripts\Helpers\WeaponChoose.cs" />
     <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />

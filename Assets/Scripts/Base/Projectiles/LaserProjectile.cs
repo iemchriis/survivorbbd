@@ -12,6 +12,7 @@ public class LaserProjectile : BaseProjectile
     {
         if (other.CompareTag("Enemy"))
         {
+            AudioManager.Instance.PlaySFX("Laser");
             Debug.Log("Enemy Hit");
             var enemy = other.GetComponent<EnemyScript>();
 

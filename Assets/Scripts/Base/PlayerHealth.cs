@@ -12,6 +12,7 @@ public class PlayerHealth : CharacterBase
         hpBar.value -= damage;
         if(health <= 0)
         {
+            AudioManager.Instance.PlaySFX("Hit");
             Death();
             GameUIManager.Instance.ShowGameOver();
         }

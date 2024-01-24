@@ -10,6 +10,7 @@ public class PlayerTriggerHelper : MonoBehaviour
     private void Start()
     {
         initialPosition = transform.position;
+        AudioManager.Instance.PlayMusic("BG");
     }
 
 
