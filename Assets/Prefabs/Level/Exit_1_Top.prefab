@@ -2330,7 +2330,7 @@ MonoBehaviour:
   - {fileID: 480155035960161583}
   - {fileID: 3067529122113397355}
   - {fileID: 4089325151804711302}
-  spawnCount: 10
+  spawnCount: 20
 --- !u!1 &7741925387774678640
 GameObject:
   m_ObjectHideFlags: 0

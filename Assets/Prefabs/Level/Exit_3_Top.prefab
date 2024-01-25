@@ -191,7 +191,7 @@ MonoBehaviour:
   - {fileID: 1079116616740693297}
   - {fileID: 788396113672973076}
   - {fileID: 1160612067613984154}
-  spawnCount: 10
+  spawnCount: 20
 --- !u!1 &6618248792902603587
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +996,7 @@ Transform:
   - {fileID: 920585460227153529}
   - {fileID: 1673682394657927921}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6419996443580022339
 MonoBehaviour:
