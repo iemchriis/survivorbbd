@@ -12,6 +12,7 @@ public class BallisticWeapon : BaseWeapon
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
+        projectileSpeed = holder.GetProjectileSpeed();
 
         damage = holder.GetWeaponDamage();
         rateOfFire = holder.GetWeaponROF();
