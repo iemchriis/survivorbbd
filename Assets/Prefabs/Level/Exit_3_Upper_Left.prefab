@@ -50,7 +50,7 @@ MonoBehaviour:
   spawnPoint:
   - {fileID: 950481776363064494}
   - {fileID: 8716623097647081507}
-  spawnCount: 10
+  spawnCount: 20
 --- !u!1 &3140955005271571374
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ Transform:
   - {fileID: 2661744622812701497}
   - {fileID: 7000364612823646326}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6557480959951849561
 MonoBehaviour:

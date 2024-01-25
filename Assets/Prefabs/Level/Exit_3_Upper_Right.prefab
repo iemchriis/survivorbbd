@@ -915,7 +915,7 @@ MonoBehaviour:
   spawnPoint:
   - {fileID: 2163510104134565803}
   - {fileID: 8702198248432302844}
-  spawnCount: 10
+  spawnCount: 20
 --- !u!1 &2966151010284264473
 GameObject:
   m_ObjectHideFlags: 0
