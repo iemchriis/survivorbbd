@@ -8722,7 +8722,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 528907842231378910, guid: bd3246a3f6b8d224aa8cd507f43e7719, type: 3}
       propertyPath: projectileSpeed
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 528907842231378910, guid: bd3246a3f6b8d224aa8cd507f43e7719, type: 3}
       propertyPath: bulletProjectile
