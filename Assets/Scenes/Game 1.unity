@@ -4617,6 +4617,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.67311615
@@ -8671,6 +8672,18 @@ PrefabInstance:
       propertyPath: bulletProjectile
       value: 
       objectReference: {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
+    - target: {fileID: 6781510883080847287, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
+      propertyPath: bulletTypes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781510883080847287, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
+      propertyPath: bulletTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
+    - target: {fileID: 6781510883080847287, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
+      propertyPath: bulletTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 667565355365552573, guid: 03268e088ce69e54b845fc19c6cf9fcf, type: 3}
     - target: {fileID: 7055119664244295851, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
       propertyPath: m_Constraints
       value: 116

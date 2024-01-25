@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class EnemyScript : CharacterBase
+public class EnemyScript : CharacterBase, IDebuff
 {
     private Transform target;
     private NavMeshAgent navmesh;
@@ -101,12 +101,26 @@ public class EnemyScript : CharacterBase
         {
             navmesh.destination = target.position;
             transform.LookAt(target.position);
-          //  transform.position = Vector3.MoveTowards(transform.position, target.position, 1 * Time.deltaTime);
+          //transform.position = Vector3.MoveTowards(transform.position, target.position, 1 * Time.deltaTime);
         }
        
         if(hasStatusEffect)
         {
             StartTime();
         }
+    }
+
+    public void ApplyEffect(int debuffAmount, float debuffDuration)
+    {
+        StartCoroutine(ApplyEffectAsync(debuffAmount, debuffDuration));
+    }
+
+    public IEnumerator ApplyEffectAsync(int debuffAmount, float debuffDuration)
+    {
+        var ogSpeed = navmesh.speed;
+
+        navmesh.speed -= debuffAmount;
+        yield return new WaitForSeconds(debuffDuration);
+        navmesh.speed = ogSpeed;
     }
 }
