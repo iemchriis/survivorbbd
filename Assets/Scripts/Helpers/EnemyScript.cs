@@ -100,7 +100,10 @@ public class EnemyScript : CharacterBase, IDebuff
 
         if (target != null && !IsDead())
         {
-            navmesh.destination = target.position;
+            if (navmesh != null)
+            {
+                navmesh.destination = target.position;
+            }
             transform.LookAt(target.position);
           //transform.position = Vector3.MoveTowards(transform.position, target.position, 1 * Time.deltaTime);
         }

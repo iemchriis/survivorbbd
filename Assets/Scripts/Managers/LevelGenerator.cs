@@ -49,12 +49,19 @@ public class LevelGenerator : MonoBehaviour
         if (GameManager.Instance.enemyCount <= 0)
         {
             GameObject powerup = Powerups[currentPowerup];
-            Popup.SetActive(true);
+            StartCoroutine(CoShowNotif());
             GameObject go = Instantiate(powerup, position.position, Quaternion.identity);
             go.transform.position = new Vector3(position.position.x, 1, position.position.z);
             
         }
 
+    }
+
+    IEnumerator CoShowNotif()
+    {
+        Popup.SetActive(true);
+        yield return new WaitForSeconds(2);
+        Popup.SetActive(false);
     }
 
    
