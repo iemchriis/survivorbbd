@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23440bf2850ec56409130ab9d6fdd8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Icon: {fileID: 2800000, guid: 5b56d9fa0e8bd6e409ed188db38a692c, type: 3}
+  Icon: {fileID: 2800000, guid: 5169d1cf8bf9f8f4faf6410ba251c55a, type: 3}
   Arrow: {fileID: 2800000, guid: 3783f195e2c8dc84cb1461fbe881e9cb, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &856601670117699840
