@@ -9,6 +9,7 @@ public class DoorTrigger : MonoBehaviour
         if(other.tag == "Player")
         {
             other.GetComponent<PlayerTriggerHelper>().GoToInitPosition();
+            GameObject.FindAnyObjectByType<DroneMovement>().ResetPositionToPlayer();
             LevelGenerator.Instance.spawnNewLevel();
         }
     }
