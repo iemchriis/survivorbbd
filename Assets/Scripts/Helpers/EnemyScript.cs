@@ -60,6 +60,7 @@ public class EnemyScript : CharacterBase, IDebuff
         if(health <=0 && !IsDead())
         {
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
+            go.transform.parent = transform.parent;
             base.Death();
             navmesh.isStopped = true;
             GameManager.Instance.targeting.RemoveFromTargetList(this);

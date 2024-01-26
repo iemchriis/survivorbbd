@@ -24,6 +24,7 @@ public class StageSpawner : MonoBehaviour
             int rand = Random.Range(0, spawnPoint.Length);
             GameObject go = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             go.transform.position = spawnPoint[rand].position;
+            go.transform.parent = transform;
             yield return new WaitForSeconds(1);
         }
     }
