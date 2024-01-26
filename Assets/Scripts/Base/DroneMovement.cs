@@ -27,7 +27,11 @@ public class DroneMovement : MonoBehaviour
         if (agent != null)
             return;
 
+    }
 
+    public void ResetPositionToPlayer()
+    {
+        transform.position = new Vector3(player.position.x+ 3.5f, player.position.y, player.position.z - 3.5f);
     }
 
 }
