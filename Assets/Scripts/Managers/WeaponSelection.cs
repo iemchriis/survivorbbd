@@ -39,5 +39,13 @@ public class WeaponSelection : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void SelectRocketWeapon()
+    {
+        //playerWeaponHolder.gameObject.AddComponent<>();
+        currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
+        GameUIManager.Instance.selectionPanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+
 
 }
