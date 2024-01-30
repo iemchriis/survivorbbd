@@ -8,6 +8,9 @@ public class PlayerDataManager : MonoBehaviour
     public string initJson;
     public PlayerStats playerStats;
     public int currentWeapon;
+
+
+    private int playerCoins;
     public static PlayerDataManager Instance { get; set; }
 
 
@@ -34,8 +37,21 @@ public class PlayerDataManager : MonoBehaviour
         data = JsonMapper.ToObject(initJson);
         playerStats.health = int.Parse(data[0]["player_life"].ToString());
         playerStats.movementSpeed = float.Parse(data[0]["player_speed"].ToString());
+        playerCoins = PlayerPrefs.GetInt("PLAYER_COINS");
+
     }
 
+    public void AddPlayerCoins()
+    {
+        playerCoins++;
+        PlayerPrefs.SetInt("PLAYER_COINS", playerCoins);
+    }
+
+
+    public int GetPlayerCoins()
+    {
+        return playerCoins;
+    }
 
 
     public int GetPlayerHealth()
