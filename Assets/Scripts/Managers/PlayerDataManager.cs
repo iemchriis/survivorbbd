@@ -10,7 +10,7 @@ public class PlayerDataManager : MonoBehaviour
     public int currentWeapon;
 
 
-    private int playerCoins;
+    public int playerCoins;
     public static PlayerDataManager Instance { get; set; }
 
 
@@ -44,6 +44,12 @@ public class PlayerDataManager : MonoBehaviour
     public void AddPlayerCoins()
     {
         playerCoins++;
+        PlayerPrefs.SetInt("PLAYER_COINS", playerCoins);
+    }
+
+    public void DeductCoins(int cost)
+    {
+        playerCoins -= cost;
         PlayerPrefs.SetInt("PLAYER_COINS", playerCoins);
     }
 
