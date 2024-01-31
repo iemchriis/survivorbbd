@@ -487,9 +487,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1919464724144998549, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
+      propertyPath: spawnCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919464724144998549, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 4004173429861921271, guid: 5975a8a55d8d622479b9bac409228b02, type: 3}
+      objectReference: {fileID: 856601670117699726, guid: b14953694d54eea4eb66f453e525024c, type: 3}
     - target: {fileID: 2388811800838890179, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
       propertyPath: m_Name
       value: Exit_1_Top
