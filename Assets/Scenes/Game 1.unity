@@ -486,6 +486,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1919464724144998549, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 4004173429861921271, guid: 5975a8a55d8d622479b9bac409228b02, type: 3}
     - target: {fileID: 2388811800838890179, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
       propertyPath: m_Name
       value: Exit_1_Top
@@ -3178,6 +3182,7 @@ MonoBehaviour:
     health: 0
     movementSpeed: 0
   currentWeapon: 0
+  playerCoins: 0
 --- !u!1 &755226708
 GameObject:
   m_ObjectHideFlags: 0
