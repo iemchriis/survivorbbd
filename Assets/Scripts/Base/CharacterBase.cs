@@ -10,6 +10,7 @@ public class CharacterBase : MonoBehaviour
     bool isDead;
 
     public GameObject damageFX;
+    public GameObject damageTxt;
 
     public bool IsDead()
     {
@@ -19,8 +20,36 @@ public class CharacterBase : MonoBehaviour
     
     public virtual void TakeDamage(int damage)
     {
-        GameObject go = Instantiate(damageFX, transform);
-        Destroy(go, 1);
+        if(damageFX != null)
+        {
+            ShowHitEffect();
+        }
+
+        if(damageTxt != null)
+        {
+            ShowDamageText(damage);
+        }
+
+        
+    }
+
+    void ShowHitEffect()
+    {
+        Debug.Log("Show Dmg");
+        GameObject fx = Instantiate(damageFX, transform);
+    
+        Destroy(fx, 1);
+    }
+
+    void ShowDamageText(int damage)
+    {
+        GameObject txt = Instantiate(damageTxt, transform.position, Quaternion.identity,transform);
+        txt.GetComponent<TextMesh>().text = damage.ToString();
+
+        Vector3 offset = new Vector3(0, 3f, 0);
+        txt.transform.localPosition += offset;
+
+        Destroy(txt, 1);
     }
 
     public virtual void TakeDamageOverTime(int damage, float duration, int tickTime)

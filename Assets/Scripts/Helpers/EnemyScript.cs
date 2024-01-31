@@ -23,9 +23,13 @@ public class EnemyScript : CharacterBase, IDebuff
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);
-        Debug.Log("Hit");
+        
         health -= damage;
-        Death();
+       
+        if(health <= 0)
+        {
+            Death();
+        }
     }
 
     

@@ -12,11 +12,11 @@ public class BallisticWeapon : BaseWeapon
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
-        projectileSpeed = 5f;
+       
 
 
         base.Initialize();
-
+        projectileSpeed = 20f;
 
     }
 
