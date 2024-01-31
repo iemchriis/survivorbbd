@@ -11,8 +11,7 @@ public class WeaponHolder : MonoBehaviour
     [SerializeField] private float weaponROF;
     [Space]
     [Header("Projectile Stats")]
-    [SerializeField] private GameObject[] bulletTypes;
-    [SerializeField] private GameObject bulletProjectile;
+    public GameObject bulletProjectile;
     [SerializeField] private float projectileSpeed;
 
 
@@ -21,6 +20,11 @@ public class WeaponHolder : MonoBehaviour
         weaponDamage = _weaponDamage;
         weaponType = _weaponType;
         
+    }
+
+    public void SetProjectile(GameObject bullet)
+    {
+        bulletProjectile = bullet;
     }
 
     public int GetWeaponDamage()

@@ -6,19 +6,17 @@ public class BallisticWeapon : BaseWeapon
 {
     [SerializeField] private GameObject bulletPrefab;
 
-    void OnEnable()
+    public override void Initialize()
     {
         firePos = this.transform;
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
-        projectileSpeed = holder.GetProjectileSpeed();
+        projectileSpeed = 5f;
 
-        damage = holder.GetWeaponDamage();
-        rateOfFire = holder.GetWeaponROF();
-        fireTime = rateOfFire;
 
-        GameManager.Instance.targeting.weapon = this;
+        base.Initialize();
+
 
     }
 

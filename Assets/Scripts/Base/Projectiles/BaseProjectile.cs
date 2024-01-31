@@ -20,6 +20,7 @@ public class BaseProjectile : MonoBehaviour
         Destroy(gameObject, 10f);      
     }
 
+ 
 
     public virtual void SetProjectileStats(int dmg, float projVelocity)
     {

@@ -3149,7 +3149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &744776091
 Transform:
   m_ObjectHideFlags: 0
@@ -5465,6 +5465,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
   playerWeaponHolder: {fileID: 1143959217}
+  projectiles:
+  - {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
+  - {fileID: 667565355365552573, guid: e941d99b8826a344b9c98a626c23a998, type: 3}
+  - {fileID: 667565355365552573, guid: 03268e088ce69e54b845fc19c6cf9fcf, type: 3}
 --- !u!1 &1250555796
 GameObject:
   m_ObjectHideFlags: 0
@@ -8748,7 +8752,7 @@ PrefabInstance:
     - target: {fileID: 6781510883080847287, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
       propertyPath: bulletProjectile
       value: 
-      objectReference: {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6781510883080847287, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
       propertyPath: bulletTypes.Array.size
       value: 2

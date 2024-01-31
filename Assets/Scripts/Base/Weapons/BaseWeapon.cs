@@ -14,6 +14,19 @@ public class BaseWeapon : MonoBehaviour
 
     public bool canFire;
 
+
+    public virtual void Initialize()
+    {
+
+
+        damage = holder.GetWeaponDamage();
+        rateOfFire = holder.GetWeaponROF();
+        fireTime = rateOfFire;
+
+        GameManager.Instance.targeting.weapon = this;
+    }
+
+
     public virtual void CanFire()
     {
         if (canFire)

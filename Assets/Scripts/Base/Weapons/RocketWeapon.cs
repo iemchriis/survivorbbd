@@ -5,26 +5,39 @@ using UnityEngine;
 public class RocketWeapon : BaseWeapon
 {
     [SerializeField]private GameObject bulletPrefab;
-    
-    void OnEnable()
+
+
+    public override void Initialize()
     {
         firePos = this.transform;
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
-        projectileSpeed = holder.GetProjectileSpeed();
+        projectileSpeed = 10f;
 
-        damage = holder.GetWeaponDamage();
-        rateOfFire = holder.GetWeaponROF();
-        fireTime = rateOfFire;
 
-        GameManager.Instance.targeting.weapon = this;
+        base.Initialize();
 
+        rateOfFire = 1f;
+
+
+    }
+
+    private void Update()
+    {
+        CanFire();
     }
 
 
     public override void Shoot()
     {
+        if(bulletPrefab == null)
+        {
+            bulletPrefab = holder.GetProjectile();
+            return;
+        }
+
+
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
