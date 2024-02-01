@@ -43,11 +43,10 @@ public class BallisticWeapon : BaseWeapon
     public override void Shoot()
     {
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-        var bullet = bulletObj.GetComponent<BaseProjectile>();
-
-        
+        var bullet = bulletObj.GetComponent<BaseProjectile>();      
 
         bullet.SetProjectileStats(totalDamage, projectileSpeed);
-        bullet.ShootProjectTile(transform.forward);
+        bullet.ShootProjectile(transform.forward);
+
     }
 }

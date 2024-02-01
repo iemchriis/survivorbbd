@@ -12,7 +12,7 @@ public class StageSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.enemyCount = spawnCount;
+        GameManager.Instance.enemyCount += spawnCount;
         StartCoroutine(CoSpawnWave());
     }
 

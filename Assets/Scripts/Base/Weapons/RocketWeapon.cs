@@ -57,6 +57,7 @@ public class RocketWeapon : BaseWeapon
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
         bullet.SetProjectileStats(totalDamage, projectileSpeed);
-        bullet.ShootProjectTile(transform.forward);
+        bullet.ShootProjectile(transform.forward);
+
     }
 }

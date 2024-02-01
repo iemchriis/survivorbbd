@@ -8,26 +8,23 @@ public class ShotgunWeapon : BaseWeapon
 
     [SerializeField] private int shotgunPellets;
 
-    [SerializeField] private Vector3[] shotSpread;
 
-    public float ConeSize;
+    public float spreadAngle = 30f;
+ 
 
-    float xSpread = Random.Range(-1, 1);
-    float ySpread = Random.Range(-1, 1);
-
-    void OnEnable()
+    public override void Initialize()
     {
         firePos = this.transform;
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
-        projectileSpeed = holder.GetProjectileSpeed();
 
-        damage = holder.GetWeaponDamage();
-        rateOfFire = holder.GetWeaponROF();
-        fireTime = rateOfFire;
+        base.Initialize();
 
-        GameManager.Instance.targeting.weapon = this;
+        damage = 5;
+        shotgunPellets = 5;
+        projectileSpeed = 15f;
+        
 
     }
 
@@ -36,15 +33,17 @@ public class ShotgunWeapon : BaseWeapon
     //Vector3 spread = new Vector3(xSpread, ySpread, 0.0f).normalized * ConeSize;
     //Quaternion rotation = Quaternion.Euler(spread) * bulletSpawn.rotation;
     //var bullet = (GameObject)Instantiate(bulletPrefab, bulletSpawn.position, rotation);
+    //float angle = spreadAngle * (i - (shotgunPellets - 1) / 2) / (shotgunPellets - 1);
+    //Quaternion rotation = Quaternion.AngleAxis(angle, firePos.forward) * firePos.rotation;
+    //Debug.Log(rotation);
+    //float pelletDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+    //float pelletDirZ = transform.position.z + Mathf.Cos((angle * Mathf.PI / 180f));
 
-    void GenerateSpread()
-    {
-        shotSpread[0] = transform.forward;
-        shotSpread[1] = transform.right + new Vector3(0, 0, -3f);
+    //Vector3 pelletVector = new Vector3(pelletDirX, 0, pelletDirZ);
+    //Vector3 pelletDirection = (pelletVector - transform.position).normalized;
 
-
-        
-    }
+    //float offset = (i - (shotgunPellets / 2)) * spreadAngle;
+    //newRot = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + offset);
 
     private void Update()
     {
@@ -53,20 +52,23 @@ public class ShotgunWeapon : BaseWeapon
 
     public override void Shoot()
     {
-        List<ShotgunProjectile> projectiles = new List<ShotgunProjectile>();
+
+        Quaternion newRot;
 
         for (int i = 0; i < shotgunPellets; i++)
         {
+            float angle = spreadAngle * (i - (shotgunPellets - 1) / 2) / (shotgunPellets -1);
+
+            newRot = Quaternion.AngleAxis(angle, firePos.up) * firePos.rotation;
+            
             GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            bulletObj.transform.rotation = newRot;
+
             var bullet = bulletObj.GetComponent<ShotgunProjectile>();
-
-            projectiles.Add(bullet);
+            bullet.SetProjectileStats(damage, projectileSpeed);
+            bullet.ShootProjectile(bullet.transform.forward);
+            Debug.Log("Shooting");
         }
-
-        projectiles[0].ShootProjectTile(transform.forward);
-
-       
-
         
     }
 }
