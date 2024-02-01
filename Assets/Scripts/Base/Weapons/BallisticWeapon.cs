@@ -31,6 +31,6 @@ public class BallisticWeapon : BaseWeapon
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
         bullet.SetProjectileStats(damage,projectileSpeed);
-        bullet.ShootProjectTile(transform.forward);
+        bullet.ShootProjectile(transform.forward);
     }
 }

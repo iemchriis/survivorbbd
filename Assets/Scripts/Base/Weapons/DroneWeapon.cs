@@ -33,6 +33,6 @@ public class DroneWeapon : BaseWeapon
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
         bullet.SetProjectileStats(damage,projectileSpeed);
-        bullet.ShootProjectTile(transform.forward);
+        bullet.ShootProjectile(transform.forward);
     }
 }

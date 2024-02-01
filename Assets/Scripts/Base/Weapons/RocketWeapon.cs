@@ -41,7 +41,7 @@ public class RocketWeapon : BaseWeapon
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
-        bullet.SetProjectileStats(damage, projectileSpeed);
-        bullet.ShootProjectTile(transform.forward);
+        bullet.SetProjectileStats(5, projectileSpeed);
+        bullet.ShootProjectile(transform.forward);
     }
 }

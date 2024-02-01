@@ -5472,6 +5472,7 @@ MonoBehaviour:
   projectiles:
   - {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
   - {fileID: 667565355365552573, guid: e941d99b8826a344b9c98a626c23a998, type: 3}
+  - {fileID: 667565355365552573, guid: ac4911c3f576dda4f877c4314360b2c7, type: 3}
   - {fileID: 667565355365552573, guid: 03268e088ce69e54b845fc19c6cf9fcf, type: 3}
 --- !u!1 &1250555796
 GameObject:

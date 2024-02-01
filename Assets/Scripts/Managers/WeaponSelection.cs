@@ -33,6 +33,11 @@ public class WeaponSelection : MonoBehaviour
                 {
                     SelectRocketWeapon();
                 }
+                break;
+                case 3:
+                {
+                    SelectShotgunWeapon();
+                }
                 break ;
         }
 
@@ -81,6 +86,18 @@ public class WeaponSelection : MonoBehaviour
         currentWeapon.Initialize();
         playerWeaponHolder.SetProjectile(projectiles[1]);
         
+        GameUIManager.Instance.selectionPanel.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void SelectShotgunWeapon()
+    {
+        playerWeaponHolder.gameObject.AddComponent<ShotgunWeapon>();
+        playerWeaponHolder.SetProjectile(projectiles[2]);
+
+        currentWeapon = playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
+        playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>().Initialize();
+
         GameUIManager.Instance.selectionPanel.SetActive(false);
         Time.timeScale = 1;
     }

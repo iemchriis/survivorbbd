@@ -28,7 +28,7 @@ public class BaseProjectile : MonoBehaviour
         projectileVelocity = projVelocity;
     }
 
-    public virtual void ShootProjectTile(Vector3 direction)
+    public virtual void ShootProjectile(Vector3 direction)
     {   
         rb.AddForce(direction * projectileVelocity, ForceMode.Impulse);
     }
