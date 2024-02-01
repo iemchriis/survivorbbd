@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallisticWeapon : BaseWeapon
 {
     [SerializeField] private GameObject bulletPrefab;
+    int totalDamage;
 
     public override void Initialize()
     {
@@ -12,7 +13,7 @@ public class BallisticWeapon : BaseWeapon
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
-       
+        totalDamage = damage;
 
 
         base.Initialize();
@@ -25,12 +26,28 @@ public class BallisticWeapon : BaseWeapon
         CanFire();
     }
 
+    void CheckCrit()
+    {
+        if (Random.value < PlayerDataManager.Instance.GetCritChanceValue())
+        {
+            // Critical hit
+            totalDamage *= 2;
+        }
+        else
+        {
+            // Normal hit
+            totalDamage = damage;
+        }
+    }
+
     public override void Shoot()
     {
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<BaseProjectile>();
 
-        bullet.SetProjectileStats(damage,projectileSpeed);
+        
+
+        bullet.SetProjectileStats(totalDamage, projectileSpeed);
         bullet.ShootProjectTile(transform.forward);
     }
 }
