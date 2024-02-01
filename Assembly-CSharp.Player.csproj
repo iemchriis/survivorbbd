@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\Base\DroneTargeting.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Base\Weapons\ShotgunWeapon.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectSnap.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\PiercingBallistic.cs" />
@@ -120,6 +121,7 @@
     <Compile Include="Assets\Scripts\Helpers\PowerupTrigger.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\Scripts\Base\Projectiles\ShotgunProjectile.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\LaserProjectile.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />

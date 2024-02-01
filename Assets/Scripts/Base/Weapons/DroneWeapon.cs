@@ -14,8 +14,8 @@ public class DroneWeapon : BaseWeapon
 
         bulletPrefab = holder.GetProjectile();
 
-        damage = holder.GetWeaponDamage();
-        rateOfFire = holder.GetWeaponROF();
+        damage = PlayerDataManager.Instance.GetDroneDamage();
+        rateOfFire = (float)PlayerDataManager.Instance.GetDroneROFValue();
         fireTime = rateOfFire;
 
        

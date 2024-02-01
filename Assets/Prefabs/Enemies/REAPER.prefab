@@ -54,6 +54,7 @@ MonoBehaviour:
   id: 
   health: 10
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageTxt: {fileID: 0}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
   hasStatusEffect: 0
   burnEffect: {fileID: 7556116353631730522}
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23440bf2850ec56409130ab9d6fdd8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Icon: {fileID: 2800000, guid: 5169d1cf8bf9f8f4faf6410ba251c55a, type: 3}
+  Icon: {fileID: 2800000, guid: a3bec04e12cfd714cb4ff85844e4c92e, type: 3}
   Arrow: {fileID: 2800000, guid: 3783f195e2c8dc84cb1461fbe881e9cb, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &3826994099950090110

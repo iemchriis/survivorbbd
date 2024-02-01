@@ -27,8 +27,10 @@ public class PlayerTriggerHelper : MonoBehaviour
             PlayerDataManager.Instance.AddPlayerCoins();
             Destroy(other.gameObject);
         }
+
         if(other.tag == "PU" && gameObject.tag == "Player")
         {
+            Debug.Log("PU TRIGGER");
             CheckPowerupTrigger(other.gameObject);
         }
        

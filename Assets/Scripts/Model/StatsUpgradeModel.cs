@@ -8,6 +8,18 @@ public class StatsUpgradeModel : MonoBehaviour
     public PlayerValues playerStats;
 
 
+    private void Start()
+    {
+        var playerData = PlayerDataManager.Instance.playerStats;
+
+        playerStats.health = playerData.health;
+        playerStats.speed = (int)playerData.movementSpeed;
+        playerStats.critChance = (int)playerData.critChance;
+        playerStats.armor = (int)playerData.armor;
+        playerStats.droneDamage = playerData.droneDamage;
+        playerStats.droneROF = (int)playerData.droneROF;
+    }
+
 
     public int GetHealthPoints()
     {
@@ -84,6 +96,12 @@ public class StatsUpgradeModel : MonoBehaviour
         return 2 - multiplier;
     }
 
+
+    public void UpdatPlayerStats()
+    {
+        PlayerDataManager.Instance.SetPlayerStats(GetHealthPoints(), GetSpeedValue(), GetCritChanceValue(), playerStats.armor, playerStats.droneDamage, playerStats.droneROF);
+        
+    }
 
 
 
