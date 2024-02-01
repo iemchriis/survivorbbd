@@ -66,13 +66,13 @@ public class EnemyScript : CharacterBase, IDebuff
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             go.transform.parent = transform.parent;
             base.Death();
-            navmesh.isStopped = true;
             GameManager.Instance.targeting.RemoveFromTargetList(this);
             GameManager.Instance.enemyCount--;
             GameManager.Instance.CheckEnemyCount();
             LevelGenerator.Instance.SpawnPowerup(transform);
             GetComponent<Animator>().SetTrigger("isDead");
             Destroy(gameObject, 2);
+            if (navmesh != null) { navmesh.isStopped = true; }
 
         }
 

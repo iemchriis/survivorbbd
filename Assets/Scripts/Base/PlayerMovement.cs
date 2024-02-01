@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        moveSpeed = (float)PlayerDataManager.Instance.GetSpeedValue();
     }
 
     private void Update()

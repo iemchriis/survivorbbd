@@ -5,6 +5,13 @@ using UnityEngine.UI;
 public class PlayerHealth : CharacterBase
 {
     public Slider hpBar;
+    private void Start()
+    {
+        health = PlayerDataManager.Instance.GetHealthValue();
+        hpBar.maxValue = PlayerDataManager.Instance.GetHealthValue();
+        hpBar.value = PlayerDataManager.Instance.GetHealthValue();
+    }
+
     public override void TakeDamage(int damage)
     {
         base.TakeDamage(damage);

@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - EXP
   - PU
+  - FxTemporaire
+  - Vision
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - UI
   - EXP
   - Enemy
-  - 
-  - 
+  - Vision
+  - PU
   - 
   - 
   - 

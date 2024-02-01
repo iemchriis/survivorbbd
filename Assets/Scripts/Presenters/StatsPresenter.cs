@@ -74,6 +74,7 @@ public class StatsPresenter : MonoBehaviour
                 break;
 
         }
+        model.UpdatPlayerStats();
 
 
     }
