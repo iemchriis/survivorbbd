@@ -1139,6 +1139,7 @@ MonoBehaviour:
   id: 
   health: 300
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageTxt: {fileID: 0}
   projectilePrefab: {fileID: 1674245100510967567, guid: 7e744257b0919374090a903ecd440aa5, type: 3}
   throwPoint: {fileID: 4002473914406065101}
   player: {fileID: 0}
@@ -1158,8 +1159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 30
+  health: 300
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageTxt: {fileID: 0}
   exp: {fileID: 919132149155446097, guid: 2f16addb4909836459bf50845cde8367, type: 3}
   hasStatusEffect: 0
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}

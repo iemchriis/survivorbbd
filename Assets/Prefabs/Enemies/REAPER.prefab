@@ -52,13 +52,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 10
+  health: 25
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 0}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
+  damage: 7
   hasStatusEffect: 0
   burnEffect: {fileID: 7556116353631730522}
-  debuffDuration: 0
 --- !u!195 &8472547934628873602
 NavMeshAgent:
   m_ObjectHideFlags: 0
