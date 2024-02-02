@@ -7,10 +7,14 @@ public class EnemyScript : CharacterBase, IDebuff
     private Transform target;
     private NavMeshAgent navmesh;
     public GameObject exp;
+    public int damage;
+
     
     public bool hasStatusEffect;
-    [SerializeField] private GameObject burnEffect;
-    [SerializeField]private float debuffDuration;
+
+
+    [SerializeField]private GameObject burnEffect;
+    private float debuffDuration;
 
     void Start()
     {
@@ -84,7 +88,7 @@ public class EnemyScript : CharacterBase, IDebuff
     {
         if(collision.transform.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
 

@@ -34,6 +34,7 @@ public class ShotgunProjectile : BaseProjectile
             if(enemy != null)
             {
                 enemy.TakeDamage(damage);
+                Destroy(gameObject);
             }
         }
     }
