@@ -11,13 +11,11 @@ public class BallisticWeapon : BaseWeapon
     {
         firePos = this.transform;
         holder = GetComponent<WeaponHolder>();
-
         bulletPrefab = holder.GetProjectile();
-        totalDamage = damage;
-
-
+       
         base.Initialize();
         projectileSpeed = 20f;
+        totalDamage = damage;
 
     }
 

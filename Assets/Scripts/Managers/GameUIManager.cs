@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameUIManager : MonoBehaviour
 {
     public Text timerText;
+    public Text coinsText;
     public float totalTime = 0;  // Set the total time in seconds
 
     public Slider expSlider;
@@ -16,8 +17,7 @@ public class GameUIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject selectionPanel;
 
-    public BaseWeapon weapon;
-
+  
     public static GameUIManager Instance { get; set; }
 
 
@@ -56,6 +56,11 @@ public class GameUIManager : MonoBehaviour
         timerText.text = $"{minutes}:{seconds}";
     }
 
+    public void UpdateCoinText(int coins)
+    {
+        coinsText.text = coins.ToString();
+    }
+
 
     public void UpdateExp()
     {
@@ -79,7 +84,7 @@ public class GameUIManager : MonoBehaviour
                 break;
 
             case 1:
-                weapon.rateOfFire -= 0.10f;
+               
                 break;
         }
 
