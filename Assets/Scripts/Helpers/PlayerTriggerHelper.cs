@@ -24,7 +24,9 @@ public class PlayerTriggerHelper : MonoBehaviour
         if(other.tag == "EXP" && gameObject.tag == "Player")
         {
             //GameUIManager.Instance.UpdateExp();
+            AudioManager.Instance.PlaySFX("Coin");
             PlayerDataManager.Instance.AddPlayerCoins();
+            GameUIManager.Instance.UpdateCoinText(PlayerDataManager.Instance.playerCoins);
             Destroy(other.gameObject);
         }
 

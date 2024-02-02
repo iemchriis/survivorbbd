@@ -43,11 +43,12 @@ public class CharacterBase : MonoBehaviour
 
     void ShowDamageText(int damage)
     {
-        GameObject txt = Instantiate(damageTxt, transform.position, Quaternion.identity,transform);
+        GameObject txt = Instantiate(damageTxt, transform.position, Quaternion.identity);
         txt.GetComponent<TextMesh>().text = damage.ToString();
 
         Vector3 offset = new Vector3(0, 3f, 0);
         txt.transform.localPosition += offset;
+        txt.transform.localRotation = Quaternion.Euler(65, 0, 0);
 
         Destroy(txt, 1);
     }

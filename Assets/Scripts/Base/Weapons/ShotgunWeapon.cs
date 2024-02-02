@@ -67,7 +67,7 @@ public class ShotgunWeapon : BaseWeapon
             var bullet = bulletObj.GetComponent<ShotgunProjectile>();
             bullet.SetProjectileStats(damage, projectileSpeed);
             bullet.ShootProjectile(bullet.transform.forward);
-            Debug.Log("Shooting");
+            
         }
         
     }

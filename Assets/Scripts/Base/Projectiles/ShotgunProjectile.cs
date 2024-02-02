@@ -17,11 +17,27 @@ public class ShotgunProjectile : BaseProjectile
 
     private void Update()
     {
+        CheckRange();
+
         //if(Vector3.Distance(startPos, transform.position) > bulletDropOff)
         //{
         //    rb.velocity = Vector3.zero;
         //    Destroy(this.gameObject);
         //}
+    }
+
+    void CheckRange()
+    {
+        float dist = Vector3.Distance(startPos, transform.position);
+
+        
+
+        if(dist > 8f)
+        {
+            Debug.Log("Range Dropoff");
+            rb.velocity = Vector3.zero;
+            Destroy(gameObject);
+        }
     }
 
 
