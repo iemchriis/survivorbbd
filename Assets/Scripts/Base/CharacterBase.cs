@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterBase : MonoBehaviour
+public abstract class CharacterBase : MonoBehaviour
 {
     public string id;
     public int health;
@@ -48,7 +48,7 @@ public class CharacterBase : MonoBehaviour
 
         Vector3 offset = new Vector3(0, 3f, 0);
         txt.transform.localPosition += offset;
-        txt.transform.localRotation = Quaternion.Euler(65, 0, 0);
+        txt.transform.localRotation = Quaternion.Euler(80, 0, 0);
 
         Destroy(txt, 1);
     }

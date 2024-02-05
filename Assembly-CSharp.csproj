@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Helpers\OffscreenMarker.cs" />
     <Compile Include="Assets\Scripts\Helpers\WeaponHolder.cs" />
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\WeaponDatas.cs" />
     <Compile Include="Assets\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />
     <Compile Include="Assets\Scripts\Presenters\StatsPresenter.cs" />

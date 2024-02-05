@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseWeapon : MonoBehaviour
+public abstract class BaseWeapon : MonoBehaviour
 {
     public WeaponHolder holder;
     
@@ -17,7 +17,6 @@ public class BaseWeapon : MonoBehaviour
 
     public virtual void Initialize()
     {
-
 
         damage = holder.GetWeaponDamage();
         rateOfFire = holder.GetWeaponROF();
