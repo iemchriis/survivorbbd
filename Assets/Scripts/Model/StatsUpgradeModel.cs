@@ -10,6 +10,7 @@ public class StatsUpgradeModel : MonoBehaviour
 
     private void Start()
     {
+
         var playerData = PlayerDataManager.Instance.playerStats;
 
         playerStats.health = playerData.health;
@@ -18,6 +19,7 @@ public class StatsUpgradeModel : MonoBehaviour
         playerStats.armor = (int)playerData.armor;
         playerStats.droneDamage = playerData.droneDamage;
         playerStats.droneROF = (int)playerData.droneROF;
+        playerStats.droneDamageType = (int)playerData.droneDamageType;
     }
 
 
@@ -49,6 +51,11 @@ public class StatsUpgradeModel : MonoBehaviour
     public int GetDroneROF()
     {
         return playerStats.droneROF;
+    }
+
+    public int GetDroneDamageType()
+    {
+        return playerStats.droneDamageType;
     }
 
 
@@ -112,5 +119,5 @@ public class StatsUpgradeModel : MonoBehaviour
 public class PlayerValues
 {
     public int health, armor, speed, critChance;
-    public int droneDamage, droneROF;
+    public int droneDamage, droneROF, droneDamageType;
 }

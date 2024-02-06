@@ -73,6 +73,15 @@ public class StatsPresenter : MonoBehaviour
                 }
                 break;
 
+            case 6:
+                if (playerCoins >= model.GetStatCost(model.playerStats.droneDamageType))
+                {
+                    PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.droneDamageType));
+                    model.playerStats.droneDamageType += 1;
+                    view.UpdatePlayerStatsUI();
+                }
+                break;
+
         }
         model.UpdatPlayerStats();
 

@@ -8,6 +8,7 @@ public class EnemyScript : CharacterBase, IDebuff
     private NavMeshAgent navmesh;
     public GameObject exp;
     public int damage;
+    public UnityEngine.UI.Slider hpSlider;
 
     
     public bool hasStatusEffect;
@@ -20,6 +21,8 @@ public class EnemyScript : CharacterBase, IDebuff
     {
         target = GameObject.FindObjectOfType<PlayerMovement>().transform;
         navmesh = GetComponent <NavMeshAgent>();
+        hpSlider.maxValue = health;
+        hpSlider.value = health;
     }
 
    
@@ -29,7 +32,7 @@ public class EnemyScript : CharacterBase, IDebuff
         base.TakeDamage(damage);
         
         health -= damage;
-       
+        if (hpSlider != null) { hpSlider.value -= damage; }
         if(health <= 0)
         {
             Death();

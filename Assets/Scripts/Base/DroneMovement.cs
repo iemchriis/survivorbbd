@@ -14,6 +14,7 @@ public class DroneMovement : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         
+        
     }
 
     private void Update()

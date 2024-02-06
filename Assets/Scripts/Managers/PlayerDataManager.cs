@@ -44,6 +44,7 @@ public class PlayerDataManager : MonoBehaviour
             playerStats.armor = float.Parse(data["armor"].ToString());
             playerStats.droneDamage = int.Parse(data["droneDamage"].ToString());
             playerStats.droneROF = float.Parse(data["droneROF"].ToString());
+            playerStats.droneDamageType = int.Parse(data["droneDamageType"].ToString());
             playerCoins = PlayerPrefs.GetInt("PLAYER_COINS");
         }
 
@@ -160,6 +161,6 @@ public class PlayerStats
     public int health;
     public double movementSpeed, critChance, armor;
 
-    public int droneDamage;
+    public int droneDamage, droneDamageType;
     public double droneROF;
 }
