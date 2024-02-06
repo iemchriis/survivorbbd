@@ -19,6 +19,21 @@ public abstract class WeaponDatas : ScriptableObject
 
 
 
+    public int GetCurrentDamage()
+    {
+        return damage[weaponLevel - 1];
+    }
+
+    public float GetCurrentFireRate()
+    {
+        return fireRate[weaponLevel - 1];
+    }
+
+    public float GetCurrentCritDamage()
+    {
+        return critMultiplier[weaponLevel - 1];
+    }
+
 }
 
 

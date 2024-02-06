@@ -109,8 +109,8 @@
     <Compile Include="Assets\Scripts\Base\Weapons\ShotgunWeapon.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectSnap.cs" />
-    <Compile Include="Assets\Scripts\Base\Projectiles\PiercingBallistic.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\BallisticWeaponData.cs" />
+    <Compile Include="Assets\Scripts\Base\Projectiles\PiercingBallistic.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LaserWeaponData.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ShotgunWeaponData.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />

@@ -6,44 +6,28 @@ public class LaserWeapon : BaseWeapon
 {
     
     private float gunRange = 100f;
-    public float laserDuration = 0.1f;
-
+    private float laserDuration = 0.1f;
+    public LaserData laserData;
     private LineRenderer laserLine;
 
-    
-    private float burnDuration = 10f;
-    private int burnTick = 2;
+  
 
    
 
-    void OnEnable()
+    public override void Initialize()
     {
-        holder = GetComponent<WeaponHolder>();
+        
         laserLine = GetComponent<LineRenderer>();
+        laserData = (LaserData)weaponData;
+        
+        base.Initialize();
 
-        firePos = this.transform;
-
-        rateOfFire =holder.GetWeaponROF();
-        fireTime = rateOfFire;
-        damage = holder.GetWeaponDamage();
-
-        GameManager.Instance.targeting.weapon = this;
     }
 
    
     void Update()
     {
-        if(canFire)
-        {
-            fireTime -= Time.deltaTime;
-            if (fireTime <= 0)
-            {
-                fireTime = rateOfFire;
-                Shoot();
-            }
-        }
-
-       
+        CanFire(weaponData.GetCurrentFireRate());
     }
 
     public override void Shoot()
@@ -58,10 +42,10 @@ public class LaserWeapon : BaseWeapon
             
             if(hit.transform.CompareTag("Enemy"))
             {
-                Debug.Log(hit.transform.name);
+               
                 var enemy = hit.transform.GetComponent<EnemyScript>();
-                enemy.TakeDamage(damage);
-                enemy.TakeDamageOverTime(damage, 10f, 2);
+                enemy.TakeDamage(laserData.GetCurrentDamage());
+                enemy.TakeDamageOverTime(laserData.GetBurnDamage(), laserData.GetBurnDuration(), 1);
             }
 
             

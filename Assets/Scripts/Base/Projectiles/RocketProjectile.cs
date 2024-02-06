@@ -6,13 +6,11 @@ public class RocketProjectile : BaseProjectile
 {
     [SerializeField] private GameObject aoeEffect;
 
-    [SerializeField] private float explosionRadius;
+    private float explosionRadius;
 
-
-    private void Start()
+    public void SetDamageValues(int damage, float radius)
     {
-        damage = 20;
-        
+        aoeEffect.GetComponent<RocketExplosionAOE>().SetValues(damage, radius);
     }
 
     public override void OnTriggerEnter(Collider other)

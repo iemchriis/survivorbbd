@@ -4,28 +4,20 @@ using UnityEngine;
 
 public class RocketWeapon : BaseWeapon
 {
-    [SerializeField]private GameObject bulletPrefab;
+    public RocketData rocketData;
     int totalDamage;
 
     public override void Initialize()
     {
-        firePos = this.transform;
-        holder = GetComponent<WeaponHolder>();
 
-        bulletPrefab = holder.GetProjectile();
-        projectileSpeed = 10f;
-
-
+        rocketData = (RocketData)weaponData;
         base.Initialize();
-
-        rateOfFire = 1f;
-
 
     }
 
     private void Update()
     {
-        CanFire();
+        CanFire(weaponData.fireRate[weaponData.weaponLevel -1]);
     }
 
     void CheckCrit()
@@ -38,7 +30,7 @@ public class RocketWeapon : BaseWeapon
         else
         {
             // Normal hit
-            totalDamage = damage;
+            //totalDamage = damage;
         }
     }
 
@@ -46,17 +38,13 @@ public class RocketWeapon : BaseWeapon
 
     public override void Shoot()
     {
-        if(bulletPrefab == null)
-        {
-            bulletPrefab = holder.GetProjectile();
-            return;
-        }
-
 
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-        var bullet = bulletObj.GetComponent<BaseProjectile>();
+        var bullet = bulletObj.GetComponent<RocketProjectile>();
 
-        bullet.SetProjectileStats(totalDamage, projectileSpeed);
+
+        bullet.SetProjectileStats(totalDamage, weaponData.projectileSpeed);
+        //bullet.SetDamageValues(r)
         bullet.ShootProjectile(transform.forward);
 
     }

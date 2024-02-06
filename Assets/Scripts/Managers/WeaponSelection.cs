@@ -8,8 +8,7 @@ public class WeaponSelection : MonoBehaviour
     [SerializeField]private WeaponHolder playerWeaponHolder;
 
     private int weaponIndex;
-
-    [SerializeField]private GameObject[] projectiles;
+    [SerializeField]private WeaponDatas[] weaponDatas;  
 
 
     private void Awake()
@@ -41,18 +40,6 @@ public class WeaponSelection : MonoBehaviour
                 break ;
         }
 
-        //if (PlayerDataManager.Instance.currentWeapon == 0)
-        //{
-        //    SelectBallisticWeapon();
-        //}
-        //else if(PlayerDataManager.Instance.currentWeapon == 1)
-        //{
-        //    SelectLaserWeapon();
-        //}
-        //else if(PlayerDataManager.Instance.currentWeapon == 2)
-        //{
-        //    SelectRocketWeapon();
-        //}
         
     }
 
@@ -60,46 +47,47 @@ public class WeaponSelection : MonoBehaviour
     public void SelectBallisticWeapon()
     {
         playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
-        playerWeaponHolder.SetProjectile(projectiles[0]);
-
         currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
-        playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>().Initialize();
+        currentWeapon.weaponData = weaponDatas[0];
+        currentWeapon.Initialize();
 
 
-
-        GameUIManager.Instance.selectionPanel.SetActive(false);
-        Time.timeScale = 1;
+    
     }
 
     public void SelectLaserWeapon()
     {
         playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
         currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
-        GameUIManager.Instance.selectionPanel.SetActive(false);
-        Time.timeScale = 1;
+        currentWeapon.weaponData = weaponDatas[1];
+        currentWeapon.Initialize();
+
+    
     }
 
     public void SelectRocketWeapon()
     {
         playerWeaponHolder.gameObject.AddComponent<RocketWeapon>();
         currentWeapon = playerWeaponHolder.gameObject.GetComponent<RocketWeapon>();
+        currentWeapon.weaponData = weaponDatas[2];
         currentWeapon.Initialize();
-        playerWeaponHolder.SetProjectile(projectiles[1]);
-        
-        GameUIManager.Instance.selectionPanel.SetActive(false);
-        Time.timeScale = 1;
+
+      
     }
 
     public void SelectShotgunWeapon()
     {
         playerWeaponHolder.gameObject.AddComponent<ShotgunWeapon>();
-        playerWeaponHolder.SetProjectile(projectiles[2]);
+        currentWeapon = (ShotgunWeapon) playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
+        currentWeapon.weaponData = weaponDatas[3];
+        currentWeapon.Initialize();
 
-        currentWeapon = playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
-        playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>().Initialize();
+       
+    }
 
-        GameUIManager.Instance.selectionPanel.SetActive(false);
-        Time.timeScale = 1;
+    void ResumeGame()
+    {
+
     }
 
 

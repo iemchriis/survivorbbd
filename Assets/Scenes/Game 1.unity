@@ -1339,7 +1339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1249580039}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WeaponSelection, Assembly-CSharp
         m_MethodName: SelectBallisticWeapon
         m_Mode: 1
@@ -5501,11 +5501,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
   playerWeaponHolder: {fileID: 1143959217}
-  projectiles:
-  - {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
-  - {fileID: 667565355365552573, guid: e941d99b8826a344b9c98a626c23a998, type: 3}
-  - {fileID: 667565355365552573, guid: ac4911c3f576dda4f877c4314360b2c7, type: 3}
-  - {fileID: 667565355365552573, guid: 03268e088ce69e54b845fc19c6cf9fcf, type: 3}
+  weaponDatas:
+  - {fileID: 11400000, guid: 18a0d4bf142d579459a80677e316c8eb, type: 2}
+  - {fileID: 11400000, guid: d06a29f0c0508c64b8055e259cd4f1df, type: 2}
+  - {fileID: 11400000, guid: 81747f0b2ea1cbb46a3329b4147f6507, type: 2}
+  - {fileID: 11400000, guid: 094307bf40797314faf9d0c3d0703ad5, type: 2}
 --- !u!1 &1250555796
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,17 +6402,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5731698319521074409, guid: bd3246a3f6b8d224aa8cd507f43e7719, type: 3}
   m_PrefabInstance: {fileID: 6411831072869123762}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1528908286 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 528907842231378910, guid: bd3246a3f6b8d224aa8cd507f43e7719, type: 3}
-  m_PrefabInstance: {fileID: 6411831072869123762}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528908283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443db07352d6fde48b766fe89f5000ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1528908287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6425,14 +6414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd58de0756bdaf04bb239ad85a014bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holder: {fileID: 1528908286}
+  bulletPrefab: {fileID: 0}
   firePos: {fileID: 1528908285}
-  damage: 1
-  rateOfFire: 0.25
-  projectileSpeed: 20
+  weaponData: {fileID: 0}
   fireTime: 0
   canFire: 0
-  bulletPrefab: {fileID: 0}
 --- !u!1 &1558652898
 GameObject:
   m_ObjectHideFlags: 0
@@ -8259,7 +8245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1249580039}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: WeaponSelection, Assembly-CSharp
         m_MethodName: SelectLaserWeapon
         m_Mode: 1

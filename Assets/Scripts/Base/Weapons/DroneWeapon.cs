@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class DroneWeapon : BaseWeapon
 {
-    [SerializeField] private GameObject bulletPrefab;
+    private WeaponHolder holder;
+    private int damage;
+    private float rateOfFire;
+    private float projectileSpeed;
 
 
     void OnEnable()
@@ -24,7 +27,7 @@ public class DroneWeapon : BaseWeapon
 
     private void Update()
     {
-        CanFire();
+        CanFire(rateOfFire);
     }
 
     public override void Shoot()

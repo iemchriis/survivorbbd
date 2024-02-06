@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class BallisticWeapon : BaseWeapon
 {
-    [SerializeField] private GameObject bulletPrefab;
-    int totalDamage;
-
+    private int totalDamage;
+    public BallisticData ballisticData;
     public override void Initialize()
-    {
-        firePos = this.transform;
-        holder = GetComponent<WeaponHolder>();
-        bulletPrefab = holder.GetProjectile();
-       
+    {            
+        ballisticData = (BallisticData)weaponData;
+        bulletPrefab = ballisticData.projectile;
         base.Initialize();
-        projectileSpeed = 20f;
-        totalDamage = damage;
 
     }
 
     private void Update()
     {
-        CanFire();
+        CanFire(ballisticData.GetCurrentFireRate());
     }
 
     void CheckCrit()
@@ -29,12 +24,12 @@ public class BallisticWeapon : BaseWeapon
         if (Random.value < PlayerDataManager.Instance.GetCritChanceValue())
         {
             // Critical hit
-            totalDamage *= 2;
+            totalDamage  = (int)(ballisticData.GetCurrentDamage() * ballisticData.critMultiplier[weaponData.weaponLevel -1]);
         }
         else
         {
             // Normal hit
-            totalDamage = damage;
+            totalDamage = ballisticData.GetCurrentDamage();
         }
     }
 
@@ -43,7 +38,7 @@ public class BallisticWeapon : BaseWeapon
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<BaseProjectile>();      
 
-        bullet.SetProjectileStats(totalDamage, projectileSpeed);
+        bullet.SetProjectileStats(totalDamage, ballisticData.projectileSpeed);
         bullet.ShootProjectile(transform.forward);
 
     }

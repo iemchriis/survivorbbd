@@ -6,13 +6,12 @@ public class RocketExplosionAOE : MonoBehaviour
 {
     private SphereCollider aoe;
 
-    [SerializeField] private int damage;
+    private int damage;
 
 
     private void Awake()
     {
         aoe = GetComponent<SphereCollider>();
-        damage = 5;
     }
 
     public void SetValues(int damage, float radius)

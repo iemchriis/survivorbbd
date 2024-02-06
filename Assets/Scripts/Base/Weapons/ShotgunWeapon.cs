@@ -4,26 +4,17 @@ using UnityEngine;
 
 public class ShotgunWeapon : BaseWeapon
 {
-    private GameObject bulletPrefab;
-
+    
     [SerializeField] private int shotgunPellets;
-
-
-    public float spreadAngle = 30f;
+    public ShotgunData shotgunData;
  
 
     public override void Initialize()
     {
-        firePos = this.transform;
-        holder = GetComponent<WeaponHolder>();
-
-        bulletPrefab = holder.GetProjectile();
-
+        shotgunData = (ShotgunData)weaponData;
+        shotgunPellets = shotgunData.pelletCount[shotgunData.weaponLevel -1];
         base.Initialize();
 
-        damage = 5;
-        shotgunPellets = 5;
-        projectileSpeed = 15f;
         
 
     }
@@ -47,7 +38,7 @@ public class ShotgunWeapon : BaseWeapon
 
     private void Update()
     {
-        CanFire();
+        CanFire(weaponData.fireRate[weaponData.weaponLevel-1]);
     }
 
     public override void Shoot()
@@ -57,7 +48,7 @@ public class ShotgunWeapon : BaseWeapon
 
         for (int i = 0; i < shotgunPellets; i++)
         {
-            float angle = spreadAngle * (i - (shotgunPellets - 1) / 2) / (shotgunPellets -1);
+            float angle = shotgunData.spreadAngle[shotgunData.weaponLevel -1] * (i - (shotgunPellets - 1) / 2) / (shotgunPellets -1);
 
             newRot = Quaternion.AngleAxis(angle, firePos.up) * firePos.rotation;
             
@@ -65,7 +56,7 @@ public class ShotgunWeapon : BaseWeapon
             bulletObj.transform.rotation = newRot;
 
             var bullet = bulletObj.GetComponent<ShotgunProjectile>();
-            bullet.SetProjectileStats(damage, projectileSpeed);
+            bullet.SetProjectileStats(weaponData.damage[weaponData.weaponLevel-1], weaponData.projectileSpeed);
             bullet.ShootProjectile(bullet.transform.forward);
             
         }
