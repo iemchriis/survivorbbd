@@ -116,11 +116,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 20
+  health: 200
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
-  damage: 5
+  damage: 10
+  hpSlider: {fileID: 0}
   hasStatusEffect: 0
   burnEffect: {fileID: 5781774722926084323}
 --- !u!195 &8911974493853456521
@@ -133,7 +134,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.71
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

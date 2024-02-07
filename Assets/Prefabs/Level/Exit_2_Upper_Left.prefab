@@ -114,6 +114,7 @@ MonoBehaviour:
   - {fileID: 1281335033250476449}
   - {fileID: 5009635349981563047}
   - {fileID: 6244057069337953169}
+  waitTime: 1
   spawnCount: 20
 --- !u!1 &3852124539998104144
 GameObject:
@@ -229,6 +230,7 @@ MonoBehaviour:
   - {fileID: 7929010547211511831}
   - {fileID: 5212917895944279737}
   - {fileID: 5195635334106968491}
+  waitTime: 5
   spawnCount: 20
 --- !u!1 &5789996848224042116
 GameObject:

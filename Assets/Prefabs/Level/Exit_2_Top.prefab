@@ -157,6 +157,7 @@ MonoBehaviour:
   - {fileID: 7564688494857839060}
   - {fileID: 7720650461035424961}
   - {fileID: 3594950301917816921}
+  waitTime: 1
   spawnCount: 20
 --- !u!1 &1909883742334443606
 GameObject:
@@ -1403,6 +1404,7 @@ MonoBehaviour:
   - {fileID: 7955371787240668831}
   - {fileID: 2665426281456217362}
   - {fileID: 901367317519317235}
+  waitTime: 5
   spawnCount: 20
 --- !u!1 &6020489641225711845
 GameObject:
