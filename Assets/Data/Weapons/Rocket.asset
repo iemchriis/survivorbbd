@@ -13,9 +13,37 @@ MonoBehaviour:
   m_Name: Rocket
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  projectileSpeed: 0
-  weaponLevel: 0
-  damage: 
-  critMultiplier: []
-  fireRate: []
-  splashRadius: 0
+  projectileSpeed: 3
+  weaponLevel: 1
+  damage: fa0000002c010000450100005e01000077010000
+  damageRange:
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  critChance:
+  - 0.01
+  - 0.01
+  - 0.01
+  - 0.01
+  - 0.01
+  critMultiplier:
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  fireRate:
+  - 3.5
+  - 3.25
+  - 3
+  - 2.75
+  - 2.5
+  splashRadius:
+  - 5
+  - 6
+  - 6.5
+  - 7
+  - 7.5
+  splashDamage: 6400000064000000640000006400000064000000

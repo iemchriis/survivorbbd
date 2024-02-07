@@ -14,11 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
   projectileSpeed: 0
-  weaponLevel: 0
-  damage: 
-  critMultiplier: []
-  fireRate: []
-  laserRange: []
-  burnDamage: []
-  burnDuration: []
-  burnTicks: []
+  weaponLevel: 1
+  damage: 5000000064000000780000008c000000a0000000
+  damageRange:
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
+  critChance:
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  critMultiplier:
+  - 1.25
+  - 1.25
+  - 1.25
+  - 1.25
+  - 1.25
+  fireRate:
+  - 1.25
+  - 1
+  - 0.75
+  - 0.5
+  - 0.25
+  laserRange: 40
+  burnDamage: 020000000400000006000000080000000a000000
+  burnDuration:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  burnTicks:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
