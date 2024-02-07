@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ProjectileBoss : CharacterBase
 {
-    public GameObject projectilePrefab;
+    public GameObject projectilePrefab, summonPrefab;
     public Transform throwPoint;
     public Transform player;
     public float throwRate = 2f; // Time between throws in seconds
     private float throwTimer = 0f;
     public float throwSpeed = 10f;
+    int attackCount;
+    public int requiredAttacksToSummon, summonCount;
     public Animator anim;
 
     private void Awake()
@@ -23,17 +25,40 @@ public class ProjectileBoss : CharacterBase
 
         if (throwTimer >= throwRate)
         {
-            ThrowProjectile();
+            if (attackCount < requiredAttacksToSummon)
+            {
+                ThrowProjectile();
+            }
+            else
+            {
+                Summon();
+            }
             throwTimer = 0f; // Reset the timer
         }
     }
 
+    public void SpawnMinions()
+    {
+        for(int i = 0; i < summonCount; i++ )
+        {
+            Vector3 randomPosition = Random.insideUnitSphere + transform.position;
+            GameObject go = Instantiate(summonPrefab, transform);
+            go.transform.position = new Vector3(randomPosition.x, transform.position.y, randomPosition.z);
+        }
+    }
 
 
     void ThrowProjectile()
     {
         anim.SetBool("Attack 01", true);
+        attackCount++;
         // Additional projectile setup if needed
+    }
+
+    void Summon()
+    {
+        anim.SetBool("Summon", true);
+        attackCount = 0;
     }
 
 
@@ -59,6 +84,12 @@ public class ProjectileBoss : CharacterBase
     public void StopAnim()
     {
         anim.SetBool("Attack 01", false);
+    }
+
+
+    public void StopSummon()
+    {
+        anim.SetBool("Summon", false);
     }
 }
 

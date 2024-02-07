@@ -8,6 +8,8 @@ public class StageSpawner : MonoBehaviour
 
     public Transform[] spawnPoint;
 
+    public float waitTime = 1;
+
     public int spawnCount;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,7 @@ public class StageSpawner : MonoBehaviour
             GameObject go = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             go.transform.position = spawnPoint[rand].position;
             go.transform.parent = transform;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(waitTime);
         }
     }
   
