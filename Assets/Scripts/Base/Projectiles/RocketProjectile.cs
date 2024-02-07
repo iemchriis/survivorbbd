@@ -8,7 +8,7 @@ public class RocketProjectile : BaseProjectile
 
     private float explosionRadius;
 
-    public void SetDamageValues(int damage, float radius)
+    public void SetSplashDamageValues(int damage, float radius)
     {
         aoeEffect.GetComponent<RocketExplosionAOE>().SetValues(damage, radius);
     }

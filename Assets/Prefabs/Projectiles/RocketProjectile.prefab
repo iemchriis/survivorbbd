@@ -149,7 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileVelocity: 0
   aoeEffect: {fileID: 5376597461953114930}
-  explosionRadius: 0
 --- !u!1 &5376597461953114930
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f819a1a7f7697469356bd13e00b0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  aoe: {fileID: 2419416335056133679}
 --- !u!1001 &6938557193847042712
 PrefabInstance:
   m_ObjectHideFlags: 0

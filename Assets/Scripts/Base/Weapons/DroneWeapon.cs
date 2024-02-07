@@ -10,18 +10,22 @@ public class DroneWeapon : BaseWeapon
     private float projectileSpeed;
 
 
-    void OnEnable()
+    void Start()
     {
         firePos = this.transform;
         holder = GetComponent<WeaponHolder>();
 
         bulletPrefab = holder.GetProjectile();
+        projectileSpeed = 20f;
 
         damage = PlayerDataManager.Instance.GetDroneDamage();
         rateOfFire = (float)PlayerDataManager.Instance.GetDroneROFValue();
-        fireTime = rateOfFire;
+        
 
-       
+        damage = 10;
+        rateOfFire = 0.5f;
+
+       fireTime = rateOfFire;
 
     }
 

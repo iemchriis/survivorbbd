@@ -37,10 +37,12 @@ public abstract class WeaponDatas : ScriptableObject
         return fireRate[weaponLevel - 1];
     }
 
-    public float GetCurrentCritDamage()
+    public float GetCurrentCritRate()
     {
-        return critMultiplier[weaponLevel - 1];
+        return critChance[weaponLevel - 1];
     }
+
+   
 
     public float GetDamageRange()
     {

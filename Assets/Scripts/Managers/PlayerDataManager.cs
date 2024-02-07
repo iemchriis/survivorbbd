@@ -9,7 +9,7 @@ public class PlayerDataManager : MonoBehaviour
     public PlayerStats playerStats;
     public int currentWeapon;
 
-
+    public int premiumCoins;
     public int playerCoins;
     public static PlayerDataManager Instance { get; set; }
 

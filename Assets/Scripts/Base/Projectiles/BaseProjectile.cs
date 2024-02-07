@@ -17,7 +17,7 @@ public class BaseProjectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        Destroy(gameObject, 10f);      
+        Destroy(gameObject, 5f);      
     }
 
  

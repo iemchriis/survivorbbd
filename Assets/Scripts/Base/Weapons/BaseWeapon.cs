@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseWeapon : MonoBehaviour
+public class BaseWeapon : MonoBehaviour
 {
     //public WeaponHolder holder;
     [SerializeField]protected GameObject bulletPrefab;

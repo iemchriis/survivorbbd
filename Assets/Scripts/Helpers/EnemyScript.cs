@@ -21,8 +21,13 @@ public class EnemyScript : CharacterBase, IDebuff
     {
         target = GameObject.FindObjectOfType<PlayerMovement>().transform;
         navmesh = GetComponent <NavMeshAgent>();
-        hpSlider.maxValue = health;
-        hpSlider.value = health;
+
+        if(hpSlider != null)
+        {
+            hpSlider.maxValue = health;
+            hpSlider.value = health;
+        }
+
     }
 
    
@@ -54,9 +59,9 @@ public class EnemyScript : CharacterBase, IDebuff
         hasStatusEffect = true;
         burnEffect.SetActive(true);
         while (debuffDuration > 0)
-        {         
-            
-            health -= damage;
+        {
+
+            TakeDamage(damage);
             Debug.Log("Burning");
             yield return new WaitForSeconds(tickTime);
         }

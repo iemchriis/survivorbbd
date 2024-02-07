@@ -21,10 +21,14 @@ public class BallisticWeapon : BaseWeapon
 
     void CheckCrit()
     {
-        if (Random.value < PlayerDataManager.Instance.GetCritChanceValue())
+        var rand = Random.value;
+        //Debug.Log(rand);
+        if (rand < PlayerDataManager.Instance.GetCritChanceValue() + ballisticData.GetCurrentCritRate())
         {
             // Critical hit
-            totalDamage  = (int)(ballisticData.GetCurrentDamage() * ballisticData.critMultiplier[weaponData.weaponLevel -1]);
+           
+            Debug.Log("Crit");
+            totalDamage  = ballisticData.GetCritDamage();
         }
         else
         {
@@ -35,10 +39,13 @@ public class BallisticWeapon : BaseWeapon
 
     public override void Shoot()
     {
+        CheckCrit();
+
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-        var bullet = bulletObj.GetComponent<BaseProjectile>();      
+        var bullet = bulletObj.GetComponent<PiercingBallistic>();      
 
         bullet.SetProjectileStats(totalDamage, ballisticData.projectileSpeed);
+        bullet.SetPierceLevel(ballisticData.GetPierceCount());
         bullet.ShootProjectile(transform.forward);
 
     }
