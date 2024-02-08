@@ -34,10 +34,30 @@ public class StatsView : MonoBehaviour
         DroneDamageCostText.text = presenter.model.GetStatCost(presenter.model.GetDroneDamage()).ToString();
         DroneROFCostText.text = presenter.model.GetStatCost(presenter.model.GetDroneROF()).ToString();
         DroneTypeCostText.text = presenter.model.GetStatCost(presenter.model.GetDroneDamageType()).ToString();
-
+        CheckMaxUI();
 
         coinText.text = PlayerDataManager.Instance.GetPlayerCoins().ToString();
     }
+
+
+    void CheckMaxUI()
+    {
+
+
+        HealthCostText.gameObject.SetActive(presenter.model.GetHealthPoints() < presenter.model.playerStats.statMaxValue);
+        ArmorCostText.gameObject.SetActive(presenter.model.GetArmorPoints() < presenter.model.playerStats.statMaxValue);
+        SpeedCostText.gameObject.SetActive(presenter.model.GetSpeedPoints() < presenter.model.playerStats.statMaxValue);
+        CritCostText.gameObject.SetActive(presenter.model.GetCritChancePoints() < presenter.model.playerStats.statMaxValue);
+        DroneDamageCostText.gameObject.SetActive(presenter.model.GetDroneDamage() < presenter.model.playerStats.statMaxValue);
+        DroneROFCostText.gameObject.SetActive(presenter.model.GetDroneROF() < presenter.model.playerStats.statMaxValue);
+        DroneTypeCostText.gameObject.SetActive(presenter.model.GetDroneDamageType() < presenter.model.playerStats.droneDamageMaxValue);
+
+        // SpeedValueText.text = presenter.model.GetSpeedValue().ToString();
+        //  CritValueText.text
+
+    }
+
+
 
 
 

@@ -635,7 +635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &140659692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1738,6 +1738,7 @@ MonoBehaviour:
     droneDamageType: 0
     droneROF: 0
   currentWeapon: 0
+  premiumCoins: 0
   playerCoins: 0
 --- !u!1 &483139818
 GameObject:
@@ -3255,6 +3256,8 @@ MonoBehaviour:
     droneDamage: 0
     droneROF: 0
     droneDamageType: 0
+    droneDamageMaxValue: 4
+    statMaxValue: 5
 --- !u!114 &1153626412
 MonoBehaviour:
   m_ObjectHideFlags: 0

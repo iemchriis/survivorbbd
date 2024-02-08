@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Helpers\WeaponHolder.cs" />
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponDatas.cs" />
+    <Compile Include="Assets\Scripts\Helpers\TriggerShow.cs" />
     <Compile Include="Assets\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />
     <Compile Include="Assets\Scripts\Presenters\StatsPresenter.cs" />
@@ -87,7 +88,6 @@
     <Compile Include="Assets\Scripts\Helpers\PlayerTriggerHelper.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\SlowProjectile.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\Scripts\Helpers\WeaponChoose.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\RocketWeapon.cs" />
     <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -95,6 +95,8 @@
     <Compile Include="Assets\Scripts\Base\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\BaseProjectile.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\Scripts\Helpers\WeaponUpgrade.cs" />
+    <Compile Include="Assets\Scripts\Helpers\ChooseWeapon.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\BaseWeapon.cs" />
     <Compile Include="Assets\Scripts\Base\CharacterBase.cs" />

@@ -104,6 +104,7 @@ public class StatsUpgradeModel : MonoBehaviour
     }
 
 
+
     public void UpdatPlayerStats()
     {
         PlayerDataManager.Instance.SetPlayerStats(GetHealthPoints(), GetSpeedValue(), GetCritChanceValue(), playerStats.armor, playerStats.droneDamage, playerStats.droneROF);
@@ -119,5 +120,6 @@ public class StatsUpgradeModel : MonoBehaviour
 public class PlayerValues
 {
     public int health, armor, speed, critChance;
-    public int droneDamage, droneROF, droneDamageType;
+    public int droneDamage, droneROF, droneDamageType, droneDamageMaxValue;
+    public int statMaxValue;
 }

@@ -23,7 +23,7 @@ public class StatsPresenter : MonoBehaviour
         switch(statIndex)
         {
             case 0:
-                if (playerCoins >= model.GetStatCost(model.playerStats.health))
+                if (playerCoins >= model.GetStatCost(model.playerStats.health) && model.playerStats.health < model.playerStats.statMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.health));
                     model.playerStats.health += 1;
@@ -31,7 +31,7 @@ public class StatsPresenter : MonoBehaviour
                 }
                 break;
             case 1:
-                if (playerCoins >= model.GetStatCost(model.playerStats.armor))
+                if (playerCoins >= model.GetStatCost(model.playerStats.armor) && model.playerStats.armor < model.playerStats.statMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.armor));
                     model.playerStats.armor += 1;
@@ -39,7 +39,7 @@ public class StatsPresenter : MonoBehaviour
                 }
                 break;
             case 2:
-                if (playerCoins >= model.GetStatCost(model.playerStats.speed))
+                if (playerCoins >= model.GetStatCost(model.playerStats.speed) && model.playerStats.speed < model.playerStats.statMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.speed));
                     model.playerStats.speed += 1;
@@ -47,7 +47,7 @@ public class StatsPresenter : MonoBehaviour
                 }
                 break;
             case 3:
-                if (playerCoins >= model.GetStatCost(model.playerStats.critChance))
+                if (playerCoins >= model.GetStatCost(model.playerStats.critChance) && model.playerStats.critChance < model.playerStats.statMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.critChance));
                     model.playerStats.critChance += 1;
@@ -56,7 +56,7 @@ public class StatsPresenter : MonoBehaviour
                 break;
 
             case 4:
-                if (playerCoins >= model.GetStatCost(model.playerStats.droneDamage))
+                if (playerCoins >= model.GetStatCost(model.playerStats.droneDamage) && model.playerStats.droneDamage < model.playerStats.statMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.droneDamage));
                     model.playerStats.droneDamage += 1;
@@ -65,7 +65,7 @@ public class StatsPresenter : MonoBehaviour
                 break;
 
             case 5:
-                if (playerCoins >= model.GetStatCost(model.playerStats.droneROF))
+                if (playerCoins >= model.GetStatCost(model.playerStats.droneROF) && model.playerStats.droneROF < model.playerStats.statMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.droneROF));
                     model.playerStats.droneROF += 1;
@@ -74,7 +74,7 @@ public class StatsPresenter : MonoBehaviour
                 break;
 
             case 6:
-                if (playerCoins >= model.GetStatCost(model.playerStats.droneDamageType))
+                if (playerCoins >= model.GetStatCost(model.playerStats.droneDamageType) && model.playerStats.droneDamageType < model.playerStats.droneDamageMaxValue)
                 {
                     PlayerDataManager.Instance.DeductCoins(model.GetStatCost(model.playerStats.droneDamageType));
                     model.playerStats.droneDamageType += 1;
