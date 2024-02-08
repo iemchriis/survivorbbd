@@ -185,10 +185,13 @@ MonoBehaviour:
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 0}
   projectilePrefab: {fileID: 1674245100510967567, guid: 7e744257b0919374090a903ecd440aa5, type: 3}
+  summonPrefab: {fileID: 0}
   throwPoint: {fileID: 740666434882036356}
   player: {fileID: 0}
-  throwRate: 2
+  throwRate: 5
   throwSpeed: 10
+  requiredAttacksToSummon: 10000
+  summonCount: 0
   anim: {fileID: 2036109890718733270}
 --- !u!114 &8285045886707242598
 MonoBehaviour:
