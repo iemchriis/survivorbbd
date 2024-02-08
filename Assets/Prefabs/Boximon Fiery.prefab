@@ -1598,7 +1598,7 @@ Transform:
   - {fileID: 4002473914406065101}
   - {fileID: 7027391057108178510}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &8329251306302410483
 Animator:
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 300
+  health: 15000
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 0}
   exp: {fileID: 919132149155446097, guid: 2f16addb4909836459bf50845cde8367, type: 3}
