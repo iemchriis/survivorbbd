@@ -12,6 +12,8 @@ public class ShotgunWeapon : BaseWeapon
     public override void Initialize()
     {
         shotgunData = (ShotgunData)weaponData;
+        bulletPrefab = shotgunData.projectile;
+
         shotgunPellets = shotgunData.pelletCount[shotgunData.weaponLevel -1];
         base.Initialize();
 
@@ -56,7 +58,7 @@ public class ShotgunWeapon : BaseWeapon
             bulletObj.transform.rotation = newRot;
 
             var bullet = bulletObj.GetComponent<ShotgunProjectile>();
-            bullet.SetProjectileStats(weaponData.damage[weaponData.weaponLevel-1], weaponData.projectileSpeed);
+            bullet.SetProjectileStats(shotgunData.GetCurrentDamage(), shotgunData.projectileSpeed);
             bullet.ShootProjectile(bullet.transform.forward);
             
         }

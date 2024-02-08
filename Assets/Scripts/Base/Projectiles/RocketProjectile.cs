@@ -8,6 +8,12 @@ public class RocketProjectile : BaseProjectile
 
     private float explosionRadius;
 
+    private void Start()
+    {
+        AudioManager.Instance.PlaySFX("Rocket");
+
+    }
+
     public void SetSplashDamageValues(int damage, float radius)
     {
         aoeEffect.GetComponent<RocketExplosionAOE>().SetValues(damage, radius);
@@ -19,7 +25,7 @@ public class RocketProjectile : BaseProjectile
         {
             rb.velocity = Vector3.zero;
             aoeEffect.SetActive(true);
-            other.GetComponent<EnemyScript>().TakeDamage(damage);
+            other.GetComponent<EnemyScript>().TakeDamage(damage, isCrit);
             Debug.Log("Direct Hit" + damage);
             Destroy(this.gameObject, 0.5f);
         }

@@ -10,6 +10,7 @@ public class BaseProjectile : MonoBehaviour
     [SerializeField] protected float projectileVelocity;
 
     protected int damage;
+    protected bool isCrit;
     
 
 
@@ -22,10 +23,11 @@ public class BaseProjectile : MonoBehaviour
 
  
 
-    public virtual void SetProjectileStats(int dmg, float projVelocity)
+    public virtual void SetProjectileStats(int dmg, float projVelocity, bool isCrit = false)
     {
         damage = dmg;
         projectileVelocity = projVelocity;
+        this.isCrit = isCrit;
     }
 
     public virtual void ShootProjectile(Vector3 direction)
@@ -39,7 +41,7 @@ public class BaseProjectile : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
             Debug.Log("Enemy Hit");
-            other.GetComponent<EnemyScript>().TakeDamage(damage);
+            other.GetComponent<EnemyScript>().TakeDamage(damage,isCrit);
             Destroy(gameObject);
         }
     }

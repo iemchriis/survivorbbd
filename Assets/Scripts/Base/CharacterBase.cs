@@ -18,7 +18,7 @@ public abstract class CharacterBase : MonoBehaviour
     }
 
     
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage, bool isCrit=false)
     {
         if(damageFX != null)
         {
@@ -27,13 +27,13 @@ public abstract class CharacterBase : MonoBehaviour
 
         if(damageTxt != null)
         {
-            ShowDamageText(damage);
+            ShowDamageText(damage, isCrit);
         }
 
         
     }
 
-    void ShowHitEffect()
+    protected void ShowHitEffect()
     {
         Debug.Log("Show Dmg");
         GameObject fx = Instantiate(damageFX, transform);
@@ -41,10 +41,15 @@ public abstract class CharacterBase : MonoBehaviour
         Destroy(fx, 1);
     }
 
-    void ShowDamageText(int damage)
+    protected void ShowDamageText(int damage, bool isCrit)
     {
         GameObject txt = Instantiate(damageTxt, transform.position, Quaternion.identity);
         txt.GetComponent<TextMesh>().text = "-" + damage.ToString();
+
+        if(isCrit)
+        {
+            txt.GetComponent<TextMesh>().color = Color.red;
+        }
 
         Vector3 offset = new Vector3(0, 3f, 0);
         txt.transform.localPosition += offset;

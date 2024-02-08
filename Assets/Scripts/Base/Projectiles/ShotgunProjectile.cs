@@ -10,6 +10,7 @@ public class ShotgunProjectile : BaseProjectile
 
     private void Start()
     {
+        AudioManager.Instance.PlaySFX("Shotty");
         bulletDropOff = 8f;
         startPos = transform.position;
         Destroy(gameObject, 2f);

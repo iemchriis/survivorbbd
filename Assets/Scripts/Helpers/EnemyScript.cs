@@ -32,7 +32,7 @@ public class EnemyScript : CharacterBase, IDebuff
 
    
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(int damage, bool isCrit = false)
     {
         base.TakeDamage(damage);
         

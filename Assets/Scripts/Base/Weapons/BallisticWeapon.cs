@@ -19,7 +19,7 @@ public class BallisticWeapon : BaseWeapon
         CanFire(ballisticData.GetCurrentFireRate());
     }
 
-    void CheckCrit()
+    private bool CheckCrit()
     {
         var rand = Random.value;
         //Debug.Log(rand);
@@ -29,22 +29,26 @@ public class BallisticWeapon : BaseWeapon
            
             Debug.Log("Crit");
             totalDamage  = ballisticData.GetCritDamage();
+            return true;
         }
         else
         {
             // Normal hit
             totalDamage = ballisticData.GetCurrentDamage();
+            return false;
         }
     }
 
     public override void Shoot()
     {
-        CheckCrit();
+        
 
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
-        var bullet = bulletObj.GetComponent<PiercingBallistic>();      
+        var bullet = bulletObj.GetComponent<PiercingBallistic>();
 
-        bullet.SetProjectileStats(totalDamage, ballisticData.projectileSpeed);
+      
+
+        bullet.SetProjectileStats(totalDamage, ballisticData.projectileSpeed, CheckCrit());
         bullet.SetPierceLevel(ballisticData.GetPierceCount());
         bullet.ShootProjectile(transform.forward);
 

@@ -32,7 +32,7 @@ public class LaserWeapon : BaseWeapon
 
     public override void Shoot()
     {
-        
+        AudioManager.Instance.PlaySFX("Laser");
         laserLine.SetPosition(0, firePos.position);
 
         RaycastHit hit;
