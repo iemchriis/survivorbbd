@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ChooseWeapon : MonoBehaviour
 {
-    private WeaponUpgrade weaponUpgrade;
+    private WeaponUpgradePresenter weaponUpgrade;
     public int weaponIndex;
 
     private void Start()
     {
-        weaponUpgrade = FindAnyObjectByType<WeaponUpgrade>();
+        weaponUpgrade = FindAnyObjectByType<WeaponUpgradePresenter>();
     }
 
     private void OnTriggerEnter(Collider other)
