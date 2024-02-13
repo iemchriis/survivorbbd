@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class WeaponDatas : ScriptableObject
 {
-   
+    [Header("UI Paramaters")]
+    public string weaponName;
+    public string weaponEffect;
+    public Sprite weaponSprite;
+    [Space]
+    [Header("Weapon Statistics")]
     public GameObject projectile;
     public float projectileSpeed;
     [Space]
@@ -15,11 +21,14 @@ public abstract class WeaponDatas : ScriptableObject
     private int critDamage;
     public float[] critChance;
     public float[] critMultiplier;
-    [Space]
     public float[] fireRate;
+    
    
 
-
+    public void IncreaseWeaponLevel()
+    {
+        weaponLevel++;
+    }
 
     public int GetCurrentDamage()
     {

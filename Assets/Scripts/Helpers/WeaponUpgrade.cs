@@ -5,36 +5,30 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class WeaponUpgradePresenter : MonoBehaviour
 {
-
+    public WeaponSelection selection;
     public WeaponUpgradeView view;
     public WeaponUpgradeModel model;
 
-    public int weaponIndex;
-    
-   
 
     public void SetActiveWeapon(int weaponIndex)
     {
+        model.weaponIndex = weaponIndex;
+        view.SetDataToUI();
         view.weaponUpgradePopUp.SetActive(true);
-        this.weaponIndex = weaponIndex;
+        
         Time.timeScale = 0;
-    }
-
-    public void SetUpgradeUI()
-    {
-
     }
 
 
     public void UpgradeSelectedWeapon()
     {
 
-        if (PlayerDataManager.Instance.premiumCoins >= model.upgradeCosts[weaponIndex])
+        if (PlayerDataManager.Instance.premiumCoins >= model.upgradeCosts[model.weaponIndex])
         {
-            if (model.weaponDatas[weaponIndex].weaponLevel == 6)
+            if (model.weaponDatas[model.weaponIndex].weaponLevel == 6)
                 return;
 
-            model.weaponDatas[weaponIndex].weaponLevel++;
+            model.weaponDatas[model.weaponIndex].IncreaseWeaponLevel();
             Debug.Log("Weapon Upgrade");
 
         }
@@ -49,7 +43,7 @@ public class WeaponUpgradePresenter : MonoBehaviour
 
     public void EnterGame()
     {
-        PlayerDataManager.Instance.currentWeapon = weaponIndex;
+        PlayerDataManager.Instance.currentWeapon = model.weaponIndex;
         Time.timeScale = 1;
         SceneManager.LoadScene("Game 1");
         
