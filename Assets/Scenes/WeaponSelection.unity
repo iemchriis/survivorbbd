@@ -3531,7 +3531,6 @@ Transform:
   - {fileID: 1119764733}
   - {fileID: 114115820}
   - {fileID: 1846803867}
-  - {fileID: 1053369981}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3892,6 +3891,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422314266}
   m_CullTransparentMesh: 1
+--- !u!1 &422721988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422721989}
+  - component: {fileID: 422721990}
+  m_Layer: 0
+  m_Name: View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422721989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422721988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993114933}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &422721990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422721988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6407ab0f0b93a149a2a5ed1bf3a6678, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponUpgradePopUp: {fileID: 1141728739}
+  weaponLevel: {fileID: 0}
+  damage: {fileID: 0}
+  rateOfFire: {fileID: 0}
+  range: {fileID: 0}
+  critChance: {fileID: 0}
+  pierceCount: {fileID: 0}
+  burnDuration: {fileID: 0}
+  burnDamage: {fileID: 0}
+  explosionDamage: {fileID: 0}
+  explosionRadius: {fileID: 0}
+  pelletCount: {fileID: 0}
+  spreadRadius: {fileID: 0}
 --- !u!1 &425839726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8202,7 +8258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1053369981
 Transform:
   m_ObjectHideFlags: 0
@@ -8210,13 +8266,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053369980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 60.167988, y: 0, z: 5.3093615}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 414503415}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1053369982
 MonoBehaviour:
@@ -8232,7 +8288,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 0}
   playerWeaponHolder: {fileID: 419196028}
-  weaponDatas: []
+  weaponDatas:
+  - {fileID: 11400000, guid: 18a0d4bf142d579459a80677e316c8eb, type: 2}
+  - {fileID: 11400000, guid: d06a29f0c0508c64b8055e259cd4f1df, type: 2}
+  - {fileID: 11400000, guid: 81747f0b2ea1cbb46a3329b4147f6507, type: 2}
+  - {fileID: 11400000, guid: 094307bf40797314faf9d0c3d0703ad5, type: 2}
 --- !u!1 &1063381532
 GameObject:
   m_ObjectHideFlags: 0
@@ -15689,6 +15749,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883186495}
   m_CullTransparentMesh: 1
+--- !u!1 &1892671358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892671360}
+  - component: {fileID: 1892671359}
+  m_Layer: 0
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1892671359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892671358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da67b52f427b07428c099a376384ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDatas:
+  - {fileID: 11400000, guid: 18a0d4bf142d579459a80677e316c8eb, type: 2}
+  - {fileID: 11400000, guid: d06a29f0c0508c64b8055e259cd4f1df, type: 2}
+  - {fileID: 11400000, guid: 81747f0b2ea1cbb46a3329b4147f6507, type: 2}
+  - {fileID: 11400000, guid: 094307bf40797314faf9d0c3d0703ad5, type: 2}
+  weaponIndex: 0
+  upgradeCosts: 
+--- !u!4 &1892671360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892671358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993114933}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894669461
 GameObject:
   m_ObjectHideFlags: 0
@@ -16524,17 +16635,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32fb50a9223c7ef4981225f933004b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponUpgradePopUp: {fileID: 1141728739}
-  WeaponUpgradeImage: {fileID: 0}
-  weaponUpgradeText: {fileID: 0}
+  view: {fileID: 422721990}
+  model: {fileID: 1892671359}
   weaponIndex: 0
-  weaponDatas:
-  - {fileID: 11400000, guid: 18a0d4bf142d579459a80677e316c8eb, type: 2}
-  - {fileID: 11400000, guid: d06a29f0c0508c64b8055e259cd4f1df, type: 2}
-  - {fileID: 11400000, guid: 81747f0b2ea1cbb46a3329b4147f6507, type: 2}
-  - {fileID: 11400000, guid: 094307bf40797314faf9d0c3d0703ad5, type: 2}
-  upgradeCosts: 00000000000000000000000000000000
-  weaponStatsSprite: []
 --- !u!4 &1993114933
 Transform:
   m_ObjectHideFlags: 0
@@ -16546,7 +16649,9 @@ Transform:
   m_LocalPosition: {x: 540, y: 753, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 422721989}
+  - {fileID: 1892671360}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -3,35 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class WeaponUpgrade : MonoBehaviour
+public class WeaponUpgradePresenter : MonoBehaviour
 {
-    public GameObject WeaponUpgradePopUp;
-    public Image WeaponUpgradeImage;
-    public Text weaponUpgradeText;
+
+    public WeaponUpgradeView view;
+    public WeaponUpgradeModel model;
 
     public int weaponIndex;
-    [SerializeField] private WeaponDatas[] weaponDatas;
-
-    public int[] upgradeCosts;
-    public Sprite[] weaponStatsSprite;
+    
+   
 
     public void SetActiveWeapon(int weaponIndex)
     {
-        WeaponUpgradePopUp.SetActive(true);
+        view.weaponUpgradePopUp.SetActive(true);
         this.weaponIndex = weaponIndex;
         Time.timeScale = 0;
+    }
+
+    public void SetUpgradeUI()
+    {
+
     }
 
 
     public void UpgradeSelectedWeapon()
     {
 
-        if (PlayerDataManager.Instance.premiumCoins >= upgradeCosts[weaponIndex])
+        if (PlayerDataManager.Instance.premiumCoins >= model.upgradeCosts[weaponIndex])
         {
-            if (weaponDatas[weaponIndex].weaponLevel == 6)
+            if (model.weaponDatas[weaponIndex].weaponLevel == 6)
                 return;
 
-            weaponDatas[weaponIndex].weaponLevel++;
+            model.weaponDatas[weaponIndex].weaponLevel++;
             Debug.Log("Weapon Upgrade");
 
         }
@@ -40,7 +43,7 @@ public class WeaponUpgrade : MonoBehaviour
 
     public void ClosePanel()
     {
-        WeaponUpgradePopUp.SetActive(false);
+        view.weaponUpgradePopUp.SetActive(false);
         Time.timeScale = 1;
     }
 

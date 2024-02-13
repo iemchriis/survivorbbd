@@ -11,7 +11,7 @@ public class WeaponSelection : MonoBehaviour
     [SerializeField]private WeaponDatas[] weaponDatas;  
 
 
-    private void Awake()
+    public void Initialize()
     {
         Time.timeScale = 1;
         weaponIndex = PlayerDataManager.Instance.currentWeapon;
