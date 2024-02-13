@@ -46,41 +46,57 @@ public class WeaponSelection : MonoBehaviour
 
     public void SelectBallisticWeapon()
     {
-        playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
-        currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
-        currentWeapon.weaponData = weaponDatas[0];
-        currentWeapon.Initialize();
+        if(playerWeaponHolder.gameObject.GetComponent<BaseWeapon>() == null)
+        {
+            playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
+            currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
+            currentWeapon.weaponData = weaponDatas[0];
+            currentWeapon.Initialize();
+
+        }
 
 
-    
+
+
     }
 
     public void SelectLaserWeapon()
     {
-        playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
-        currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
-        currentWeapon.weaponData = weaponDatas[1];
-        currentWeapon.Initialize();
+
+        if(playerWeaponHolder.gameObject.GetComponent<BaseWeapon>() == null)
+        {
+            playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
+            currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
+            currentWeapon.weaponData = weaponDatas[1];
+            currentWeapon.Initialize();
+        }
+      
 
     
     }
 
     public void SelectRocketWeapon()
     {
-        playerWeaponHolder.gameObject.AddComponent<RocketWeapon>();
-        currentWeapon = playerWeaponHolder.gameObject.GetComponent<RocketWeapon>();
-        currentWeapon.weaponData = weaponDatas[2];
-        currentWeapon.Initialize();
-
-      
+        if (playerWeaponHolder.gameObject.GetComponent<BaseWeapon>() == null)
+        {
+            playerWeaponHolder.gameObject.AddComponent<RocketWeapon>();
+            currentWeapon = playerWeaponHolder.gameObject.GetComponent<RocketWeapon>();
+            currentWeapon.weaponData = weaponDatas[2];
+            currentWeapon.Initialize();
+        }
     }
 
     public void SelectShotgunWeapon()
     {
-        playerWeaponHolder.gameObject.AddComponent<ShotgunWeapon>();
-        currentWeapon = (ShotgunWeapon) playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
-        currentWeapon.weaponData = weaponDatas[3];
-        currentWeapon.Initialize();
+
+
+        if(playerWeaponHolder.gameObject.GetComponent <BaseWeapon>() == null)
+        {
+            playerWeaponHolder.gameObject.AddComponent<ShotgunWeapon>();
+            currentWeapon = (ShotgunWeapon)playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
+            currentWeapon.weaponData = weaponDatas[3];
+            currentWeapon.Initialize();
+        }
 
        
     }

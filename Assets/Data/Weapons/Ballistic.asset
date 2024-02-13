@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5d26d82a2a3634aaded597aae2c3fc, type: 3}
   m_Name: Ballistic
   m_EditorClassIdentifier: 
+  weaponName: Ballistic Rifle
+  weaponEffect: 
+  weaponSprite: {fileID: 0}
   projectile: {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
   projectileSpeed: 20
   weaponLevel: 1

@@ -10,4 +10,10 @@ public class ShotgunData : WeaponDatas
     public int[] pelletCount;
     public float[] spreadAngle;
     public int spreadRandom;
+
+
+    public int GetPelletCount()
+    {
+        return pelletCount[weaponLevel - 1];
+    }
 }

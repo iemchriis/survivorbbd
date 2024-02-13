@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Base\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\BaseProjectile.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\Scripts\Helpers\WeaponUpgradeExit.cs" />
     <Compile Include="Assets\Scripts\Helpers\WeaponUpgrade.cs" />
     <Compile Include="Assets\Scripts\Helpers\ChooseWeapon.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerHealth.cs" />
