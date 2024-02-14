@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WeaponSelection : MonoBehaviour
 {
-    [SerializeField]private BaseWeapon currentWeapon;
+    public BaseWeapon currentWeapon;
     [SerializeField]private WeaponHolder playerWeaponHolder;
 
     private int weaponIndex;
     [SerializeField]private WeaponDatas[] weaponDatas;  
 
 
-    public void Initialize()
+    public void SelectWeapon()
     {
         Time.timeScale = 1;
         weaponIndex = PlayerDataManager.Instance.currentWeapon;
@@ -46,8 +46,17 @@ public class WeaponSelection : MonoBehaviour
 
     public void SelectBallisticWeapon()
     {
-        if(playerWeaponHolder.gameObject.GetComponent<BaseWeapon>() == null)
+        if(currentWeapon == null)
         {
+            playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
+            currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
+            currentWeapon.weaponData = weaponDatas[0];
+            currentWeapon.Initialize();
+
+        }
+        else if (currentWeapon.weaponData != weaponDatas[0])
+        {
+            Destroy(currentWeapon);
             playerWeaponHolder.gameObject.AddComponent<BallisticWeapon>();
             currentWeapon = playerWeaponHolder.gameObject.GetComponent<BallisticWeapon>();
             currentWeapon.weaponData = weaponDatas[0];
@@ -63,8 +72,16 @@ public class WeaponSelection : MonoBehaviour
     public void SelectLaserWeapon()
     {
 
-        if(playerWeaponHolder.gameObject.GetComponent<BaseWeapon>() == null)
+        if(currentWeapon == null )
         {
+            playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
+            currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
+            currentWeapon.weaponData = weaponDatas[1];
+            currentWeapon.Initialize();
+        }
+        else if (currentWeapon.weaponData != weaponDatas[1])
+        {
+            Destroy (currentWeapon);
             playerWeaponHolder.gameObject.AddComponent<LaserWeapon>();
             currentWeapon = playerWeaponHolder.gameObject.GetComponent<LaserWeapon>();
             currentWeapon.weaponData = weaponDatas[1];
@@ -77,8 +94,16 @@ public class WeaponSelection : MonoBehaviour
 
     public void SelectRocketWeapon()
     {
-        if (playerWeaponHolder.gameObject.GetComponent<BaseWeapon>() == null)
+        if (currentWeapon == null )
         {
+            playerWeaponHolder.gameObject.AddComponent<RocketWeapon>();
+            currentWeapon = playerWeaponHolder.gameObject.GetComponent<RocketWeapon>();
+            currentWeapon.weaponData = weaponDatas[2];
+            currentWeapon.Initialize();
+        }
+        else if (currentWeapon.weaponData != weaponDatas[2])
+        {
+            Destroy(currentWeapon);
             playerWeaponHolder.gameObject.AddComponent<RocketWeapon>();
             currentWeapon = playerWeaponHolder.gameObject.GetComponent<RocketWeapon>();
             currentWeapon.weaponData = weaponDatas[2];
@@ -90,8 +115,16 @@ public class WeaponSelection : MonoBehaviour
     {
 
 
-        if(playerWeaponHolder.gameObject.GetComponent <BaseWeapon>() == null)
+        if(currentWeapon == null)
         {
+            playerWeaponHolder.gameObject.AddComponent<ShotgunWeapon>();
+            currentWeapon = (ShotgunWeapon)playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
+            currentWeapon.weaponData = weaponDatas[3];
+            currentWeapon.Initialize();
+        }
+        else if(currentWeapon.weaponData != weaponDatas[3])
+        {
+            Destroy(currentWeapon);
             playerWeaponHolder.gameObject.AddComponent<ShotgunWeapon>();
             currentWeapon = (ShotgunWeapon)playerWeaponHolder.gameObject.GetComponent<ShotgunWeapon>();
             currentWeapon.weaponData = weaponDatas[3];
@@ -99,11 +132,6 @@ public class WeaponSelection : MonoBehaviour
         }
 
        
-    }
-
-    void ResumeGame()
-    {
-
     }
 
 

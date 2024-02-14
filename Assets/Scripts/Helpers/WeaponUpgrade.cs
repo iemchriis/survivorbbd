@@ -44,10 +44,12 @@ public class WeaponUpgradePresenter : MonoBehaviour
     public void EnterGame()
     {
         PlayerDataManager.Instance.currentWeapon = model.weaponIndex;
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Game 1");
+
+        selection.SelectWeapon();
+        ClosePanel();
         
     }
+
 
 
 }

@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public WeaponSelection selection;
     public PlayerVision targeting;
     public int enemyCount;
 
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-       // Time.timeScale = 0;
+       selection.SelectWeapon();
     }
 
   

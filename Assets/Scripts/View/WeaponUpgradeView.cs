@@ -27,6 +27,8 @@ public class WeaponUpgradeView : MonoBehaviour
     public Text nextRange;
     public Text nextCritChance;
     public Text nextEffectStat;
+    [Space]
+    public Text noneEquippedNotice;
 
     //[Space]
     //[Header("Laser Stats")]
@@ -62,6 +64,18 @@ public class WeaponUpgradeView : MonoBehaviour
         nextCritChance.text = presenter.model.GetNextCritChance().ToString();   
         nextEffectStat.text = presenter.model.GetNextSpecialStat(curIndex).ToString();  
         
+    }
+
+    public void ShowNotice()
+    {
+        StartCoroutine(CoShowNotice());
+    }
+
+    IEnumerator CoShowNotice()
+    {
+        noneEquippedNotice.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        noneEquippedNotice.gameObject.SetActive(false);
     }
 
 }

@@ -18,7 +18,9 @@ public class BaseWeapon : MonoBehaviour
     public virtual void Initialize()
     {
         firePos = this.transform;
-        GameManager.Instance.targeting.weapon = this;
+
+        if(GameManager.Instance != null)
+            GameManager.Instance.targeting.weapon = this;
     }
 
 

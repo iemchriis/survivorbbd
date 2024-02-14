@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Ballistic
   m_EditorClassIdentifier: 
   weaponName: Ballistic Rifle
-  weaponEffect: 
-  weaponSprite: {fileID: 0}
+  weaponEffect: Piercing
+  weaponSprite: {fileID: 21300000, guid: 36602849d825d854da94cad1e8219e08, type: 3}
   projectile: {fileID: 667565355365552573, guid: c563025db47957f4e8c18edbb944f0db, type: 3}
   projectileSpeed: 20
   weaponLevel: 1

@@ -1963,6 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c439041e46074ef47835aea03d4c4476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selection: {fileID: 1249580039}
   targeting: {fileID: 419442531}
   enemyCount: 0
 --- !u!4 &465342435

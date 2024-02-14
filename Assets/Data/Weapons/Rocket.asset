@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75139301d12e16a459d9e209abffb42d, type: 3}
   m_Name: Rocket
   m_EditorClassIdentifier: 
+  weaponName: Rocket
+  weaponEffect: Splash Damage
+  weaponSprite: {fileID: 21300000, guid: 13ed80b69dccf8045837b30e8544e996, type: 3}
   projectile: {fileID: 667565355365552573, guid: e941d99b8826a344b9c98a626c23a998, type: 3}
   projectileSpeed: 10
   weaponLevel: 1

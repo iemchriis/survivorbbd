@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ed9116e4d1ca24da37f4f8cb68e023, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
+  weaponName: Shotgun
+  weaponEffect: Pellets
+  weaponSprite: {fileID: 21300000, guid: 5c1a5979a1ee71e4f8e76774f40bcb9a, type: 3}
   projectile: {fileID: 667565355365552573, guid: ac4911c3f576dda4f877c4314360b2c7, type: 3}
   projectileSpeed: 20
   weaponLevel: 1
