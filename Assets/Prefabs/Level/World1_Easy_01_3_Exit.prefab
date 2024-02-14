@@ -7776,7 +7776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5240134857097339573}
   m_Layer: 0
-  m_Name: World1_Easy_01
+  m_Name: World1_Easy_01_3_Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
