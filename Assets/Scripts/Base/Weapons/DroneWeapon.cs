@@ -42,4 +42,10 @@ public class DroneWeapon : BaseWeapon
         bullet.SetProjectileStats(damage,projectileSpeed);
         bullet.ShootProjectile(transform.forward);
     }
+
+
+    public void UpgradeDroneROF()
+    {
+        rateOfFire -= 0.1f;
+    }
 }
