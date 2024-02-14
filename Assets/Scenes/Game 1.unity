@@ -360,6 +360,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14621446}
   m_CullTransparentMesh: 1
+--- !u!1 &39831843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39831844}
+  - component: {fileID: 39831845}
+  m_Layer: 0
+  m_Name: DAMAGE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &39831844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39831843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1457365751}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &39831845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39831843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6a9098014bda04cb3b9e5a414beb85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &42037310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,10 +3327,12 @@ MonoBehaviour:
   - {fileID: 8027845953666990481, guid: f550cab4d05ef8d4b8ecf8333229ef68, type: 3}
   - {fileID: 8396036272268989348, guid: 4014b30d0c74f084cbdc3a6bbd9c8953, type: 3}
   Powerups:
-  - {fileID: 2547352508413978104, guid: f4c73b68f1dfc944ca7b4da5127f8fcd, type: 3}
-  - {fileID: 8562099501817804338, guid: 4b5c7da70ae023f4f8abe0d3f2d75810, type: 3}
-  - {fileID: 5715394818143568621, guid: b5bbb187b045b5e49b9766b1d8d59e42, type: 3}
-  - {fileID: 482395879874433229, guid: cda8719f16ca6c347bb6607c65a19013, type: 3}
+  - {fileID: 8052843164940807417, guid: e9c98a558a71a3548995c7caadb8d5ae, type: 3}
+  - {fileID: 6049784814317387329, guid: 19ae9bc0fbfff9f4a91ecec7845a65e5, type: 3}
+  - {fileID: 5428570800399270262, guid: 6ee150a462199fc4eb784dc279ba2558, type: 3}
+  - {fileID: 5332654663922249212, guid: 55b0e1b3a802bd145928c2280c811874, type: 3}
+  - {fileID: 2358951084590751998, guid: 5adab390efe76904d9e258b259034a6b, type: 3}
+  - {fileID: 5428570800399270262, guid: 6ee150a462199fc4eb784dc279ba2558, type: 3}
   bossLevel: {fileID: 7952575903326855830, guid: 9aea11f51b5718e4cba85147bf1830f6, type: 3}
   Popup: {fileID: 688087901}
   stagesBeforeBoss: 3
@@ -3635,6 +3681,50 @@ Transform:
   m_Father: {fileID: 1457365751}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &852407779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852407780}
+  - component: {fileID: 852407781}
+  m_Layer: 0
+  m_Name: STATUS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852407780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852407779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1457365751}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852407781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852407779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c07c409d5e56140951337fd9f91b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &856717452
 GameObject:
   m_ObjectHideFlags: 0
@@ -6817,6 +6907,48 @@ MonoBehaviour:
     - '"Increase base weapon rate of fire of drone  - starts with speed decrease
       of 0.1   - decrease 0.1 per upgrade"'
     sponsorName: Speed
+  - sponsor: {fileID: 1966400458}
+    sponsorRarity: 0
+    sponsorDescription:
+    - '"Lob a grenade with AOE Damges  - throws grenade with AOE Damage of 100  -
+      damage increases by 25 per upgade  - throws grenade every 30 seconds"'
+    - '"Leave a landmine with AOE Damage  - lays landmine with AOE Damage of 100  
+      - lays landmine each 30 seconds after entering a level  - damage increases
+      by 25 per upgrade"'
+    - '"Throws Acid with AOE Damages  - throws acids with AOE Damage of 25  - removes
+      armor of affected enemies  - throws acid every 30 seconds  - damage increases
+      by 5 per upgrade"'
+    sponsorName: AOE
+  - sponsor: {fileID: 852407781}
+    sponsorRarity: 0
+    sponsorDescription:
+    - '"Main weapon deals stun damage. Stunned enemies cannot move or shoot  - starts
+      with 10% chance to stun  - additional 5% chance to stun per upgrade - stun
+      duration 3 seconds (no extension per upgrade)"'
+    - '"Main weapon deals slow damage. Slowed enemies will have slowed movement and
+      shooting speed  - starts with 15% chance to slow  - additional 5% chance to
+      slow per upgrade - stun duration 3 seconds (no extension per upgrade)"'
+    - '"If player gets damages by an enemy, that enemy will recieve stun damage 
+      - stun duration 3 seconds  - additional .5 seconds per upgrade"'
+    sponsorName: STATUS
+  - sponsor: {fileID: 39831845}
+    sponsorRarity: 0
+    sponsorDescription:
+    - '"Main weapon deals additional base damage  - starts with 2% additional damage 
+      - additional 2% per upgrade  - max 20% additional base damage "'
+    - '"Drone weaposn deals additional base damage  - starts with 2% additional damage 
+      - additional 2% per upgrade  - max 20% additional base damage "'
+    - '"Base weapon increases critical damage output of this playthrough  - starts
+      with 10% additional critical damage  - additional 5% per upgrade  - max 20%
+      additional critical damage"'
+    sponsorName: Damage
+  - sponsor: {fileID: 1837429879}
+    sponsorRarity: 0
+    sponsorDescription:
+    - Gems
+    - Health Pickup
+    - Premium Currency
+    sponsorName: RESOURCE
 --- !u!4 &1457365751
 Transform:
   m_ObjectHideFlags: 0
@@ -6831,6 +6963,10 @@ Transform:
   m_Children:
   - {fileID: 1308708126}
   - {fileID: 834442074}
+  - {fileID: 1966400457}
+  - {fileID: 852407780}
+  - {fileID: 39831844}
+  - {fileID: 1837429880}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8326,6 +8462,50 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1837429878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837429880}
+  - component: {fileID: 1837429879}
+  m_Layer: 0
+  m_Name: RESOURCE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1837429879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837429878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd886ea1dee75fd4c8fb272deb5bfac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1837429880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837429878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1457365751}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1854109587
 GameObject:
   m_ObjectHideFlags: 0
@@ -9181,6 +9361,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962089622}
   m_CullTransparentMesh: 1
+--- !u!1 &1966400456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966400457}
+  - component: {fileID: 1966400458}
+  m_Layer: 0
+  m_Name: AOE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966400457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966400456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1457365751}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966400458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966400456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00a7a8d985cfb748b8bc533b7b4cac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1967014555
 GameObject:
   m_ObjectHideFlags: 0

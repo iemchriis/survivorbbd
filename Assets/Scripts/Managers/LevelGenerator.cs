@@ -24,6 +24,10 @@ public class LevelGenerator : MonoBehaviour
         currentPowerup = Random.Range(0, Powerups.Length);
     }
 
+    public void SetPowerup(int i)
+    {
+        currentPowerup = i;
+    }
 
     public void spawnNewLevel()
     {

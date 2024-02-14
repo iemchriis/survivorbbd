@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2932398052380932548}
   - component: {fileID: 453256127242248933}
   - component: {fileID: 9213902603294467583}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CFX_Magical_Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4786,7 +4786,7 @@ GameObject:
   - component: {fileID: 7509167634270436041}
   - component: {fileID: 5525902934374563092}
   - component: {fileID: 4412668816645184884}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Waves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9385,9 +9385,10 @@ GameObject:
   - component: {fileID: 2138273894304709080}
   - component: {fileID: 1351921266260105246}
   - component: {fileID: 1114056371056898}
-  m_Layer: 0
+  - component: {fileID: 3802280134410300134}
+  m_Layer: 9
   m_Name: Sponsor_Defense
-  m_TagString: Untagged
+  m_TagString: PU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9473,7 +9474,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -9492,6 +9493,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+--- !u!114 &3802280134410300134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8052843164940807417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0913e7571a8b3c241a62b78e1a5d6bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupID: 0
 --- !u!1 &8976522354181523102
 GameObject:
   m_ObjectHideFlags: 0
@@ -9503,7 +9517,7 @@ GameObject:
   - component: {fileID: 2677055927864280579}
   - component: {fileID: 3233579771170241432}
   - component: {fileID: 9099999932691510317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}

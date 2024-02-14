@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Presenters\SponsorPresenter.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\EnemyProjectile.cs" />
     <Compile Include="Assets\Scripts\Model\StatsUpgradeModel.cs" />
+    <Compile Include="Assets\Scripts\Sponsors\ResourceSponsor.cs" />
     <Compile Include="Assets\Scripts\Helpers\StageSpawner.cs" />
     <Compile Include="Assets\Scripts\Helpers\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\Managers\LevelGenerator.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Assets\Scripts\Managers\Managers.cs" />
     <Compile Include="Assets\Scripts\Base\DroneTargeting.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Scripts\Sponsors\StatusSponsor.cs" />
     <Compile Include="Assets\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\ShotgunWeapon.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
@@ -123,6 +125,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\LaserWeaponData.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\ShotgunWeaponData.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Scripts\Sponsors\AOESponsor.cs" />
     <Compile Include="Assets\Scripts\Helpers\Level.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerDataManager.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\LaserWeapon.cs" />
@@ -137,6 +140,7 @@
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\Sponsors\ShieldSponsor.cs" />
+    <Compile Include="Assets\Scripts\Sponsors\DamageSponsor.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\ShotgunProjectile.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\LaserProjectile.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />

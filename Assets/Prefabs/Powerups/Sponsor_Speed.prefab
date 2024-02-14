@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5983487482147554610}
   - component: {fileID: 5872977957439405697}
   - component: {fileID: 7005577528295475685}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7165646325377853462}
   - component: {fileID: 3843464877367275047}
   - component: {fileID: 3051664498383816628}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CFX_ElectricityBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4948,9 +4948,10 @@ GameObject:
   - component: {fileID: 7287857013727172360}
   - component: {fileID: 3367096745509928299}
   - component: {fileID: -3233864201960906755}
-  m_Layer: 0
+  - component: {fileID: 4120632398188165341}
+  m_Layer: 9
   m_Name: Sponsor_Speed
-  m_TagString: Untagged
+  m_TagString: PU
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5036,7 +5037,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5055,6 +5056,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+--- !u!114 &4120632398188165341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6049784814317387329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0913e7571a8b3c241a62b78e1a5d6bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupID: 1
 --- !u!1 &6906058431784544710
 GameObject:
   m_ObjectHideFlags: 0
@@ -5066,7 +5080,7 @@ GameObject:
   - component: {fileID: 3395736505549901099}
   - component: {fileID: 2480842882814030119}
   - component: {fileID: 1910301650443636436}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
