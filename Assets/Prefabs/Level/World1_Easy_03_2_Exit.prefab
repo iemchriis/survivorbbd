@@ -18599,7 +18599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3796294926856745003}
   m_Layer: 0
-  m_Name: World1_Easy_03
+  m_Name: World1_Easy_03_2_Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

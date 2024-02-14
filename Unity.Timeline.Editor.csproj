@@ -327,8 +327,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\inspectors\CurvesOwner\ICurvesOwnerInspectorWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\Manipulators\HeaderSplitterManipulator.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\Window\OverlayDrawer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\treeview\TimelineClipUnion.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\Window\TimelineWindow_TimeCursor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\treeview\TimelineClipUnion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.timeline@1.7.4\Editor\Unity.Timeline.Editor.asmdef" />

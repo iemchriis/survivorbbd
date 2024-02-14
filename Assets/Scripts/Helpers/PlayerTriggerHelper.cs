@@ -43,6 +43,7 @@ public class PlayerTriggerHelper : MonoBehaviour
     {
 
         int ID = other.GetComponent<PowerupTrigger>().powerupID;
+        GameObject.FindObjectOfType<SponsorPresenter>().SetupSponsorUI(ID);
         Destroy(other);
         switch(ID)
         {

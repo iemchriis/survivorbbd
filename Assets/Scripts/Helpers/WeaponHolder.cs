@@ -46,4 +46,10 @@ public class WeaponHolder : MonoBehaviour
     {
         return projectileSpeed;
     }
+
+
+    public void UpgradeWeaponROF()
+    {
+        weaponROF -= 0.1f;
+    }
 }
