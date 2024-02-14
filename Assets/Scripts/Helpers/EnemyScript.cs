@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class EnemyScript : CharacterBase, IDebuff
+public class EnemyScript : CharacterBase, ISlowed, IStunned
 {
     private Transform target;
     private NavMeshAgent navmesh;
@@ -130,17 +130,29 @@ public class EnemyScript : CharacterBase, IDebuff
         }
     }
 
-    public void ApplyEffect(int debuffAmount, float debuffDuration)
+    public void ApplySlowEffect(int debuffAmount, float debuffDuration)
     {
-        StartCoroutine(ApplyEffectAsync(debuffAmount, debuffDuration));
+        StartCoroutine(ApplySlowEffectAsync(debuffAmount, debuffDuration));
     }
 
-    public IEnumerator ApplyEffectAsync(int debuffAmount, float debuffDuration)
+    public IEnumerator ApplySlowEffectAsync(int debuffAmount, float debuffDuration)
     {
         var ogSpeed = navmesh.speed;
 
         navmesh.speed -= debuffAmount;
         yield return new WaitForSeconds(debuffDuration);
         navmesh.speed = ogSpeed;
+    }
+
+    public void ApplyStun(float stunDuration)
+    {
+        StartCoroutine(ApplyStunAsync(stunDuration));
+    }
+
+    public IEnumerator ApplyStunAsync(float stunDuration)
+    {
+        navmesh.isStopped = true;
+        yield return new WaitForSeconds(stunDuration);
+        navmesh.isStopped = false;
     }
 }
