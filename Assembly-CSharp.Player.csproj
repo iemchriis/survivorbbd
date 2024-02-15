@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponDatas.cs" />
     <Compile Include="Assets\Scripts\Helpers\TriggerShow.cs" />
+    <Compile Include="Assets\Scripts\Helpers\PlayerBomb.cs" />
     <Compile Include="Assets\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />
     <Compile Include="Assets\Scripts\Presenters\StatsPresenter.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\Presenters\SponsorPresenter.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\EnemyProjectile.cs" />
     <Compile Include="Assets\Scripts\Model\StatsUpgradeModel.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Bomb.cs" />
     <Compile Include="Assets\Scripts\Sponsors\ResourceSponsor.cs" />
     <Compile Include="Assets\Scripts\Helpers\StageSpawner.cs" />
     <Compile Include="Assets\Scripts\Helpers\EnemyScript.cs" />
