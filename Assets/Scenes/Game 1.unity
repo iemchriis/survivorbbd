@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028563, g: 0.22571588, b: 0.30692416, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2640,7 +2640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -230.79999, y: -39}
+  m_AnchoredPosition: {x: -230.79999, y: 0}
   m_SizeDelta: {x: 306.44934, y: 60.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549808332
@@ -3320,6 +3320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e7b9aaaac0bc040a93c6c87b2b1c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sequences: []
+  currentSequence: {fileID: 0}
   levelPrefabs:
   - {fileID: 2388811800838890179, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
   - {fileID: 4285351391412023216, guid: 1da45f126f5b6694f90eb772c6f35473, type: 3}
@@ -3760,7 +3762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000078678, y: -39}
+  m_AnchoredPosition: {x: 0.0000078678, y: 0}
   m_SizeDelta: {x: 306.4493, y: 60.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856717454
@@ -7300,7 +7302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -132.6, y: -39}
+  m_AnchoredPosition: {x: -132.6, y: 0}
   m_SizeDelta: {x: 306.44934, y: 60.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565582344

@@ -7,12 +7,17 @@ public class LevelGenerator : MonoBehaviour
 
     public static LevelGenerator Instance { get; set; }
 
+    public LevelSequence[] sequences;
+    public LevelSequence currentSequence;
+
     public GameObject[] levelPrefabs;
     public GameObject[] Powerups;
     public GameObject bossLevel, Popup;
     private int currentPowerup;
     private int currentLevel;
     public int stagesBeforeBoss;
+
+    private Vector3 spawnPos = new Vector3(45.38131f, -9.046906f, 4.755415f);
     // Start is called before the first frame update
     private void Awake()
     {
@@ -35,15 +40,16 @@ public class LevelGenerator : MonoBehaviour
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
         GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
+        //GameObject level = currentSequence.Sequence[currentLevel].GetLevelFromList();
         if (currentLevel < stagesBeforeBoss)
         {
 
-            GameObject go = Instantiate(level, new Vector3(45.38131f, -9.046906f, 4.755415f), Quaternion.identity);
+            GameObject go = Instantiate(level, spawnPos, Quaternion.identity);
         }
         else
         {
             currentLevel = 0;
-            GameObject go = Instantiate(bossLevel, new Vector3(45.38131f, -9.046906f, 4.755415f), Quaternion.identity);
+            GameObject go = Instantiate(bossLevel,spawnPos, Quaternion.identity);
         }
     }
 
