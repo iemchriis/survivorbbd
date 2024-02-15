@@ -72390,6 +72390,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3201668429629408208}
     m_Modifications:
+    - target: {fileID: 394054508085712264, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: powerupIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_Name
       value: PlayerExit
