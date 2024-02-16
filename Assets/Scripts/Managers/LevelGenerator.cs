@@ -39,8 +39,8 @@ public class LevelGenerator : MonoBehaviour
         currentLevel++;
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
-        GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
-        //GameObject level = currentSequence.Sequence[currentLevel].GetLevelFromList();
+        //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
+        GameObject level = currentSequence.Sequence[currentLevel].GetLevelFromList();
         if (currentLevel < stagesBeforeBoss)
         {
 

@@ -25,6 +25,7 @@ public class RocketExplosionAOE : MonoBehaviour
             {
                 Debug.Log("Explosion Damage");
                 enemy.TakeDamage(damage);
+                Destroy(this.gameObject);
             }
         }
     }
