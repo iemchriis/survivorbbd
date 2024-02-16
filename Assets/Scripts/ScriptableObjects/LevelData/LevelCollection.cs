@@ -16,15 +16,9 @@ public class LevelCollection : ScriptableObject
     public Level GetLevelFromList()
     {
         int rand = Random.Range(0, Levels.Count);
-
-        for (int i = 0; i < Levels.Count; i++)
-        {
-            if(i == rand)
-            {
-                return Levels[i];
-            }
-        }
-        return null;    
+        Debug.Log(rand);
+        
+        return Levels[rand];
     }
 
 }

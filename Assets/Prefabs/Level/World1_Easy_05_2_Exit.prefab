@@ -4606,7 +4606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4695000081214172345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 0.0001, z: -35}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4636,6 +4636,7 @@ MonoBehaviour:
   Door:
   - {fileID: 8103362748446954025}
   - {fileID: 3117470570064259785}
+  playerSpawn: {fileID: 331888514032397800}
 --- !u!1 &5549717859388029952
 GameObject:
   m_ObjectHideFlags: 0
@@ -7041,6 +7042,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522618411159421123, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7193,6 +7198,10 @@ PrefabInstance:
     - target: {fileID: 1146750882366685360, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_Name
       value: EnemySpawner_Zombie_Count10_Wait_60_SpawnPoint1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146750882366685360, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
@@ -7354,6 +7363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner_Zombie_Count10_Wait_90_SpawnPoint1
       objectReference: {fileID: 0}
+    - target: {fileID: 1146750882366685360, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
       value: 90
@@ -7436,11 +7449,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpawn
       objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+--- !u!4 &331888514032397800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+  m_PrefabInstance: {fileID: 8403222906848423847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8725361297685128290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 975182603056745413, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
@@ -7501,6 +7535,10 @@ PrefabInstance:
     - target: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522618411159421123, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_Size.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

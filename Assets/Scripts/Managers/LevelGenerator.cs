@@ -23,9 +23,9 @@ public class LevelGenerator : MonoBehaviour
 
     private int currentPowerup;
     private int currentLevel;
-   // public int stagesBeforeBoss;
+    // public int stagesBeforeBoss;
 
-    private Vector3 spawnPos = new Vector3(45.38131f, -9.046906f, 4.755415f);
+    private Vector3 spawnPos = new Vector3(0, 0, 0); ///new Vector3(45.38131f, -9.046906f, 4.755415f);
     // Start is called before the first frame update
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class LevelGenerator : MonoBehaviour
         }
 
         currentPowerup = Random.Range(0, Powerups.Length);
-        navMeshSurface.RemoveData();
+        
         navMeshSurface.BuildNavMesh();
     }
 
@@ -57,10 +57,9 @@ public class LevelGenerator : MonoBehaviour
         GameManager.Instance.SetCurrentLevel(null);
         //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
         activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
-        
         GameObject go = Instantiate(activeLevel.gameObject, spawnPos, Quaternion.identity);
 
-
+        Debug.Log(activeLevel.name);
 
         //if (currentLevel < stagesBeforeBoss)
         //{
@@ -72,8 +71,9 @@ public class LevelGenerator : MonoBehaviour
         //    currentLevel = 0;
         //    GameObject go = Instantiate(bossLevel,spawnPos, Quaternion.identity);
         //}
+        navMeshSurface.RemoveData();
+        navMeshSurface.BuildNavMesh();
 
-       
     }
 
 

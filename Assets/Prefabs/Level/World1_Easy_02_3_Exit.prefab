@@ -52330,7 +52330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6949705795515412383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 0.0001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -52363,6 +52363,7 @@ MonoBehaviour:
   - {fileID: 2087164097940251393}
   - {fileID: 1053453755424990273}
   - {fileID: 6130355439091475077}
+  playerSpawn: {fileID: 6887127455761820984}
 --- !u!1 &7053159267235549223
 GameObject:
   m_ObjectHideFlags: 0
@@ -72181,6 +72182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerExit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -72225,6 +72230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522618411159421123, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72263,6 +72272,10 @@ PrefabInstance:
     - target: {fileID: 1281097050576769460, guid: a6becc7b306226040a48227ecbb2edc6, type: 3}
       propertyPath: m_Name
       value: EnemySpawner_Reaper_Count10_Wait60_SpawnPoint1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281097050576769460, guid: a6becc7b306226040a48227ecbb2edc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4096862311952329108, guid: a6becc7b306226040a48227ecbb2edc6, type: 3}
       propertyPath: m_RootOrder
@@ -72420,6 +72433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerExit
       objectReference: {fileID: 0}
+    - target: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -72464,6 +72481,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522618411159421123, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72502,6 +72523,10 @@ PrefabInstance:
     - target: {fileID: 1281097050576769460, guid: a6becc7b306226040a48227ecbb2edc6, type: 3}
       propertyPath: m_Name
       value: EnemySpawner_Reaper_Count10_Wait60_SpawnPoint1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1281097050576769460, guid: a6becc7b306226040a48227ecbb2edc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4096862311952329108, guid: a6becc7b306226040a48227ecbb2edc6, type: 3}
       propertyPath: m_RootOrder
@@ -72621,6 +72646,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpawn
       objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.642
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72629,6 +72678,11 @@ PrefabInstance:
 --- !u!4 &2458493607961535666 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 975182603056745413, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
+  m_PrefabInstance: {fileID: 3429167310324838263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6887127455761820984 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8071897964090409551, guid: 26806a1e066a44943b27c8025523bed5, type: 3}
   m_PrefabInstance: {fileID: 3429167310324838263}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6485929769592905579
@@ -72642,6 +72696,10 @@ PrefabInstance:
     - target: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_Name
       value: PlayerExit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_RootOrder
@@ -72686,6 +72744,10 @@ PrefabInstance:
     - target: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522618411159421123, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+      propertyPath: m_Size.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
