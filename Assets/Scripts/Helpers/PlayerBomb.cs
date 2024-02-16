@@ -6,6 +6,7 @@ public class PlayerBomb : MonoBehaviour
 {
 
     public bool canFire;
+    public int numberOfTrajectory;
     private float fireTime;
     public float rateOfFire;
     public Bomb Bombs;
@@ -41,7 +42,7 @@ public class PlayerBomb : MonoBehaviour
 
     IEnumerator CoThrowBomb()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < numberOfTrajectory; i++)
         {
             Vector3 newPos = Random.onUnitSphere + transform.position;
             newPos.y += 3;
