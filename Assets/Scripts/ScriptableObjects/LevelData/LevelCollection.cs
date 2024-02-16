@@ -8,7 +8,12 @@ public class LevelCollection : ScriptableObject
     public List<Level> Levels = new List<Level>();
 
 
-    public GameObject GetLevelFromList()
+    public Level GetCurrentLevel(int index)
+    {
+        return Levels[index];
+    }
+
+    public Level GetLevelFromList()
     {
         int rand = Random.Range(0, Levels.Count);
 
@@ -16,7 +21,7 @@ public class LevelCollection : ScriptableObject
         {
             if(i == rand)
             {
-                return Levels[i].gameObject;
+                return Levels[i];
             }
         }
         return null;    

@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LevelGenerator : MonoBehaviour
 {
 
     public static LevelGenerator Instance { get; set; }
 
-    public LevelSequence[] sequences;
+    //public LevelSequence[] sequences;
+
+    public NavMeshSurface navMeshSurface;
     public LevelSequence currentSequence;
+
+    private Level activeLevel;
 
     public GameObject[] levelPrefabs;
     public GameObject[] Powerups;
     public GameObject bossLevel, Popup;
+
+
     private int currentPowerup;
     private int currentLevel;
-    public int stagesBeforeBoss;
+   // public int stagesBeforeBoss;
 
     private Vector3 spawnPos = new Vector3(45.38131f, -9.046906f, 4.755415f);
     // Start is called before the first frame update
@@ -27,6 +35,8 @@ public class LevelGenerator : MonoBehaviour
         }
 
         currentPowerup = Random.Range(0, Powerups.Length);
+        navMeshSurface.RemoveData();
+        navMeshSurface.BuildNavMesh();
     }
 
     public void SetPowerup(int i)
@@ -34,23 +44,36 @@ public class LevelGenerator : MonoBehaviour
         currentPowerup = i;
     }
 
-    public void spawnNewLevel()
+    public Transform GetActiveLevel()
     {
+        return activeLevel.playerSpawn;
+    }
+
+    public void SpawnNewLevel()
+    {
+
         currentLevel++;
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
         //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
-        GameObject level = currentSequence.Sequence[currentLevel].GetLevelFromList();
-        if (currentLevel < stagesBeforeBoss)
-        {
+        activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
+        
+        GameObject go = Instantiate(activeLevel.gameObject, spawnPos, Quaternion.identity);
 
-            GameObject go = Instantiate(level, spawnPos, Quaternion.identity);
-        }
-        else
-        {
-            currentLevel = 0;
-            GameObject go = Instantiate(bossLevel,spawnPos, Quaternion.identity);
-        }
+
+
+        //if (currentLevel < stagesBeforeBoss)
+        //{
+
+
+        //}
+        //else
+        //{
+        //    currentLevel = 0;
+        //    GameObject go = Instantiate(bossLevel,spawnPos, Quaternion.identity);
+        //}
+
+       
     }
 
 

@@ -26,8 +26,6 @@ public class GameManager : MonoBehaviour
        selection.SelectWeapon();
     }
 
-  
-
 
     public void CheckEnemyCount()
     {

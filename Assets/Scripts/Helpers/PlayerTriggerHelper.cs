@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class PlayerTriggerHelper : MonoBehaviour
 {
-
+    [SerializeField]private DroneMovement drone;
     private Vector3 initialPosition;
 
     private void Start()
     {
-        initialPosition = transform.position;
         AudioManager.Instance.PlayMusic("BG");
     }
 
 
-    public void GoToInitPosition()
+    public void GoToNextSpawn()
     {
-        transform.position = initialPosition;
+        Transform newSpawn = LevelGenerator.Instance.GetActiveLevel();
+        transform.position = newSpawn.position;
+        transform.rotation = newSpawn.rotation;
+
+        drone.ResetPositionToPlayer();
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,6 +8,10 @@ public class RocketExplosionAOE : MonoBehaviour
 
     private int damage;
 
+    private void Awake()
+    {
+        Destroy(gameObject, 1f);
+    }
 
     public void SetValues(int damage, float radius)
     {

@@ -7,6 +7,8 @@ public class Level : MonoBehaviour
     private bool isLevelEnded;
     public GameObject[] Door;
 
+    public Transform playerSpawn;
+
     private void Start()
     {
         GameManager.Instance.SetCurrentLevel(this);
@@ -24,7 +26,7 @@ public class Level : MonoBehaviour
         {
             go.SetActive(true);
         }
-     //   Door.SetActive(true);
+     
     }
 
     public bool LevelEnded()
