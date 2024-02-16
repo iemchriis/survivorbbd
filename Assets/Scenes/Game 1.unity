@@ -4018,6 +4018,7 @@ GameObject:
   - component: {fileID: 910492972}
   - component: {fileID: 910492973}
   - component: {fileID: 910492974}
+  - component: {fileID: 910492975}
   m_Layer: 11
   m_Name: BombPoint
   m_TagString: Untagged
@@ -4072,6 +4073,22 @@ MonoBehaviour:
   numberOfTrajectory: 1
   rateOfFire: 3
   Bombs: {fileID: -7145620975331736173, guid: 0d6cbd25f72498d48836433ea16d6c27, type: 3}
+--- !u!114 &910492975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910492971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28865f6c4171a54e900d5ae3c90668a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFire: 1
+  numberOfTrajectory: 1
+  rateOfFire: 5
+  Poison: {fileID: 6781355231413482270, guid: ed3a44b9fd7df7847a0f30f34bd3d013, type: 3}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
