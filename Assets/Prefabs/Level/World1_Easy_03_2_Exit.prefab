@@ -18598,6 +18598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3796294926856745003}
+  - component: {fileID: 6746050963817105947}
   m_Layer: 0
   m_Name: World1_Easy_03_2_Exit
   m_TagString: Untagged
@@ -18630,6 +18631,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6746050963817105947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687164398725786577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door:
+  - {fileID: 5259978338176730431}
+  - {fileID: 3319167351889263874}
 --- !u!1 &8783014344561186962
 GameObject:
   m_ObjectHideFlags: 0
@@ -20992,6 +21008,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+--- !u!1 &3319167351889263874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+  m_PrefabInstance: {fileID: 2378408674935161068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8013051435132534316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
@@ -21139,6 +21160,11 @@ PrefabInstance:
 --- !u!4 &710210447989196305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+  m_PrefabInstance: {fileID: 5183345642916755665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5259978338176730431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
   m_PrefabInstance: {fileID: 5183345642916755665}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5238537646556491183

@@ -5613,6 +5613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714967713045890567}
+  - component: {fileID: 1411807925778820565}
   m_Layer: 0
   m_Name: World1_Easy_04_2_Exit
   m_TagString: Untagged
@@ -5642,6 +5643,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1411807925778820565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386874908268551472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door:
+  - {fileID: 6114710579993772583}
+  - {fileID: 5085118899689535365}
 --- !u!1001 &1225874897527356815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5950,6 +5966,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
   m_PrefabInstance: {fileID: 5296298832907700843}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5085118899689535365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+  m_PrefabInstance: {fileID: 5296298832907700843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5303451726767537711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6080,5 +6101,10 @@ PrefabInstance:
 --- !u!4 &1585212289508098313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+  m_PrefabInstance: {fileID: 6614120891502772169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6114710579993772583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
   m_PrefabInstance: {fileID: 6614120891502772169}
   m_PrefabAsset: {fileID: 0}

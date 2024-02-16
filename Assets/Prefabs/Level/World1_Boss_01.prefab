@@ -73147,6 +73147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3046850027788642958}
+  - component: {fileID: 5306361288479529709}
   m_Layer: 0
   m_Name: World1_Boss_01
   m_TagString: Untagged
@@ -73172,6 +73173,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5306361288479529709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7147189382285515612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door:
+  - {fileID: 1327122807476788550}
 --- !u!1 &7606027849097576873
 GameObject:
   m_ObjectHideFlags: 0
@@ -87215,6 +87230,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+--- !u!1 &1327122807476788550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085863425497185774, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
+  m_PrefabInstance: {fileID: 2124326976408789160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6003014512542080616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5635654350898855616, guid: a1f126c5d03465b48b5572d38955847d, type: 3}
