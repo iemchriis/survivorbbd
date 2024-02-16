@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Model\WeaponUpgradeModel.cs" />
     <Compile Include="Assets\Scripts\Model\SponsorModel.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\WeaponDatas.cs" />
+    <Compile Include="Assets\Poison.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\RocketWeapon.cs" />
     <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\Scripts\Base\Weapons\ShotgunWeapon.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectSnap.cs" />
+    <Compile Include="Assets\PlayerPoisonBomb.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\PiercingBallistic.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\ShotgunWeaponData.cs" />
