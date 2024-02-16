@@ -2640,7 +2640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -230.79999, y: -39}
+  m_AnchoredPosition: {x: -230.79999, y: 0}
   m_SizeDelta: {x: 306.44934, y: 60.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549808332
@@ -3760,7 +3760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000078678, y: -39}
+  m_AnchoredPosition: {x: 0.0000078678, y: 0}
   m_SizeDelta: {x: 306.4493, y: 60.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856717454
@@ -4026,7 +4026,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 1
-  rateOfFire: 5
+  numberOfTrajectory: 1
+  rateOfFire: 3
   Bombs: {fileID: -3403124011485791486, guid: 0d423ac5c36f7824db33798bdd24a83d, type: 3}
 --- !u!1 &961739749
 GameObject:
@@ -7347,7 +7348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -132.6, y: -39}
+  m_AnchoredPosition: {x: -132.6, y: 0}
   m_SizeDelta: {x: 306.44934, y: 60.5281}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565582344

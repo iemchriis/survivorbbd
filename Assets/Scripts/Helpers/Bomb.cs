@@ -42,7 +42,8 @@ public class Bomb : MonoBehaviour
     {
         if(collision.gameObject.tag != "Player")
         {
-            Instantiate(AOE, transform.position, Quaternion.identity);
+            GameObject go =  Instantiate(AOE, transform.position, Quaternion.identity);
+            go.GetComponent<RocketExplosionAOE>().SetValues(20, 10);
             Destroy(gameObject);
         }
     }
