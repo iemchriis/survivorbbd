@@ -6,6 +6,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 {
     private Transform target;
     private NavMeshAgent navmesh;
+    private Animator animator;
     public GameObject exp;
     public int damage;
     public UnityEngine.UI.Slider hpSlider;
@@ -19,6 +20,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         target = GameObject.FindObjectOfType<PlayerMovement>().transform;
         navmesh = GetComponent <NavMeshAgent>();
 
@@ -35,8 +37,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
     public override void TakeDamage(int damage, bool isCrit = false)
     {
         base.TakeDamage(damage);
-        
-        health -= damage;
+             
         if (hpSlider != null) { hpSlider.value -= damage; }
         if(health <= 0)
         {
@@ -73,18 +74,23 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
     public override void Death()
     {
-        if(health <=0 && !IsDead())
+        if(!IsDead())
         {
-            GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
-            go.transform.parent = transform.parent;
+
             base.Death();
-            GameManager.Instance.targeting.RemoveFromTargetList(this);
-            GameManager.Instance.enemyCount--;
-            GameManager.Instance.CheckEnemyCount();
-            LevelGenerator.Instance.SpawnPowerup(transform);
-            GetComponent<Animator>().SetTrigger("isDead");
-            Destroy(gameObject, 2);
+
+            GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
+            go.transform.SetParent(transform.parent);
+
             if (navmesh != null) { navmesh.isStopped = true; }
+
+            GameManager.Instance.RemoveEnemy(this); 
+            GameManager.Instance.CheckEnemyCount();
+
+            LevelGenerator.Instance.SpawnPowerup(transform);
+            animator.SetTrigger("isDead");
+            Destroy(gameObject, 2);
+            
 
         }
 
@@ -110,7 +116,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
     }
 
 
-    // Update is called once per frame
+   
     void Update()
     {
 
@@ -121,7 +127,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
                 navmesh.destination = target.position;
             }
             transform.LookAt(target.position);
-          //transform.position = Vector3.MoveTowards(transform.position, target.position, 1 * Time.deltaTime);
+          
         }
        
         if(hasStatusEffect)

@@ -20,6 +20,8 @@ public abstract class CharacterBase : MonoBehaviour
     
     public virtual void TakeDamage(int damage, bool isCrit=false)
     {
+        health -= damage;
+
         if(damageFX != null)
         {
             ShowHitEffect();

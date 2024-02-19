@@ -26,6 +26,13 @@ public class GameManager : MonoBehaviour
        selection.SelectWeapon();
     }
 
+    public void RemoveEnemy(EnemyScript enemy)
+    {
+        targeting.RemoveFromTargetList(enemy);
+        enemyCount--;
+
+    }
+
 
     public void CheckEnemyCount()
     {
