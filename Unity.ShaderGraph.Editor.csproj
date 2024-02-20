@@ -492,7 +492,6 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Generation\TargetResources\Structs.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Drawing\Interfaces\IShaderInputObserver.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\Input\Gradient\BlackbodyNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\Math\Trigonometry\Arctangent2Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Drawing\Blackboard\SGBlackboard.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\RedirectNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\Input\Texture\CubemapAssetNode.cs" />
@@ -501,6 +500,7 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\Math\Range\OneMinusNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Util\RGBANodeOutput.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Drawing\Blackboard\BlackboardInputInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\Math\Trigonometry\Arctangent2Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Graphs\UVMaterialSlot.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\Input\Basic\IntegerNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@14.0.8\Editor\Data\Nodes\UV\RotateNode.cs" />

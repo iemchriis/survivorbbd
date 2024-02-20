@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\WeaponDatas.cs" />
     <Compile Include="Assets\Poison.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\RocketWeapon.cs" />
+    <Compile Include="Assets\Scripts\Helpers\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
@@ -111,8 +112,8 @@
     <Compile Include="Assets\Scripts\Helpers\ChooseWeapon.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\BaseWeapon.cs" />
-    <Compile Include="Assets\Scripts\Base\CharacterBase.cs" />
     <Compile Include="Assets\Scripts\Helpers\PlayerLandmine.cs" />
+    <Compile Include="Assets\Scripts\Base\CharacterBase.cs" />
     <Compile Include="Assets\Scripts\Base\PlayerVision.cs" />
     <Compile Include="Assets\Scripts\Helpers\ProjectileBoss.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\RocketWeaponData.cs" />
