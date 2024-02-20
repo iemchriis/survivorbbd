@@ -41,8 +41,20 @@ public class BaseProjectile : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
             Debug.Log("Enemy Hit");
-            other.GetComponent<EnemyScript>().TakeDamage(damage,isCrit);
+            other.GetComponent<EnemyScript>().TakeDamage(damage);
             Destroy(gameObject);
+        }
+    }
+
+    public CharacterBase.DamageType CheckIfCrit()
+    {
+        if(isCrit)
+        {
+            return CharacterBase.DamageType.CRIT;
+        }
+        else
+        {
+            return CharacterBase.DamageType.NORMAL;
         }
     }
 }

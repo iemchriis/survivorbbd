@@ -12,7 +12,7 @@ public class PlayerHealth : CharacterBase
         hpBar.value = PlayerDataManager.Instance.GetHealthValue();
     }
 
-    public override void TakeDamage(int damage, bool isCrit = false)
+    public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
         base.TakeDamage(damage);
         health -=damage;

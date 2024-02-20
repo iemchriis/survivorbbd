@@ -20,22 +20,16 @@ public class ShotgunProjectile : BaseProjectile
     {
         CheckRange();
 
-        //if(Vector3.Distance(startPos, transform.position) > bulletDropOff)
-        //{
-        //    rb.velocity = Vector3.zero;
-        //    Destroy(this.gameObject);
-        //}
+       
     }
 
     void CheckRange()
     {
         float dist = Vector3.Distance(startPos, transform.position);
 
-        
-
         if(dist > 8f)
         {
-            Debug.Log("Range Dropoff");
+            
             rb.velocity = Vector3.zero;
             Destroy(gameObject);
         }
@@ -50,7 +44,7 @@ public class ShotgunProjectile : BaseProjectile
 
             if(enemy != null)
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage, CheckIfCrit());
                 Destroy(gameObject);
             }
         }

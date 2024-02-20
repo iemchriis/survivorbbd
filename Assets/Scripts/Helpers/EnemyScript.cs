@@ -34,7 +34,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
    
 
-    public override void TakeDamage(int damage, bool isCrit = false)
+    public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
         base.TakeDamage(damage);
              
@@ -62,7 +62,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
         while (debuffDuration > 0)
         {
 
-            TakeDamage(damage);
+            TakeDamage(damage, DamageType.BURN);
             Debug.Log("Burning");
             yield return new WaitForSeconds(tickTime);
         }

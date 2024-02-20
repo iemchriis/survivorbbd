@@ -21,24 +21,24 @@ public class RocketWeapon : BaseWeapon
         CanFire(rocketData.GetCurrentFireRate());
     }
 
-    void CheckCrit()
+    private bool CheckCrit()
     {
         var rand = Random.value;
-        //Debug.Log(rand);
+        
         if (rand < PlayerDataManager.Instance.GetCritChanceValue() + rocketData.GetCurrentCritRate())
         {
             // Critical hit
-
             Debug.Log("Crit");
             totalDamage = rocketData.GetCritDamage();
+            return true;
         }
         else
         {
             // Normal hit
             totalDamage = rocketData.GetCurrentDamage();
+            return false;
         }
     }
-
 
 
     public override void Shoot()
@@ -49,7 +49,7 @@ public class RocketWeapon : BaseWeapon
         var bullet = bulletObj.GetComponent<RocketProjectile>();
 
 
-        bullet.SetProjectileStats(totalDamage, rocketData.projectileSpeed);
+        bullet.SetProjectileStats(totalDamage, rocketData.projectileSpeed, CheckCrit());
         bullet.SetSplashDamageValues(rocketData.GetSplashDamage(), rocketData.GetSplashRadius());
         bullet.ShootProjectile(transform.forward);
 

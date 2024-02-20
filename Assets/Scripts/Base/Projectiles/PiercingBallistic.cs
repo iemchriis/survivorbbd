@@ -26,13 +26,20 @@ public class PiercingBallistic : BaseProjectile
     {
         if(other.CompareTag("Enemy"))
         {
-            pierceCount--;
-            other.GetComponent<EnemyScript>().TakeDamage(damage,isCrit);
-            if (pierceCount <= 0)
+            var enemy = other.GetComponent<EnemyScript>();
+
+            if(enemy != null)
             {
-                Debug.Log("Pierce Ended");
-                Destroy(gameObject);
+                pierceCount--;
+                enemy.TakeDamage(damage, CheckIfCrit());
+                if (pierceCount <= 0)
+                {
+                    Debug.Log("Pierce Ended");
+                    Destroy(gameObject);
+                }
             }
+
+           
         }
     }
 }

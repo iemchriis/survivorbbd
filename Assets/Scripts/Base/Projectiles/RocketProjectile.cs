@@ -23,11 +23,19 @@ public class RocketProjectile : BaseProjectile
     {
         if(other.CompareTag("Enemy"))
         {
-            rb.velocity = Vector3.zero;
-            aoeEffect.SetActive(true);
-            other.GetComponent<EnemyScript>().TakeDamage(damage, isCrit);
-            Debug.Log("Direct Hit" + damage);
-            Destroy(this.gameObject, 0.5f);
+            var enemy = other.GetComponent<EnemyScript>();
+            if(enemy != null)
+            {
+                // stop projectile
+                rb.velocity = Vector3.zero;
+                // activate AOE Damage
+                aoeEffect.SetActive(true);
+                enemy.TakeDamage(damage, CheckIfCrit());
+                
+                Destroy(this.gameObject, 0.5f);
+            }
+
+          
         }
     }
 }

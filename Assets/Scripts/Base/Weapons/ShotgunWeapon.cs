@@ -7,6 +7,8 @@ public class ShotgunWeapon : BaseWeapon
     
     [SerializeField] private int shotgunPellets;
     public ShotgunData shotgunData;
+
+    private int totalDamage;
  
 
     public override void Initialize()
@@ -43,6 +45,26 @@ public class ShotgunWeapon : BaseWeapon
         CanFire(weaponData.fireRate[weaponData.weaponLevel-1]);
     }
 
+    private bool CheckCrit()
+    {
+        var rand = Random.value;
+        //Debug.Log(rand);
+        if (rand < PlayerDataManager.Instance.GetCritChanceValue() + shotgunData.GetCurrentCritRate())
+        {
+            // Critical hit
+
+            Debug.Log("Crit");
+            totalDamage = shotgunData.GetCritDamage();
+            return true;
+        }
+        else
+        {
+            // Normal hit
+            totalDamage = shotgunData.GetCurrentDamage();
+            return false;
+        }
+    }
+
     public override void Shoot()
     {
 
@@ -58,7 +80,7 @@ public class ShotgunWeapon : BaseWeapon
             bulletObj.transform.rotation = newRot;
 
             var bullet = bulletObj.GetComponent<ShotgunProjectile>();
-            bullet.SetProjectileStats(shotgunData.GetCurrentDamage(), shotgunData.projectileSpeed);
+            bullet.SetProjectileStats(totalDamage, shotgunData.projectileSpeed, CheckCrit());
             bullet.ShootProjectile(bullet.transform.forward);
             
         }

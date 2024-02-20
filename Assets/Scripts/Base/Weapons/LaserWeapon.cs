@@ -10,9 +10,9 @@ public class LaserWeapon : BaseWeapon
     public LaserData laserData;
     private LineRenderer laserLine;
 
-  
 
-   
+    private int totalDamage;
+    private bool isCrit;
 
     public override void Initialize()
     {
@@ -24,7 +24,25 @@ public class LaserWeapon : BaseWeapon
 
     }
 
-   
+    void CheckCrit()
+    {
+        var rand = Random.value;
+        //Debug.Log(rand);
+        if (rand < PlayerDataManager.Instance.GetCritChanceValue() + laserData.GetCurrentCritRate())
+        {
+            // Critical hit
+
+            Debug.Log("Crit");
+            totalDamage = laserData.GetCritDamage();
+        }
+        else
+        {
+            // Normal hit
+            totalDamage = laserData.GetCurrentDamage();
+        }
+    }
+
+
     void Update()
     {
         CanFire(weaponData.GetCurrentFireRate());
@@ -44,7 +62,7 @@ public class LaserWeapon : BaseWeapon
             {
                
                 var enemy = hit.transform.GetComponent<EnemyScript>();
-                enemy.TakeDamage(laserData.GetCurrentDamage());
+                enemy.TakeDamage(totalDamage, CheckIfCrit());
                 enemy.TakeDamageOverTime(laserData.GetBurnDamage(), laserData.GetBurnDuration(), 1);
             }
 
@@ -62,5 +80,17 @@ public class LaserWeapon : BaseWeapon
         laserLine.enabled = true;
         yield return new WaitForSeconds(laserDuration);
         laserLine.enabled = false;
+    }
+
+    public CharacterBase.DamageType CheckIfCrit()
+    {
+        if (isCrit)
+        {
+            return CharacterBase.DamageType.CRIT;
+        }
+        else
+        {
+            return CharacterBase.DamageType.NORMAL;
+        }
     }
 }
