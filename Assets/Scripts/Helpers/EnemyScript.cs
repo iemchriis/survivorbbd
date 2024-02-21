@@ -77,6 +77,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
         if(!IsDead())
         {
 
+            StopAllCoroutines();
             base.Death();
 
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
