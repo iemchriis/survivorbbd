@@ -12,7 +12,7 @@ public class LaserWeapon : BaseWeapon
 
 
     private int totalDamage;
-    private bool isCrit;
+   
 
     public override void Initialize()
     {
@@ -24,23 +24,7 @@ public class LaserWeapon : BaseWeapon
 
     }
 
-    void CheckCrit()
-    {
-        var rand = Random.value;
-        //Debug.Log(rand);
-        if (rand < PlayerDataManager.Instance.GetCritChanceValue() + laserData.GetCurrentCritRate())
-        {
-            // Critical hit
-
-            Debug.Log("Crit");
-            totalDamage = laserData.GetCritDamage();
-        }
-        else
-        {
-            // Normal hit
-            totalDamage = laserData.GetCurrentDamage();
-        }
-    }
+   
 
 
     void Update()
@@ -50,6 +34,7 @@ public class LaserWeapon : BaseWeapon
 
     public override void Shoot()
     {
+    
         AudioManager.Instance.PlaySFX("Laser");
         laserLine.SetPosition(0, firePos.position);
 
@@ -62,7 +47,9 @@ public class LaserWeapon : BaseWeapon
             {
                
                 var enemy = hit.transform.GetComponent<EnemyScript>();
-                enemy.TakeDamage(totalDamage, CheckIfCrit());
+
+                var check = CheckIfCrit();
+                enemy.TakeDamage(totalDamage, check);
                 enemy.TakeDamageOverTime(laserData.GetBurnDamage(), laserData.GetBurnDuration(), 1);
             }
 
@@ -84,13 +71,25 @@ public class LaserWeapon : BaseWeapon
 
     public CharacterBase.DamageType CheckIfCrit()
     {
-        if (isCrit)
+        var rand = Random.value;
+        //Debug.Log(rand);
+        if (rand < PlayerDataManager.Instance.GetCritChanceValue() + laserData.GetCurrentCritRate())
         {
+            // Critical hit
+
+            
+            totalDamage = laserData.GetCritDamage();
             return CharacterBase.DamageType.CRIT;
         }
         else
         {
+            // Normal hit
+            
+            totalDamage = laserData.GetCurrentDamage();
             return CharacterBase.DamageType.NORMAL;
         }
+
+
+        
     }
 }

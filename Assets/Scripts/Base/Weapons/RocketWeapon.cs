@@ -43,13 +43,13 @@ public class RocketWeapon : BaseWeapon
 
     public override void Shoot()
     {
-        CheckCrit();
+        var crit = CheckCrit();
 
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<RocketProjectile>();
 
 
-        bullet.SetProjectileStats(totalDamage, rocketData.projectileSpeed, CheckCrit());
+        bullet.SetProjectileStats(totalDamage, rocketData.projectileSpeed,crit);
         bullet.SetSplashDamageValues(rocketData.GetSplashDamage(), rocketData.GetSplashRadius());
         bullet.ShootProjectile(transform.forward);
 

@@ -42,13 +42,12 @@ public class BallisticWeapon : BaseWeapon
     public override void Shoot()
     {
         
-
+        var crit = CheckCrit();
         GameObject bulletObj = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         var bullet = bulletObj.GetComponent<PiercingBallistic>();
 
       
-
-        bullet.SetProjectileStats(totalDamage, ballisticData.projectileSpeed, CheckCrit());
+        bullet.SetProjectileStats(totalDamage, ballisticData.projectileSpeed, crit);
         bullet.SetPierceLevel(ballisticData.GetPierceCount());
         bullet.ShootProjectile(transform.forward);
 
