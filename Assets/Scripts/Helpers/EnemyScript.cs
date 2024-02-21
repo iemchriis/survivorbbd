@@ -36,7 +36,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
     public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
-        base.TakeDamage(damage);
+        base.TakeDamage(damage, type);
              
         if (hpSlider != null) { hpSlider.value -= damage; }
         if(health <= 0)

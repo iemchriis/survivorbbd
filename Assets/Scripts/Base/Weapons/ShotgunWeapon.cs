@@ -67,7 +67,7 @@ public class ShotgunWeapon : BaseWeapon
 
     public override void Shoot()
     {
-
+        var crit = CheckCrit();
         Quaternion newRot;
 
         for (int i = 0; i < shotgunPellets; i++)
@@ -80,7 +80,7 @@ public class ShotgunWeapon : BaseWeapon
             bulletObj.transform.rotation = newRot;
 
             var bullet = bulletObj.GetComponent<ShotgunProjectile>();
-            bullet.SetProjectileStats(totalDamage, shotgunData.projectileSpeed, CheckCrit());
+            bullet.SetProjectileStats(totalDamage, shotgunData.projectileSpeed, crit);
             bullet.ShootProjectile(bullet.transform.forward);
             
         }
