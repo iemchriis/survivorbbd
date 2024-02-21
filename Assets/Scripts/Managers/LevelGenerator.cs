@@ -57,20 +57,11 @@ public class LevelGenerator : MonoBehaviour
         GameManager.Instance.SetCurrentLevel(null);
         //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
         activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
-        GameObject go = Instantiate(activeLevel.gameObject, spawnPos, Quaternion.identity);
+        //Vector3 rot = new Vector3(0, 90, 0);
+        GameObject go = Instantiate(activeLevel.gameObject, spawnPos, activeLevel.transform.rotation);
 
         Debug.Log(activeLevel.name);
 
-        //if (currentLevel < stagesBeforeBoss)
-        //{
-
-
-        //}
-        //else
-        //{
-        //    currentLevel = 0;
-        //    GameObject go = Instantiate(bossLevel,spawnPos, Quaternion.identity);
-        //}
         navMeshSurface.RemoveData();
         navMeshSurface.BuildNavMesh();
 
