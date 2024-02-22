@@ -509,6 +509,9 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_StaticBatching: 0
     m_DynamicBatching: 1
+  - m_BuildTarget: Standalone
+    m_StaticBatching: 0
+    m_DynamicBatching: 1
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
@@ -835,7 +838,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: survivor
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -843,7 +846,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: survivor
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: survivorbbd
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
