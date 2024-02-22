@@ -187,6 +187,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2890534069101806333}
     m_Modifications:
+    - target: {fileID: 1351921266260105246, guid: e9c98a558a71a3548995c7caadb8d5ae, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5705360011884256015, guid: e9c98a558a71a3548995c7caadb8d5ae, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -338,6 +342,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6105359491177773704, guid: 55b0e1b3a802bd145928c2280c811874, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -361,6 +369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2890534069101806333}
     m_Modifications:
+    - target: {fileID: 3367096745509928299, guid: 19ae9bc0fbfff9f4a91ecec7845a65e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6049784814317387329, guid: 19ae9bc0fbfff9f4a91ecec7845a65e5, type: 3}
       propertyPath: m_Name
       value: Sponsor_Speed
@@ -543,6 +555,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8113121436316870162, guid: 5adab390efe76904d9e258b259034a6b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -698,6 +714,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5428570800399270262, guid: 6ee150a462199fc4eb784dc279ba2558, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520408368301990839, guid: 6ee150a462199fc4eb784dc279ba2558, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
