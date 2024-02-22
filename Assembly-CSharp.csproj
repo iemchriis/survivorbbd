@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Helpers\TriggerShow.cs" />
     <Compile Include="Assets\Scripts\Helpers\PlayerBomb.cs" />
+    <Compile Include="Assets\Scripts\Helpers\SponsorTriggert.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelData\LevelCollection.cs" />
     <Compile Include="Assets\Scripts\Helpers\Sound.cs" />
     <Compile Include="Assets\Scripts\Managers\GameUIManager.cs" />

@@ -76,7 +76,6 @@ public class LevelGenerator : MonoBehaviour
             StartCoroutine(CoShowNotif());
             GameObject go = Instantiate(powerup, position.position, Quaternion.identity);
             go.transform.position = new Vector3(position.position.x, 1, position.position.z);
-            
         }
 
     }
