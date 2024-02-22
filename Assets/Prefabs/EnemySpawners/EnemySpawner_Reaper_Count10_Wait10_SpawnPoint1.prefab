@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 569726781537678397}
   - component: {fileID: 2649309926602809833}
   - component: {fileID: 4394336049822584179}
+  - component: {fileID: 1830850285495502645}
   m_Layer: 0
   m_Name: EnemySpawner_Reaper_Count10_Wait10_SpawnPoint1
   m_TagString: Untagged
@@ -124,6 +125,22 @@ MonoBehaviour:
   - {fileID: 326409566225049733}
   waitTime: 10
   spawnCount: 10
+--- !u!208 &1830850285495502645
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281097050576769460}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6236073650468991251
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +153,7 @@ GameObject:
   - component: {fileID: 7455149272039870231}
   - component: {fileID: 3662213986918841576}
   - component: {fileID: 1329932470231212455}
+  - component: {fileID: 4283657753092758254}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -229,3 +247,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!208 &4283657753092758254
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236073650468991251}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

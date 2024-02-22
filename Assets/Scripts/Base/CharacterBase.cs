@@ -98,7 +98,7 @@ public abstract class CharacterBase : MonoBehaviour
         }
   
         // set position and rotation offset
-        Vector3 offset = new Vector3(0, 3f, 0);
+        Vector3 offset = new Vector3(Random.Range(-1.5f, 1.5f), 3f, 0);
         txt.transform.localPosition += offset;
         txt.transform.localRotation = Quaternion.Euler(80, 0, 0);
 

@@ -51,20 +51,25 @@ public class LevelGenerator : MonoBehaviour
 
     public void SpawnNewLevel()
     {
-
+        
         currentLevel++;
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
+        
         //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
         activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
         //Vector3 rot = new Vector3(0, 90, 0);
         GameObject go = Instantiate(activeLevel.gameObject, spawnPos, activeLevel.transform.rotation);
 
         Debug.Log(activeLevel.name);
-
         navMeshSurface.RemoveData();
-        navMeshSurface.BuildNavMesh();
+        Invoke(nameof(BuildLevel), 0.5f);
 
+    }
+
+    public void BuildLevel()
+    {
+        navMeshSurface.BuildNavMesh();
     }
 
 
