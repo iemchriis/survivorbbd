@@ -42,7 +42,7 @@ public class ProjectileBoss : CharacterBase
         for(int i = 0; i < summonCount; i++ )
         {
             Vector3 randomPosition = Random.insideUnitSphere + transform.position;
-            GameObject go = Instantiate(summonPrefab, transform);
+            GameObject go = Instantiate(summonPrefab, transform.position, Quaternion.identity);
             go.transform.position = new Vector3(randomPosition.x, transform.position.y, randomPosition.z);
         }
     }
