@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
+    [SerializeField] private int damage;
+
+
+    private void Awake()
+    {
+        Destroy(gameObject, 5f);
+    }
+
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }
