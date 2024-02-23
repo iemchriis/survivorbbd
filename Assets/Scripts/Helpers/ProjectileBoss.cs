@@ -59,6 +59,7 @@ public class ProjectileBoss : MonoBehaviour
     {
         anim.SetBool("Summon", true);
         attackCount = 0;
+        GameManager.Instance.enemyCount += summonCount;
     }
 
 
