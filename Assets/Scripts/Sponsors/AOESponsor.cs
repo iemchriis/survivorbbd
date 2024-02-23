@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class AOESponsor : SponsorBase
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Upgrade(int i)
     {
-        
+        switch (i)
+        {
+            case 0:
+                UpgradeBomb();
+                break;
+
+            case 1:
+                LandMine();
+                break;
+
+            case 2:
+                Poison();
+                break;
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    void UpgradeBomb()
     {
-        
+        GameObject.FindObjectOfType<PlayerBomb>().canFire = true;
+    }
+
+
+    void LandMine()
+    {
+        GameObject.FindObjectOfType<PlayerLandmine>().canFire = true;
+    }
+
+
+    void Poison()
+    {
+        GameObject.FindObjectOfType<PlayerPoisonBomb>().canFire = true;
     }
 }

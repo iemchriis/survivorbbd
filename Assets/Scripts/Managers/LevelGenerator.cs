@@ -18,7 +18,7 @@ public class LevelGenerator : MonoBehaviour
 
     public GameObject[] levelPrefabs;
     public GameObject[] Powerups;
-    public GameObject bossLevel, Popup;
+    public GameObject bossLevel, Popup, Fade;
 
 
     private int currentPowerup;
@@ -55,7 +55,7 @@ public class LevelGenerator : MonoBehaviour
         currentLevel++;
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
-        
+        Fade.SetActive(true);
         //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
         activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
         //Vector3 rot = new Vector3(0, 90, 0);
