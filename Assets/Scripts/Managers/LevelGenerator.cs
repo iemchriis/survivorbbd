@@ -63,7 +63,7 @@ public class LevelGenerator : MonoBehaviour
 
         Debug.Log(activeLevel.name);
         navMeshSurface.RemoveData();
-        Invoke(nameof(BuildLevel), 0.5f);
+        Invoke(nameof(BuildLevel), 0.1f);
 
     }
 

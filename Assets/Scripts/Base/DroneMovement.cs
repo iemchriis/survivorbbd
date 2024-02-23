@@ -30,9 +30,17 @@ public class DroneMovement : MonoBehaviour
 
     }
 
-    public void ResetPositionToPlayer()
+    public void ResetPositionToPlayer(Vector3 pos)
     {
-        transform.position = new Vector3(player.position.x+ 3.5f, player.position.y, player.position.z - 3.5f);
+        StartCoroutine(CoResetPosition(pos));   
+    }
+
+    IEnumerator CoResetPosition(Vector3 pos)
+    {
+        //gameObject.SetActive(false);
+        transform.position = pos;
+        yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(true);
     }
 
 }

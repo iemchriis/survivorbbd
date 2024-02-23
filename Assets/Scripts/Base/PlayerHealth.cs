@@ -15,7 +15,7 @@ public class PlayerHealth : CharacterBase
     public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
         base.TakeDamage(damage);
-        health -=damage;
+       
         hpBar.value -= damage;
         if(health <= 0)
         {

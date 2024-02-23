@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028563, g: 0.22571588, b: 0.30692416, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10134,6 +10134,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5142345151447362875, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2079354082}
+    - target: {fileID: 5142345151447362875, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
       propertyPath: joystick
       value: 
       objectReference: {fileID: 684229823}
@@ -10161,6 +10165,11 @@ PrefabInstance:
 --- !u!4 &2079354081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400062, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
+  m_PrefabInstance: {fileID: 2079354080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2079354082 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5807709595835562624, guid: 6f17559dceea3754d859c59ba8ca0302, type: 3}
   m_PrefabInstance: {fileID: 2079354080}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2093216947 stripped

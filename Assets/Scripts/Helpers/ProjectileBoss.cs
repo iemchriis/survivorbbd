@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileBoss : CharacterBase
+public class ProjectileBoss : MonoBehaviour
 {
     public GameObject projectilePrefab, summonPrefab;
     public Transform throwPoint;
