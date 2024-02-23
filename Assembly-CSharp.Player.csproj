@@ -132,6 +132,7 @@
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectSnap.cs" />
     <Compile Include="Assets\PlayerPoisonBomb.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\PiercingBallistic.cs" />
+    <Compile Include="Assets\Settings.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\ShotgunWeaponData.cs" />
     <Compile Include="Assets\Scripts\Sponsors\AOESponsor.cs" />

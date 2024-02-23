@@ -9,7 +9,7 @@ using UnityEngine;
         public static AudioManager Instance;
 
         public Sound[] MusicSounds, SfXSounds;
-    public AudioSource musicSource, SFXSource;
+        public AudioSource musicSource, SFXSource;
         
         public delegate void OnAudioManagerInitialized();
         public event OnAudioManagerInitialized onInitialized;
@@ -30,7 +30,17 @@ using UnityEngine;
             }
         }
 
+        
+    public void Music(float i)
+    {
+        musicSource.volume = i;
+    }
 
+
+    public void SFX(float i)
+    {
+        SFXSource.volume = i;
+    }
 
 
         public void PlayMusic(string name)
