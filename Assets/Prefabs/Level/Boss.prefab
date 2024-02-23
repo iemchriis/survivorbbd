@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900e1310042a4144384ab3f39aad929d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8716363910638669543, guid: c0adca9c489a38b438599024317c7e5f, type: 3}
+  enemyPrefab: {fileID: 7927497299433866330, guid: 12a3d2ece7a8f2c43afca27e8d3b102d, type: 3}
   spawnPoint:
   - {fileID: 4986859576701773059}
+  waitTime: 1
   spawnCount: 1
 --- !u!1 &5545145378024197307
 GameObject:
@@ -896,7 +897,7 @@ Transform:
   - {fileID: 3653643388456396351}
   - {fileID: 8398908194800861539}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8952862013746075566
 MonoBehaviour:
@@ -910,10 +911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomNumber: 
   Door:
   - {fileID: 7858245326256252207}
   - {fileID: 1028784861715923113}
   - {fileID: 8450441589743632651}
+  playerSpawn: {fileID: 0}
 --- !u!1001 &26121210400793072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15016,6 +15019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0857c47c70b44abdfdd27ed0dee6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupIndex: 0
+  powerups: []
 --- !u!1001 &2104195605883088557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37994,6 +37999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0857c47c70b44abdfdd27ed0dee6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupIndex: 0
+  powerups: []
 --- !u!4 &4043568057148666554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8908795335367550806, guid: 16883ef0da64c204c93cd9214e3a05bf, type: 3}
@@ -73628,6 +73635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0857c47c70b44abdfdd27ed0dee6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupIndex: 0
+  powerups: []
 --- !u!1001 &9128187411054643082
 PrefabInstance:
   m_ObjectHideFlags: 0

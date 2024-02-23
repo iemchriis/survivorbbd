@@ -15,7 +15,7 @@ public class DoorTrigger : MonoBehaviour
 
     void randomOffer()
     {
-        powerupIndex = Random.Range(0, powerups.Length);
+      //  powerupIndex = Random.Range(0, powerups.Length);
         powerups[powerupIndex].SetActive(true);
     }
 

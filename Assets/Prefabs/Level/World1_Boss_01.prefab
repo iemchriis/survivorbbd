@@ -81728,7 +81728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 900e1310042a4144384ab3f39aad929d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8716363910638669543, guid: c0adca9c489a38b438599024317c7e5f, type: 3}
+  enemyPrefab: {fileID: 7927497299433866330, guid: 12a3d2ece7a8f2c43afca27e8d3b102d, type: 3}
   spawnPoint:
   - {fileID: 5923208143890163530}
   waitTime: 1
