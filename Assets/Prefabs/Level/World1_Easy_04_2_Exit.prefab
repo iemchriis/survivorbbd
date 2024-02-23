@@ -5406,7 +5406,7 @@ Transform:
   - {fileID: 555603565707687083}
   - {fileID: 8597085333620416053}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1411807925778820565
 MonoBehaviour:
@@ -5420,6 +5420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomNumber: 
   Door:
   - {fileID: 6114710579993772583}
   - {fileID: 5085118899689535365}
@@ -5479,6 +5480,10 @@ PrefabInstance:
     - target: {fileID: 1146750882366685360, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_Name
       value: EnemySpawner_Zombie_Count10_Wait_10_SpawnPoint1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: spawnCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5590,6 +5595,10 @@ PrefabInstance:
       propertyPath: waitTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: spawnCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.999996
@@ -5671,6 +5680,10 @@ PrefabInstance:
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: spawnCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5990,6 +6003,10 @@ PrefabInstance:
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: spawnCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x

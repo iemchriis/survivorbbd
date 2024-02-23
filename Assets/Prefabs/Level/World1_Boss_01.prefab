@@ -73186,9 +73186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomNumber: 
   Door:
   - {fileID: 1327122807476788550}
-  playerSpawn: {fileID: 0}
+  playerSpawn: {fileID: 2574299068978037595}
 --- !u!1 &7606027849097576873
 GameObject:
   m_ObjectHideFlags: 0

@@ -8073,6 +8073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc08c2597b9dc0f41b4e948af46bf530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomNumber: 
   Door:
   - {fileID: 3602585796709308881}
   - {fileID: 7473804449089334224}
@@ -10359,6 +10360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner_Zombie_Count10_Wait_10_SpawnPoint1
       objectReference: {fileID: 0}
+    - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
+      propertyPath: spawnCount
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.1122704
@@ -10605,7 +10610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: spawnCount
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10695,7 +10700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: spawnCount
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: m_LocalPosition.x
