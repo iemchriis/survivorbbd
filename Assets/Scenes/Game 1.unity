@@ -8151,6 +8151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner_CrawlerMelee_Count10_Wait_10_SpawnPoint1 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1146750882366685360, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.56
