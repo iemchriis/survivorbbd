@@ -16,7 +16,7 @@ public class ProjectileBoss : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindObjectOfType<PlayerTriggerHelper>().transform;
+        player = GameManager.Instance.targeting.transform.parent;
     }
 
     void Update()

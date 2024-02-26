@@ -24,8 +24,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
        selection.SelectWeapon();
+       SpawnEnemiesOnLevel();
     }
 
+   
     public void RemoveEnemy(EnemyScript enemy)
     {
         targeting.RemoveFromTargetList(enemy);
@@ -41,6 +43,12 @@ public class GameManager : MonoBehaviour
             currentLevel.NewLevel();
         }
     }
+    public void SpawnEnemiesOnLevel()
+    {
+        currentLevel.ActivateSpawners();
+    }
+
+   
 
     public void DeleteLevel()
     {

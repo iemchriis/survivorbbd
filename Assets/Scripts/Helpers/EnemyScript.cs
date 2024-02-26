@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-public class EnemyScript : CharacterBase, ISlowed, IStunned
+public class EnemyScript : CharacterBase
 {
-    private Transform target;
-    private NavMeshAgent navmesh;
-    private Animator animator;
+    private EnemyMovement movement;
+
     public GameObject exp;
     public int damage;
     public Slider hpSlider;
-
-    
-    public bool hasStatusEffect;
+    public bool hasDps;
 
 
     [SerializeField]private GameObject burnEffect;
@@ -21,10 +18,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-        target = GameObject.FindObjectOfType<PlayerMovement>().transform;
-        navmesh = GetComponent <NavMeshAgent>();
-
+        movement = GetComponent<EnemyMovement>();
         if(hpSlider != null)
         {
             hpSlider.maxValue = health;
@@ -33,7 +27,25 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
     }
 
-   
+    void Update()
+    {
+        if (hasDps)
+        {
+            DebuffTimer();
+        }
+    }
+
+    void DebuffTimer()
+    {
+        debuffDuration -= Time.deltaTime;
+        if (debuffDuration <= 0)
+        {
+            hasDps = false;
+        }
+    }
+
+
+
 
     public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
@@ -58,7 +70,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
 
     IEnumerator DOT(int damage, float duration, int tickTime)
     {
-        hasStatusEffect = true;
+        hasDps = true;
         burnEffect.SetActive(true);
         while (debuffDuration > 0)
         {
@@ -84,13 +96,13 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             go.transform.SetParent(transform.parent);
 
-            if (navmesh != null) { navmesh.isStopped = true; }
+            if (movement.Navmesh != null) { movement.Navmesh.isStopped = true; }
 
             GameManager.Instance.RemoveEnemy(this); 
             GameManager.Instance.CheckEnemyCount();
 
             LevelGenerator.Instance.SpawnPowerup(transform);
-            animator.SetTrigger("isDead");
+            movement.Animator.SetTrigger("isDead");
             Destroy(gameObject, 2);
             
 
@@ -108,59 +120,9 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
         }
     }
 
-    void StartTime()
-    {
-        debuffDuration -= Time.deltaTime;
-        if(debuffDuration <= 0)
-        {
-            hasStatusEffect = false;
-        }
-    }
-
+  
 
    
-    void Update()
-    {
+   
 
-        if (target != null && !IsDead())
-        {
-            if (navmesh != null)
-            {
-                navmesh.destination = target.position;
-            }
-            transform.LookAt(target.position);
-          
-        }
-       
-        if(hasStatusEffect)
-        {
-            StartTime();
-        }
-    }
-
-    public void ApplySlowEffect(int debuffAmount, float debuffDuration)
-    {
-        StartCoroutine(ApplySlowEffectAsync(debuffAmount, debuffDuration));
-    }
-
-    public IEnumerator ApplySlowEffectAsync(int debuffAmount, float debuffDuration)
-    {
-        var ogSpeed = navmesh.speed;
-
-        navmesh.speed -= debuffAmount;
-        yield return new WaitForSeconds(debuffDuration);
-        navmesh.speed = ogSpeed;
-    }
-
-    public void ApplyStun(float stunDuration)
-    {
-        StartCoroutine(ApplyStunAsync(stunDuration));
-    }
-
-    public IEnumerator ApplyStunAsync(float stunDuration)
-    {
-        navmesh.isStopped = true;
-        yield return new WaitForSeconds(stunDuration);
-        navmesh.isStopped = false;
-    }
 }

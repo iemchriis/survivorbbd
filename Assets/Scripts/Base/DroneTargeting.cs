@@ -91,15 +91,14 @@ public class DroneTargeting : MonoBehaviour
 
     void CheckIfDead()
     {
-        foreach (var target in targets)
+        for (int i = 0; i < targets.Count; i++)
         {
-            var enemy = target.GetComponent<EnemyScript>();
+            var enemy = targets[i].GetComponent<EnemyScript>();
             if (enemy.IsDead())
             {
-                RemoveFromTargetList(enemy);    
+                RemoveFromTargetList(enemy);
             }
-        }
-
+        }   
 
         if (nearestEnemy == null)
             return;

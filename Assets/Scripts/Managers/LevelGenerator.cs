@@ -14,8 +14,6 @@ public class LevelGenerator : MonoBehaviour
     public NavMeshSurface navMeshSurface;
     public LevelSequence currentSequence;
 
-    private Level activeLevel;
-
     public GameObject[] levelPrefabs;
     public GameObject[] Powerups;
     public GameObject bossLevel, Popup, Fade;
@@ -23,10 +21,11 @@ public class LevelGenerator : MonoBehaviour
 
     private int currentPowerup;
     private int currentLevel;
-    // public int stagesBeforeBoss;
+
+    private Level activeLevel;
 
     private Vector3 spawnPos = new Vector3(0, 0, 0); ///new Vector3(45.38131f, -9.046906f, 4.755415f);
-    // Start is called before the first frame update
+
     private void Awake()
     {
         if(Instance == null)
@@ -43,11 +42,11 @@ public class LevelGenerator : MonoBehaviour
     {
         currentPowerup = i;
     }
-
     public Transform GetActiveLevel()
     {
         return activeLevel.playerSpawn;
     }
+
 
     public void SpawnNewLevel()
     {
@@ -56,12 +55,11 @@ public class LevelGenerator : MonoBehaviour
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
         Fade.SetActive(true);
-        //GameObject level = levelPrefabs[Random.Range(0, levelPrefabs.Length)];
+        
         activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
-        //Vector3 rot = new Vector3(0, 90, 0);
         GameObject go = Instantiate(activeLevel.gameObject, spawnPos, activeLevel.transform.rotation);
 
-        Debug.Log(activeLevel.name);
+        
         navMeshSurface.RemoveData();
         Invoke(nameof(BuildLevel), 0.1f);
 
@@ -70,6 +68,7 @@ public class LevelGenerator : MonoBehaviour
     public void BuildLevel()
     {
         navMeshSurface.BuildNavMesh();
+        GameManager.Instance.SpawnEnemiesOnLevel();
     }
 
 
