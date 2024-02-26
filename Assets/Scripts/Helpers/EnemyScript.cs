@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class EnemyScript : CharacterBase, ISlowed, IStunned
 {
     private Transform target;
@@ -9,7 +10,7 @@ public class EnemyScript : CharacterBase, ISlowed, IStunned
     private Animator animator;
     public GameObject exp;
     public int damage;
-    public UnityEngine.UI.Slider hpSlider;
+    public Slider hpSlider;
 
     
     public bool hasStatusEffect;

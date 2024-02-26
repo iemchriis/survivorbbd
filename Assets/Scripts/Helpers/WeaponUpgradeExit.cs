@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WeaponUpgradeExit : MonoBehaviour
 {
     [SerializeField] private WeaponUpgradePresenter presenter;
+    [SerializeField] private string sceneName;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +14,7 @@ public class WeaponUpgradeExit : MonoBehaviour
         {
             if(presenter.selection.currentWeapon != null)
             {
-                SceneManager.LoadScene("Game 1");
+                SceneManager.LoadScene(sceneName);
             }
             else
             {

@@ -6094,6 +6094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   presenter: {fileID: 1993114932}
+  sceneName: Game 1
 --- !u!1 &1511454029
 GameObject:
   m_ObjectHideFlags: 0
