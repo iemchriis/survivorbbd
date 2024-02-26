@@ -167,6 +167,7 @@
     <None Include="Assets\Extensions\LitJson\LitJson.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\Chibi Soul Reaper\readme.txt" />
+    <None Include="Assets\Placeholder_Enemies\Light Hearted Tech\SentryRobot\Documentation\Readme.txt" />
     <None Include="Assets\Extensions\Low Poly Assault Troop\Read Me.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\Shaders\sh_SOLID_standardWithVC.shader" />
