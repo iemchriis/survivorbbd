@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856601670117272814}
   - component: {fileID: -3088113816831399903}
+  - component: {fileID: -6368044812182627919}
   - component: {fileID: 8911974493853456521}
   - component: {fileID: 1189623601512904567}
   - component: {fileID: 957970922430763787}
@@ -124,6 +125,18 @@ MonoBehaviour:
   hpSlider: {fileID: 0}
   hasStatusEffect: 0
   burnEffect: {fileID: 5781774722926084323}
+--- !u!114 &-6368044812182627919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856601670117699726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &8911974493853456521
 NavMeshAgent:
   m_ObjectHideFlags: 0

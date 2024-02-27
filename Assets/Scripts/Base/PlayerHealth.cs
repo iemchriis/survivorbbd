@@ -8,8 +8,13 @@ public class PlayerHealth : CharacterBase
     private void Start()
     {
         health = PlayerDataManager.Instance.GetHealthValue();
-        hpBar.maxValue = PlayerDataManager.Instance.GetHealthValue();
-        hpBar.value = PlayerDataManager.Instance.GetHealthValue();
+
+        if(hpBar != null)
+        {
+            hpBar.maxValue = PlayerDataManager.Instance.GetHealthValue();
+            hpBar.value = PlayerDataManager.Instance.GetHealthValue();
+        }
+        
     }
 
     public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)

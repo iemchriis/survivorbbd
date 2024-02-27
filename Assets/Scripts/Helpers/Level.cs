@@ -6,15 +6,27 @@ public class Level : MonoBehaviour
 {
     private bool isLevelEnded;
     public List<int> randomNumber = new List<int>();
+    
     public GameObject[] Door;
+    public StageSpawner[] stageSpawners;
+
 
     public Transform playerSpawn;
 
 
     private void Start()
     {
+        stageSpawners = GetComponentsInChildren<StageSpawner>();
         GameManager.Instance.SetCurrentLevel(this);
         GenerateRandomList();
+    }
+
+    public void ActivateSpawners()
+    {
+        for (int i = 0; i < stageSpawners.Length; i++)
+        {
+            stageSpawners[i].StartSpawnWave();
+        }
     }
 
 

@@ -37,9 +37,9 @@ public class DroneMovement : MonoBehaviour
 
     IEnumerator CoResetPosition(Vector3 pos)
     {
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
         transform.position = pos;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(5f);
         gameObject.SetActive(true);
     }
 
