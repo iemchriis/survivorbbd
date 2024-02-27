@@ -4909,6 +4909,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbba4a467efa3947abad94acb8a1d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canFire: 0
-  numberOfTrajectory: 0
+  canFire: 1
   rateOfFire: 1

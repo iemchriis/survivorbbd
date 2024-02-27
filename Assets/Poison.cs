@@ -10,6 +10,12 @@ public class Poison : MonoBehaviour
     private int damage;
 
 
+
+    private void Start()
+    {
+        Destroy(gameObject, 3);
+    }
+
     private void OnTriggerStay(Collider other)
     {
 
