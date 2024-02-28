@@ -8,18 +8,18 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
     public EnemyType enemyType;
     private Transform target;
     private NavMeshAgent navmesh;
-    private Animator animator;
+    
 
     private EnemyScript health;
     private float debuffDuration;
 
     public NavMeshAgent Navmesh { get => navmesh;}
-    public Animator Animator { get => animator;}
+    
 
     private void Start()
     {
         health = GetComponent<EnemyScript>();
-        animator = GetComponent<Animator>();
+        
         target = GameManager.Instance.targeting.transform.parent;
         navmesh = GetComponent<NavMeshAgent>();
     }
@@ -27,7 +27,10 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
     private void Update()
     {
         GoToTarget();
+<<<<<<< HEAD
     
+=======
+>>>>>>> 0e641eb0ad3a7e911c56c902721b63a037df5c58
     }
 
   
@@ -59,7 +62,14 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
         }
     }
 
+<<<<<<< HEAD
     
+=======
+    public void Attack()
+    {
+
+    }
+>>>>>>> 0e641eb0ad3a7e911c56c902721b63a037df5c58
 
     public void ApplySlowEffect(int debuffAmount, float debuffDuration)
     {

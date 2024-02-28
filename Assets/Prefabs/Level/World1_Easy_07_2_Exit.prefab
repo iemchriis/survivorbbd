@@ -1429,7 +1429,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610291894294907898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.9396927, z: 0, w: 0.34202018}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1440,7 +1440,7 @@ Transform:
   - {fileID: 4990254314899298333}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 140, z: 0}
 --- !u!114 &-8129723420300118569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1457,6 +1457,7 @@ MonoBehaviour:
   Door:
   - {fileID: 2405132890606234586}
   - {fileID: 316640732448430899}
+  stageSpawners: []
   playerSpawn: {fileID: 1797649483340061154}
 --- !u!1 &1882249327451042345
 GameObject:

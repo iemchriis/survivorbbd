@@ -4724,7 +4724,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4695000081214172345}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.9396927, z: 0, w: 0.34202018}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4739,7 +4739,7 @@ Transform:
   - {fileID: 3588420218999429514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 140, z: 0}
 --- !u!114 &7400003407694220547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4756,6 +4756,7 @@ MonoBehaviour:
   Door:
   - {fileID: 8103362748446954025}
   - {fileID: 3117470570064259785}
+  stageSpawners: []
   playerSpawn: {fileID: 331888514032397800}
 --- !u!1 &5549717859388029952
 GameObject:
@@ -7332,7 +7333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: spawnCount
@@ -7422,7 +7423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: spawnCount
@@ -7594,7 +7595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: waitTime
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6371059701061521367, guid: a48cea4e76c8ca648aaad3fe020b3338, type: 3}
       propertyPath: spawnCount

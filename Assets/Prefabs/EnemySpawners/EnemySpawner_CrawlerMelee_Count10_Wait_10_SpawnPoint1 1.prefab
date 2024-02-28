@@ -123,7 +123,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 9193169001036270607, guid: 6c2888b58654aca4bb0fce9c869b115f, type: 3}
   spawnPoint:
   - {fileID: 8941686612103609293}
-  waitTime: 10
+  waitTime: 0
   spawnCount: 10
 --- !u!208 &5171902175088594012
 NavMeshObstacle:
