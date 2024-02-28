@@ -5,8 +5,9 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 public class EnemyScript : CharacterBase
 {
-    private EnemyMovement movement;
-
+    [SerializeField]private EnemyMovement movement;
+    private Animator animator;
+    
     public GameObject exp;
     public int damage;
     public Slider hpSlider;
@@ -16,10 +17,12 @@ public class EnemyScript : CharacterBase
     [SerializeField]private GameObject burnEffect;
     private float debuffDuration;
 
+    public Animator Animator { get => animator; }
+
     void Start()
     {
-        movement = GetComponent<EnemyMovement>();
-        if(hpSlider != null)
+        animator = GetComponent<Animator>();
+        if (hpSlider != null)
         {
             hpSlider.maxValue = health;
             hpSlider.value = health;
@@ -96,13 +99,13 @@ public class EnemyScript : CharacterBase
             GameObject go = Instantiate(exp, transform.position, Quaternion.identity);
             go.transform.SetParent(transform.parent);
 
-            if (movement.Navmesh != null) { movement.Navmesh.isStopped = true; }
+            if (movement != null) { movement.Navmesh.isStopped = true; }
 
             GameManager.Instance.RemoveEnemy(this); 
             GameManager.Instance.CheckEnemyCount();
 
             LevelGenerator.Instance.SpawnPowerup(transform);
-            movement.Animator.SetTrigger("isDead");
+            animator.SetTrigger("isDead");
             Destroy(gameObject, 2);
             
 
