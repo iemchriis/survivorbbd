@@ -27,10 +27,6 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
     private void Update()
     {
         GoToTarget();
-<<<<<<< HEAD
-    
-=======
->>>>>>> 0e641eb0ad3a7e911c56c902721b63a037df5c58
     }
 
   
@@ -62,14 +58,12 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
         }
     }
 
-<<<<<<< HEAD
-    
-=======
+
     public void Attack()
     {
 
     }
->>>>>>> 0e641eb0ad3a7e911c56c902721b63a037df5c58
+
 
     public void ApplySlowEffect(int debuffAmount, float debuffDuration)
     {
