@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4865289450399900180}
   - {fileID: 4257615496920184455}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -217,6 +218,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aoe: {fileID: 2419416335056133679}
+--- !u!1001 &1132341321362992753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5121352769448839390}
+    m_Modifications:
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.2957
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.2957
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.2957
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5492562470172138753, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+      propertyPath: m_Name
+      value: ScifiMechHeavyCanonProjectile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+--- !u!4 &4865289450399900180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5490477923894611045, guid: b352152d7699fa24fa71278750f75f89, type: 3}
+  m_PrefabInstance: {fileID: 1132341321362992753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6938557193847042712
 PrefabInstance:
   m_ObjectHideFlags: 0
