@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
 {
+    public EnemyType enemyType;
     private Transform target;
     private NavMeshAgent navmesh;
     private Animator animator;
@@ -26,24 +27,39 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
     private void Update()
     {
         GoToTarget();
-
-       
+    
     }
 
   
 
     void GoToTarget()
     {
+
         if (target != null && !health.IsDead())
         {
             if (navmesh != null)
             {
-                navmesh.destination = target.position;
+                if (enemyType == EnemyType.CHASE)
+                {
+                    navmesh.destination = target.position;
+                }
+
+                if(enemyType == EnemyType.PATROL)
+                {
+                    float distance = Vector3.Distance(transform.position, target.position);
+                    Debug.Log(distance);
+                    if(distance < 7)
+                    {
+                        navmesh.destination = target.position;
+                    }
+                }
             }
             transform.LookAt(target.position);
 
         }
     }
+
+    
 
     public void ApplySlowEffect(int debuffAmount, float debuffDuration)
     {
@@ -70,4 +86,12 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
         yield return new WaitForSeconds(stunDuration);
         navmesh.isStopped = false;
     }
+}
+
+
+public enum EnemyType
+{
+    CHASE,
+    PATROL
+
 }

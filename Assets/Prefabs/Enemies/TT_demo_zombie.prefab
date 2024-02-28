@@ -123,7 +123,7 @@ MonoBehaviour:
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
   damage: 10
   hpSlider: {fileID: 0}
-  hasStatusEffect: 0
+  hasDps: 0
   burnEffect: {fileID: 5781774722926084323}
 --- !u!114 &-6368044812182627919
 MonoBehaviour:
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: 1
 --- !u!195 &8911974493853456521
 NavMeshAgent:
   m_ObjectHideFlags: 0
