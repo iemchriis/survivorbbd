@@ -17,6 +17,7 @@ public class EnemyTurret : MonoBehaviour
     private void Start()
     {
         fireTime = fireRate;
+        GameManager.Instance.enemyCount++;
     }
 
 
