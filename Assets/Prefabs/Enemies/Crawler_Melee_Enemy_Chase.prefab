@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_LocalScale.x
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 100
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   movement: {fileID: 5141812789851979977}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
