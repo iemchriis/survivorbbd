@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
 {
     public EnemyType enemyType;
+    public float distanceToChase;
     private Transform target;
     private NavMeshAgent navmesh;
     
@@ -47,7 +48,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
                 {
                     float distance = Vector3.Distance(transform.position, target.position);
                     Debug.Log(distance);
-                    if(distance < 7)
+                    if(distance < distanceToChase)
                     {
                         navmesh.destination = target.position;
                     }
