@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 200
+  health: 100
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   movement: {fileID: 5141812789851979977}
@@ -224,3 +224,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 1
+  distanceToChase: 14

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_Name
-      value: Crawler_Melee_Enemy
+      value: Crawler_Melee_Enemy_Chase
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_TagString
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 200
+  health: 100
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   movement: {fileID: 5141812789851979977}
@@ -223,3 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: 0
+  distanceToChase: 0
