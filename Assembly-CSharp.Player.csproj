@@ -87,6 +87,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\Scripts\Managers\WeaponSelection.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\AnimatedCosmos\Example\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Interface\IDebuff.cs" />
     <Compile Include="Assets\Scripts\View\StatsView.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\DroneWeapon.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Assets\Scripts\Helpers\Weapon\WeaponHolder.cs" />
     <Compile Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\EditorScripts\scrEdit_objectSnap.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\PiercingBallistic.cs" />
+    <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scripts\Helpers\Weapon\PlayerLandmine.cs" />
     <Compile Include="Assets\Settings.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Assets\Scripts\Sponsors\AOESponsor.cs" />
     <Compile Include="Assets\Scripts\Helpers\Level.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerDataManager.cs" />
+    <Compile Include="Assets\AnimatedCosmos\Example\MaterialSwitch.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\LaserWeapon.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\BallisticWeaponData.cs" />
@@ -163,15 +166,18 @@
     <Compile Include="Assets\Scripts\Interface\ITargeting.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\AnimatedCosmos\Shaders\CosmosAnimated.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
     <None Include="Assets\Models\RealisticCharacter\Shader\Rim_Diffuse.shader" />
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
+    <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
     <None Include="Assets\Extensions\LitJson\LitJson.dll" />
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\Chibi Soul Reaper\readme.txt" />
     <None Include="Assets\Placeholder_Enemies\Light Hearted Tech\SentryRobot\Documentation\Readme.txt" />
     <None Include="Assets\Extensions\Low Poly Assault Troop\Read Me.txt" />
+    <None Include="Assets\AnimatedCosmos\Shaders\CosmosAnimatedMesh.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
     <None Include="Assets\Extensions\ZerinLabs_enviroKit_RetroSpaceship\Shaders\sh_SOLID_standardWithVC.shader" />
   </ItemGroup>
