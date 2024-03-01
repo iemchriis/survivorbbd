@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3269316243342756991}
   - component: {fileID: 7254886311269944982}
   - component: {fileID: 8933013844625488795}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 8651293845382592996}
   - component: {fileID: 226247095097221953}
   - component: {fileID: 1385344119852233284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 61970891631541092}
   - component: {fileID: 4766553553959561621}
   - component: {fileID: 443842711543263540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3550,7 +3550,7 @@ GameObject:
   - component: {fileID: 2361834274271702883}
   - component: {fileID: 4734177425267342553}
   - component: {fileID: 4861873969998289736}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 265982193919418260}
   - component: {fileID: 4579913834932304283}
   - component: {fileID: 3469282232099794153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6734,7 +6734,7 @@ GameObject:
   - component: {fileID: 448384320810344445}
   - component: {fileID: 5777633958230004826}
   - component: {fileID: 8953745335745018823}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7081,7 +7081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5216978379109982318}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LandMine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7107,5 +7107,5 @@ Transform:
   - {fileID: 3548921265295489683}
   - {fileID: 5660203257180979071}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
