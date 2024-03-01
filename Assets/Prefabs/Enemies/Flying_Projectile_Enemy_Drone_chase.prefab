@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flying_Projectile_Enemy_Drone_chase
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
       propertyPath: m_RootOrder
       value: 0
