@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.009912142, g: 0.0040112915, b: 0.0070729703, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2108,7 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initJson: '[     {         "player_name": "BBD",         "player_level": 1,        
-    "player_life": 100,         "player_speed": 3     } ]'
+    "player_life": 1000,         "player_speed": 5     } ]'
   playerStats:
     health: 0
     movementSpeed: 0

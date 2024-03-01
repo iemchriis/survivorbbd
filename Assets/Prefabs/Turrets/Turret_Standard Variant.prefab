@@ -189,11 +189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 300
+  health: 150
   damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   movement: {fileID: 0}
-  exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
+  exp: {fileID: 4545758718704240142, guid: 43124a0739d4b004080bc0a478f54d6e, type: 3}
   damage: 2
   hpSlider: {fileID: 0}
   hasDps: 0
