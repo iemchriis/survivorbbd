@@ -13,7 +13,7 @@ class OffscreenMarker : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         var instance = OffscreenMarkersCameraScript.Instance();
         if (instance)
         {
