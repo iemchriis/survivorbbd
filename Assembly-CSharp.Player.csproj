@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Sponsors\SpeedSponsor.cs" />
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Helpers\TriggerShow.cs" />
+    <Compile Include="Assets\Scripts\Helpers\LootBlast.cs" />
     <Compile Include="Assets\Scripts\Helpers\SponsorTriggert.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelData\LevelCollection.cs" />
     <Compile Include="Assets\Scripts\Helpers\Enemy\ProjectileBoss.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets\Scripts\Managers\Managers.cs" />
     <Compile Include="Assets\Scripts\Base\DroneTargeting.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Scripts\Helpers\LootDrop.cs" />
     <Compile Include="Assets\Scripts\PlayerPoisonBomb.cs" />
     <Compile Include="Assets\Scripts\Sponsors\StatusSponsor.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\ShotgunWeapon.cs" />

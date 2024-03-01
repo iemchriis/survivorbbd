@@ -43,6 +43,15 @@ public class PlayerTriggerHelper : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Resource")
+        {
+            collision.gameObject.GetComponent<LootDrop>().GetLoot();
+        }
+    }
+
+
     void CheckPowerupTrigger(GameObject other)
     {
 
