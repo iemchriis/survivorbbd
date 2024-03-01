@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transport_Drop_Melee_Enemy_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 6910552001321535165, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7516942050357227331, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -95,6 +99,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6910552001321535165, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8296271805938113512}
+    - targetCorrespondingSourceObject: {fileID: 6910552001321535165, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5939319330271482219}
   m_SourcePrefab: {fileID: 100100000, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
 --- !u!1 &3974175669633842368 stripped
 GameObject:
@@ -117,10 +124,11 @@ MonoBehaviour:
   health: 100
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
-  exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
+  movement: {fileID: 5939319330271482219}
+  exp: {fileID: 4545758718704240142, guid: 43124a0739d4b004080bc0a478f54d6e, type: 3}
   damage: 10
   hpSlider: {fileID: 0}
-  hasStatusEffect: 0
+  hasDps: 0
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
 --- !u!195 &8568586458685186614
 NavMeshAgent:
@@ -207,3 +215,17 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: 5707ba18e403cc34990efbb0da7a1aa1, type: 3}
   Arrow: {fileID: 2800000, guid: 3783f195e2c8dc84cb1461fbe881e9cb, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &5939319330271482219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974175669633842368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 1
+  distanceToChase: 14
