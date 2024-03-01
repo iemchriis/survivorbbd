@@ -47,7 +47,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
                 if(enemyType == EnemyType.PATROL)
                 {
                     float distance = Vector3.Distance(transform.position, target.position);
-                    Debug.Log(distance);
+
                     if(distance < distanceToChase)
                     {
                         navmesh.destination = target.position;

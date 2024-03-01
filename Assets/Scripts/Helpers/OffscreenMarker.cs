@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +8,12 @@ class OffscreenMarker : MonoBehaviour
     public Texture Arrow = null;
     public Color Color = Color.white;
 
-    void Start()
+
+
+
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(1);
         var instance = OffscreenMarkersCameraScript.Instance();
         if (instance)
         {
