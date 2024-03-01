@@ -16,8 +16,9 @@ public class PlayerTriggerHelper : MonoBehaviour
     public void GoToNextSpawn()
     {
         Transform newSpawn = LevelGenerator.Instance.GetActiveLevel();
-        
-        transform.SetLocalPositionAndRotation(newSpawn.position, Quaternion.identity);
+        Vector3 offset = new Vector3(0, 1.3f, 0);
+        Vector3 spawnPos = newSpawn.position + offset;
+        transform.SetLocalPositionAndRotation(spawnPos, Quaternion.identity);
        
 
         drone.ResetPositionToPlayer(newSpawn.position);

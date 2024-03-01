@@ -5,16 +5,30 @@ using UnityEngine;
 public class WeaponHolder : MonoBehaviour
 {
 
-    [Header("Weapon Stats")]
-    [SerializeField] private int weaponDamage;
-    [SerializeField] private string weaponType;
-    [SerializeField] private float weaponROF;
-    [Space]
-    [Header("Projectile Stats")]
+   // [Header("Weapon Stats")]
+    private int weaponDamage;
+    private string weaponType;
+    private float weaponROF;
+    //[Space]
+    //[Header("Projectile Stats")]
     public GameObject bulletProjectile;
-    [SerializeField] private float projectileSpeed;
+    private float projectileSpeed;
 
+    [SerializeField] private PlayerVision vision;
 
+    private void Update()
+    {
+        if(vision != null)
+            SetAngleToEnemy();
+    }
+
+    void SetAngleToEnemy()
+    {
+        if(vision.nearestEnemy == null)
+            return;
+
+        transform.LookAt(vision.nearestEnemy.transform);
+    }
     public void SetWeaponStats(int _weaponDamage, string _weaponType)
     {
         weaponDamage = _weaponDamage;

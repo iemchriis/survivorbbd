@@ -108,9 +108,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4859603012249308666}
-    - targetCorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1166314695905624523}
     - targetCorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
       insertIndex: -1
@@ -133,27 +130,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
   m_PrefabInstance: {fileID: 6572336858944045974}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4859603012249308666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6572336858944013620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da767c35c86fed47b828d8d76b36e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5309274888430301421, guid: a43a051a3f082d240a72c77b7cec46a3, type: 3}
-  summonPrefab: {fileID: 0}
-  throwPoint: {fileID: 445821084362107870}
-  player: {fileID: 0}
-  throwRate: 2
-  throwSpeed: 10
-  requiredAttacksToSummon: 10000
-  summonCount: 0
-  anim: {fileID: 0}
 --- !u!114 &1166314695905624523
 MonoBehaviour:
   m_ObjectHideFlags: 0

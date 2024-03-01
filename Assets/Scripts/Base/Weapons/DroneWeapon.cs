@@ -13,9 +13,9 @@ public class DroneWeapon : BaseWeapon
     void Start()
     {
         firePos = this.transform;
-        holder = GetComponent<WeaponHolder>();
+       
 
-        bulletPrefab = holder.GetProjectile();
+       
         projectileSpeed = 20f;
 
         damage = PlayerDataManager.Instance.GetDroneDamage();

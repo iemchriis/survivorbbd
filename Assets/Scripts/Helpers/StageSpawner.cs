@@ -20,6 +20,7 @@ public class StageSpawner : MonoBehaviour
 
     public void StartSpawnWave()
     {
+        Debug.Log("Spawn Wave");
         StartCoroutine(CoSpawnWave());
     }
 

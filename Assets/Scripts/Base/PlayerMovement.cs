@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
         LookAtEnemy();
     }
 
+  
+
     private void FixedUpdate()
     {
         if(!GetComponent<PlayerHealth>().IsDead())
@@ -38,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Vector3 enemyDirection = vision.nearestEnemy.transform.position;
+            Vector3 enemyDirection = new Vector3(vision.nearestEnemy.transform.position.x,
+                                                    transform.position.y,
+                                                    vision.nearestEnemy.transform.position.z);
 
             transform.LookAt(enemyDirection);
         }
