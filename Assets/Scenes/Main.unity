@@ -2108,7 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initJson: '[     {         "player_name": "BBD",         "player_level": 1,        
-    "player_life": 1000,         "player_speed": 5     } ]'
+    "player_life": 1000,         "player_speed": 7     } ]'
   playerStats:
     health: 0
     movementSpeed: 0
