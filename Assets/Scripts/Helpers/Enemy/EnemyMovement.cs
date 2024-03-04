@@ -41,7 +41,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
             {
                 if (enemyType == EnemyType.CHASE)
                 {
-                    navmesh.destination = target.position;
+                    navmesh.SetDestination(target.position);
                 }
 
                 if(enemyType == EnemyType.PATROL)

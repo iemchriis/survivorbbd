@@ -62,14 +62,21 @@ public class LevelGenerator : MonoBehaviour
         
         navMeshSurface.RemoveData();
         Invoke(nameof(BuildLevel), 0.1f);
+        Invoke(nameof(SpawnEnemies), 0.5f);
 
     }
 
-    public void BuildLevel()
+    private void BuildLevel()
     {
         navMeshSurface.BuildNavMesh();
+      
+    }
+
+    private void SpawnEnemies()
+    {
         GameManager.Instance.SpawnEnemiesOnLevel();
     }
+
 
 
     public void SpawnPowerup(Transform position)

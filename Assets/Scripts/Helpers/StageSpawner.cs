@@ -38,8 +38,9 @@ public class StageSpawner : MonoBehaviour
         for(int i = 0; i < spawnCount; i++)
         {
             int rand = Random.Range(0, spawnPoint.Length);
-            GameObject go = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            go.transform.position = GetRandomWavePosition(rand);
+            GameObject go = Instantiate(enemyPrefab, GetRandomWavePosition(rand), Quaternion.identity);
+
+            //go.transform.position = GetRandomWavePosition(rand);
             go.transform.parent = transform;
             yield return new WaitForSeconds(waitTime);
         }
