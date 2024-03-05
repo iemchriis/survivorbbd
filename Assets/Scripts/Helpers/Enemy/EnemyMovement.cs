@@ -9,13 +9,11 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
     public float distanceToChase;
     private Transform target;
     private NavMeshAgent navmesh;
-    
-
     private EnemyScript health;
-    private float debuffDuration;
-
-    public NavMeshAgent Navmesh { get => navmesh;}
     
+    public NavMeshAgent Navmesh { get => navmesh;}
+    public Transform Target { get => target; }
+    public EnemyScript Health { get => health; }
 
     private void Start()
     {
@@ -57,12 +55,6 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
             transform.LookAt(target.position);
 
         }
-    }
-
-
-    public void Attack()
-    {
-
     }
 
 

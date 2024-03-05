@@ -9,7 +9,6 @@ public class EnemyScript : CharacterBase
     private Animator animator;
     
     public GameObject exp;
-    public int damage;
     public Slider hpSlider;
     public bool hasDps;
 
@@ -115,14 +114,7 @@ public class EnemyScript : CharacterBase
 
    
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.transform.CompareTag("Player"))
-        {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
-        }
-    }
-
+  
   
 
    
