@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
         LookAtEnemy();
     }
 
@@ -74,7 +75,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
+
             transform.rotation = Quaternion.LookRotation(rb.velocity);
+            transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         }
     }
 

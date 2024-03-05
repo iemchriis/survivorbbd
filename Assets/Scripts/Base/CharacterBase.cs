@@ -19,7 +19,7 @@ public abstract class CharacterBase : MonoBehaviour
 
     private bool isDead;
 
-    public GameObject damageFX;
+    public GameObject damageFX, destroyFX;
     public GameObject damageTxt;
 
     public bool IsDead()
@@ -114,6 +114,17 @@ public abstract class CharacterBase : MonoBehaviour
     {
         GetComponent<BoxCollider>().enabled = false;    
         isDead = true;
+        DeathFx();
+    }
+
+
+    void DeathFx()
+    {
+        if (destroyFX != null)
+        {
+            GameObject go = Instantiate(destroyFX, transform.position, Quaternion.identity);
+            Destroy(go, 1);
+        }
     }
 
 
