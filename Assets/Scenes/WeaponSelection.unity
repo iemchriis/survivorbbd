@@ -10605,6 +10605,34 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &210828745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5457385356135240833, guid: 6128c18d4ffd5cd4f8bedc8ded74e63e, type: 3}
+  m_PrefabInstance: {fileID: 503463406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &210828747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210828745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &223792711
 GameObject:
   m_ObjectHideFlags: 0
@@ -25438,6 +25466,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5803756766160993318, guid: 6128c18d4ffd5cd4f8bedc8ded74e63e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 503463408}
+    - targetCorrespondingSourceObject: {fileID: 5457385356135240833, guid: 6128c18d4ffd5cd4f8bedc8ded74e63e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 210828747}
   m_SourcePrefab: {fileID: 100100000, guid: 6128c18d4ffd5cd4f8bedc8ded74e63e, type: 3}
 --- !u!1 &503463407 stripped
 GameObject:
@@ -47545,7 +47576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -106577,6 +106608,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1101204633}
+    - target: {fileID: 3970357538171972770, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.0369587
+      objectReference: {fileID: 0}
+    - target: {fileID: 3970357538171972770, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
+      propertyPath: m_Center.y
+      value: -0.033685535
+      objectReference: {fileID: 0}
     - target: {fileID: 8106078912168131548, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
       propertyPath: hpBar
       value: 
@@ -106586,8 +106625,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 937572149}
     - target: {fileID: 8271217913243102667, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271217913243102667, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
       propertyPath: m_Constraints
-      value: 116
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271217913243102667, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
