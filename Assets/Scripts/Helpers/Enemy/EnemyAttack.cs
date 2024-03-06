@@ -8,26 +8,17 @@ public abstract class EnemyAttack : MonoBehaviour
 
 
     protected EnemyMovement movement;
-
+    protected bool isAttacking;
 
     protected virtual void Start()
     {
         movement = GetComponent<EnemyMovement>();
-        
+        movement.Navmesh.stoppingDistance = AttackRange;
     }
 
     protected virtual void CheckRange()
     {
-        var target = movement.Target;
-        float dist = Vector3.Distance(transform.position, target.position);
-        if(dist <= AttackRange)
-        {
-            Attack();
-        }
-        else
-        {
-            ReturnToFollow();
-        }
+        
     }
 
     public virtual void ReturnToFollow()

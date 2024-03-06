@@ -26,17 +26,28 @@ public class RangeEnemyAttack : EnemyAttack
         float dist = Vector3.Distance(transform.position, target.position);
         if (dist <= AttackRange)
         {
-            Attack();
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                Attack();
+            }
+
         }
         else
         {
-            ReturnToFollow();
+            if (isAttacking)
+            {
+                isAttacking = false;
+                ReturnToFollow();
+            }
+
         }
     }
 
     public override void Attack()
     {
         base.Attack();
+        Debug.Log("Attacking");
         movement.Health.Animator.SetBool("Attack", true);
     }
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445821084362107870}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7d58443320393004181d10b90b8e5587, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -128,6 +132,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7683460488618889448}
+    - targetCorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1243680306191244420}
   m_SourcePrefab: {fileID: 100100000, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
 --- !u!1 &6572336858944013620 stripped
 GameObject:
@@ -149,10 +156,10 @@ MonoBehaviour:
   id: 
   health: 100
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   movement: {fileID: 7683460488618889448}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
-  damage: 2
   hpSlider: {fileID: 0}
   hasDps: 0
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
@@ -255,6 +262,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: 0
   distanceToChase: 14
+--- !u!114 &1243680306191244420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6572336858944013620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce2c5e700d460844914d36df8f7a066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackRange: 5
+  projectile: {fileID: 5309274888430301421, guid: a43a051a3f082d240a72c77b7cec46a3, type: 3}
+  firePoint: {fileID: 445821084362107870}
+  projectileVelocity: 10
 --- !u!4 &6572336858944444692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
