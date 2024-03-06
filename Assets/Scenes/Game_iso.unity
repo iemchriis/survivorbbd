@@ -2006,6 +2006,10 @@ PrefabInstance:
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 1935214481}
+    - target: {fileID: 8106078912168131548, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
+      propertyPath: destroyFX
+      value: 
+      objectReference: {fileID: 100012, guid: 856ddc11c4d1bd54885aa67f69f72cdf, type: 3}
     - target: {fileID: 8175590487660105333, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}
       propertyPath: drone
       value: 

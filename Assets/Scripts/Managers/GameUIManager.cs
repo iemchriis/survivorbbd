@@ -94,7 +94,7 @@ public class GameUIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        Time.timeScale = 0;
+      //  Time.timeScale = 0;
         gameOverPanel.SetActive(true);
     }
 
