@@ -16,6 +16,16 @@ public class MeleeEnemyAttack : EnemyAttack
             CheckRange();
     }
 
+    private void EnableAttackCollider()
+    {
+        attackCollider.enabled = true;
+    }
+
+    private void DisablettackCollider()
+    {
+        attackCollider.enabled = false;
+    }
+
     protected override void CheckRange()
     {
         var target = movement.Target;
@@ -33,6 +43,7 @@ public class MeleeEnemyAttack : EnemyAttack
     public override void Attack()
     {
         base.Attack();
+        //Debug.Log("Attacking");
         movement.Health.Animator.SetBool("Attack", true);
     }
 
@@ -42,9 +53,6 @@ public class MeleeEnemyAttack : EnemyAttack
         attackCollider.enabled = false;
     }
 
-    public void EnableAttackCollider(bool enable)
-    {
-        attackCollider.enabled = enable;
-    }
+   
 
 }

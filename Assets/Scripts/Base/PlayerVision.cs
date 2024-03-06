@@ -19,6 +19,7 @@ public class PlayerVision : MonoBehaviour
             return;
         }
            
+        
 
         targets.Sort((x,y) => Vector3.Distance(transform.position, x.transform.position).CompareTo(Vector3.Distance(transform.position, y.transform.position)));
 
@@ -31,6 +32,28 @@ public class PlayerVision : MonoBehaviour
     {
         targets.Remove(enemy);
         nearestEnemy = null;
+    }
+
+    void CheckIfDead()
+    {
+        for (int i = 0; i < targets.Count; i++)
+        {
+            var enemy = targets[i].GetComponent<EnemyScript>();
+            if (enemy.IsDead())
+            {
+                RemoveFromTargetList(enemy);
+            }
+        }
+
+        if (nearestEnemy == null)
+            return;
+
+        var nearest = nearestEnemy.GetComponent<EnemyScript>();
+
+        if (nearest.IsDead())
+        {
+            RemoveFromTargetList(nearest);
+        }
     }
 
 
@@ -70,5 +93,7 @@ public class PlayerVision : MonoBehaviour
     {
         if(weapon != null)
             CalculateNearest();
+
+        CheckIfDead();
     }
 }
