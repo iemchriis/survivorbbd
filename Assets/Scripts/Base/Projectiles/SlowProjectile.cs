@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SlowProjectile : BaseProjectile
 {
-    [SerializeField] private float slowDuration;
+    [SerializeField]private int slowAmount;
+    [SerializeField]private float slowDuration;
 
     public override void OnTriggerEnter(Collider other)
     {
@@ -12,13 +13,17 @@ public class SlowProjectile : BaseProjectile
         {
             AudioManager.Instance.PlaySFX("Laser");
             Debug.Log("Enemy Hit");
-            var enemy = other.GetComponent<EnemyScript>();
 
-            enemy.TakeDamage(damage);
-            //enemy.ApplyEffect()
-            
+            var enemyHealth = other.GetComponent<EnemyScript>();
+            var enemyMovement = other.GetComponent<EnemyMovement>();
 
+            enemyHealth.TakeDamage(damage);
+            enemyMovement.ApplySlowEffect(slowAmount, slowDuration);
             Destroy(gameObject);
+        }
+        else if(other.CompareTag("Player"))
+        {
+            
         }
     }
 

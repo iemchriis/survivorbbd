@@ -23,7 +23,7 @@ public class RocketProjectile : BaseProjectile
     {
         if(other.CompareTag("Enemy"))
         {
-            var enemy = other.GetComponent<EnemyScript>();
+            var enemy = other.GetComponent<IDamagable>();
             if(enemy != null)
             {
                 // stop projectile

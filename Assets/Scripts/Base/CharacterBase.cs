@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class CharacterBase : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public abstract class CharacterBase : MonoBehaviour
     public int health;
 
     private bool isDead;
-
+    public Slider hpSlider;
     public GameObject damageFX, destroyFX;
     public GameObject damageTxt;
 
@@ -26,40 +27,26 @@ public abstract class CharacterBase : MonoBehaviour
     {
         return isDead;
     }
-
     
-    public virtual void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
-    {
-        health -= damage;
-
-        if(damageFX != null)
-        {
-            ShowHitEffect();
-        }
-
-        if(damageTxt != null)
-        {
-            ShowDamageText(damage, type);
-        }
-
-        
-    }
 
     protected void ShowHitEffect()
     {
-        
+        if (damageFX == null)
+            return;
+
         GameObject fx = Instantiate(damageFX, transform);
-    
         Destroy(fx, 1);
     }
 
     protected void ShowDamageText(int damage, DamageType type)
     {
+        if (damageTxt == null)
+            return;
+
         GameObject go = Instantiate(damageTxt, transform.position, Quaternion.identity);
         TextMesh txt = go.GetComponent<TextMesh>();
         // set damage to text
         txt.text = "-" + damage.ToString();
-
         // set color type
         switch (type)
         {
@@ -105,10 +92,9 @@ public abstract class CharacterBase : MonoBehaviour
         Destroy(go, 1);
     }
 
-    public virtual void TakeDamageOverTime(int damage, float duration, int tickTime)
-    {
+   
 
-    }
+
 
     public virtual void Death()
     {

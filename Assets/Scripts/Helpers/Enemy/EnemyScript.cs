@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-public class EnemyScript : CharacterBase
+public class EnemyScript: CharacterBase, IDamagable
 {
-    [SerializeField]private EnemyMovement movement;
+    private EnemyMovement movement;
     private Animator animator;
     
     public GameObject exp;
-    public Slider hpSlider;
-    public bool hasDps;
+    protected bool hasDps;
+    protected float debuffDuration;
 
-
-    [SerializeField]private GameObject burnEffect;
-    private float debuffDuration;
+    public GameObject burnEffect;
+   
 
     public Animator Animator { get => animator; }
 
     void Start()
     {
+        movement = GetComponent<EnemyMovement>();
         animator = GetComponent<Animator>();
         if (hpSlider != null)
         {
@@ -31,29 +31,34 @@ public class EnemyScript : CharacterBase
 
     void Update()
     {
-        if (hasDps)
-        {
-            DebuffTimer();
-        }
+        DebuffTimer();
     }
 
-    void DebuffTimer()
+    protected void DebuffTimer()
     {
-        debuffDuration -= Time.deltaTime;
-        if (debuffDuration <= 0)
+
+        if(hasDps)
         {
-            hasDps = false;
+            debuffDuration -= Time.deltaTime;
+            if (debuffDuration <= 0)
+            {
+                hasDps = false;
+            }
         }
+ 
     }
 
 
 
 
-    public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
+    public void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
-        base.TakeDamage(damage, type);
+        health -= damage;
              
-        if (hpSlider != null) { hpSlider.value -= damage; }
+       
+        ShowHitEffect();
+        ShowDamageText(damage, type);
+
         if(health <= 0)
         {
             Death();
@@ -62,7 +67,7 @@ public class EnemyScript : CharacterBase
 
     
 
-    public override void TakeDamageOverTime(int damage, float duration, int tickTime)
+    public void TakeDamageOverTime(int damage, float duration, int tickTime)
     {
        debuffDuration = duration;
        
@@ -70,7 +75,7 @@ public class EnemyScript : CharacterBase
     }
 
 
-    IEnumerator DOT(int damage, float duration, int tickTime)
+    protected IEnumerator DOT(int damage, float duration, int tickTime)
     {
         hasDps = true;
         burnEffect.SetActive(true);

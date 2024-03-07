@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class PlayerHealth : CharacterBase
+public class PlayerHealth : CharacterBase, IDamagable
 {
-    public Slider hpBar;
+    
     private void Start()
     {
         health = PlayerDataManager.Instance.GetHealthValue();
 
-        if(hpBar != null)
+        if(hpSlider != null)
         {
-            hpBar.maxValue = PlayerDataManager.Instance.GetHealthValue();
-            hpBar.value = PlayerDataManager.Instance.GetHealthValue();
+            hpSlider.maxValue = PlayerDataManager.Instance.GetHealthValue();
+            hpSlider.value = PlayerDataManager.Instance.GetHealthValue();
         }
         
     }
 
-    public override void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
+    public void TakeDamage(int damage, DamageType type = DamageType.NORMAL)
     {
-        base.TakeDamage(damage);
+        health -= damage;
        
-        hpBar.value -= damage;
+        hpSlider.value -= damage;
         if(health <= 0)
         {
             Death();
@@ -30,6 +30,8 @@ public class PlayerHealth : CharacterBase
         }
     }
 
-
-   
+    public void TakeDamageOverTime(int damage, float duration, int tickTime)
+    {
+        throw new System.NotImplementedException();
+    }
 }

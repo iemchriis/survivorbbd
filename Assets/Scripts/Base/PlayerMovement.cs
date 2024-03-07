@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
 {
     [SerializeField] private PlayerVision vision;
     [SerializeField] private Animator animator;
@@ -19,8 +19,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update()
-    {
-        
+    {      
         LookAtEnemy();
     }
 
@@ -37,7 +36,6 @@ public class PlayerMovement : MonoBehaviour
         if (vision.nearestEnemy == null)
         {
             LookDirection();
-            //transform.LookAt(transform.forward);
         }
         else
         {
@@ -81,5 +79,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ApplySlowEffect(int debuffAmount, float debuffDuration)
+    {
+        throw new System.NotImplementedException();
+    }
 
+    public IEnumerator ApplySlowEffectAsync(int debuffAmount, float debuffDuration)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void ApplyStun(float stunDuration)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public IEnumerator ApplyStunAsync(float stunDuration)
+    {
+        throw new System.NotImplementedException();
+    }
 }
