@@ -123,7 +123,7 @@ public abstract class CharacterBase : MonoBehaviour
         if (destroyFX != null)
         {
             GameObject go = Instantiate(destroyFX, transform.position, Quaternion.identity);
-            Destroy(go, 1);
+            Destroy(go, 2);
         }
     }
 
