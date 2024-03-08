@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Helpers\Enemy\MeleeEnemyAttack.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Enemy\TurretTypes\TurretHealth.cs" />
     <Compile Include="Assets\Scripts\Helpers\OffscreenMarker.cs" />
     <Compile Include="Assets\Scripts\Sponsors\SpeedSponsor.cs" />
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
@@ -74,13 +75,13 @@
     <Compile Include="Assets\Scripts\Helpers\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Presenters\StatsPresenter.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Enemy\TurretTypes\FireTurret.cs" />
     <Compile Include="Assets\Scripts\Presenters\SponsorPresenter.cs" />
     <Compile Include="Assets\Scripts\Base\Projectiles\EnemyProjectile.cs" />
     <Compile Include="Assets\Scripts\Model\StatsUpgradeModel.cs" />
     <Compile Include="Assets\Scripts\Helpers\Weapon\WeaponUpgrade.cs" />
     <Compile Include="Assets\Scripts\Sponsors\ResourceSponsor.cs" />
     <Compile Include="Assets\Scripts\Helpers\StageSpawner.cs" />
-    <Compile Include="Assets\Scripts\Helpers\Enemy\EnemyTurret.cs" />
     <Compile Include="Assets\Scripts\Helpers\Enemy\RangeEnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Managers\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Helpers\Weapon\WeaponUpgradeExit.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Assets\Scripts\BossAnimController.cs" />
     <Compile Include="Assets\Scripts\Model\SponsorModel.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Weapons\WeaponDatas.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Enemy\TurretTypes\EnemyTurret.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\RocketWeapon.cs" />
     <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -130,7 +132,9 @@
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\Managers.cs" />
     <Compile Include="Assets\Scripts\Base\DroneTargeting.cs" />
+    <Compile Include="Assets\Scripts\Helpers\Enemy\TurretTypes\TurretConsole.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Scripts\Interface\IDamagable.cs" />
     <Compile Include="Assets\Scripts\Helpers\LootDrop.cs" />
     <Compile Include="Assets\Scripts\PlayerPoisonBomb.cs" />
     <Compile Include="Assets\Scripts\Sponsors\StatusSponsor.cs" />

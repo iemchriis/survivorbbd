@@ -14,8 +14,8 @@ public class PlayerInventory : MonoBehaviour
     public void AddHealth()
     {
         GetComponent<PlayerHealth>().health += 10;
-        GetComponent<PlayerHealth>().hpBar.value += 10;
-        GetComponent<PlayerHealth>().hpBar.maxValue += 10;
+        GetComponent<PlayerHealth>().hpSlider.value += 10;
+        GetComponent<PlayerHealth>().hpSlider.maxValue += 10;
     }
 
     public void AddSpeed()
