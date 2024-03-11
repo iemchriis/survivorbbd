@@ -99,6 +99,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5163605520243934255, guid: bf7a0b0eac96d9c4fa90abe22fb68fac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 475265320167754265}
+    - targetCorrespondingSourceObject: {fileID: 5163605520243934255, guid: bf7a0b0eac96d9c4fa90abe22fb68fac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3680007887042210929}
   m_SourcePrefab: {fileID: 100100000, guid: bf7a0b0eac96d9c4fa90abe22fb68fac, type: 3}
 --- !u!1 &4121416976527543232 stripped
 GameObject:
@@ -118,14 +121,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 100
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
-  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
-  movement: {fileID: 0}
-  exp: {fileID: 4545758718704240142, guid: 43124a0739d4b004080bc0a478f54d6e, type: 3}
-  damage: 10
+  health: 10000
   hpSlider: {fileID: 0}
-  hasDps: 0
+  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
+  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
+  exp: {fileID: 4545758718704240142, guid: 43124a0739d4b004080bc0a478f54d6e, type: 3}
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
 --- !u!195 &6453370957605646014
 NavMeshAgent:
@@ -192,8 +193,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -212,3 +213,17 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: 546205626b5cd364bac1b2cc16bd8b4a, type: 3}
   Arrow: {fileID: 2800000, guid: 3783f195e2c8dc84cb1461fbe881e9cb, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &-3680007887042210929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121416976527543232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 2
+  distanceToChase: 0

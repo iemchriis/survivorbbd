@@ -122,13 +122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 100
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
-  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
-  movement: {fileID: 5939319330271482219}
-  exp: {fileID: 4545758718704240142, guid: 43124a0739d4b004080bc0a478f54d6e, type: 3}
-  damage: 10
   hpSlider: {fileID: 0}
-  hasDps: 0
+  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
+  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
+  exp: {fileID: 1263353222758848266, guid: 4b1ce1c84e067d2429bd51996d3d256b, type: 3}
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
 --- !u!195 &8568586458685186614
 NavMeshAgent:

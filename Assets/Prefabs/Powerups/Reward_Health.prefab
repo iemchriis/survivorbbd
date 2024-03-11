@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2108340582821309047}
   - component: {fileID: 2055577246926111495}
   - component: {fileID: 2055577245761883649}
+  - component: {fileID: -4787206311682254959}
   m_Layer: 0
   m_Name: Reward_Health
   m_TagString: Untagged
@@ -133,3 +134,16 @@ MonoBehaviour:
   endScale: {x: 0, y: 0, z: 0}
   scaleSpeed: 0
   scaleRate: 0
+--- !u!114 &-4787206311682254959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094296372526006209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab57198e0e172544994c52ea098a85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootType: 0

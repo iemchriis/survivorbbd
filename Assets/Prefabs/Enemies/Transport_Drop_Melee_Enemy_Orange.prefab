@@ -1166,7 +1166,7 @@ GameObject:
   - component: {fileID: 5703120302092751556}
   m_Layer: 0
   m_Name: Transport_Drop_Melee_Enemy_Orange
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1187,7 @@ Transform:
   - {fileID: 1285524114485230381}
   - {fileID: 7311368298525914981}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4434021355014554787
 Animator:
@@ -1224,12 +1224,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 100
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
-  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
-  exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
-  damage: 10
   hpSlider: {fileID: 0}
-  hasStatusEffect: 0
+  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
+  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
+  exp: {fileID: 2157683385999266409, guid: e3ad8e203324d4348bb9208a9e58f0fe, type: 3}
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
 --- !u!195 &311914093770036818
 NavMeshAgent:

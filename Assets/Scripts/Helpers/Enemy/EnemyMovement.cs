@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
 {
     public EnemyType enemyType;
     public float distanceToChase;
-    private Transform target;
+    public Transform target;
     private NavMeshAgent navmesh;
     private EnemyScript health;
     
@@ -51,6 +51,26 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
                         navmesh.destination = target.position;
                     }
                 }
+                Vector3 fleeDirection = transform.position - target.position;
+
+                if (enemyType == EnemyType.FLEE)
+                {
+                    Debug.Log(fleeDirection.magnitude < 4.0);
+                    if (fleeDirection.magnitude < 4.0)
+                    {
+                        // Calculate the target position by adding the flee direction to the AI's position
+                        Vector3 dirtoPlayer = transform.position - target.position;
+
+                        Vector3 targetPosition = transform.position + dirtoPlayer;
+
+                        // Move the AI to the target position
+                        navmesh.SetDestination(targetPosition);
+                    }
+                }
+
+
+
+
             }
             transform.LookAt(target.position);
 
@@ -89,6 +109,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
 public enum EnemyType
 {
     CHASE,
-    PATROL
+    PATROL,
+    FLEE
 
 }
