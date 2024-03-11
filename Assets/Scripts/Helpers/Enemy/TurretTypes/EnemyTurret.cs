@@ -60,19 +60,30 @@ public class EnemyTurret : MonoBehaviour
 
     }
 
+    public void ChangeTarget()
+    {
+        if (!isHackable)
+            return;
+
+        Debug.Log("Turrets Hacked");
+        target = null;
+        TargetName = "Enemy";
+        this.transform.parent.tag = "Friendly";
+    }
+
     
     
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag(TargetName))
         {
             target = other.transform;
         }
     }
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag(TargetName))
         {
             target = null;
         }

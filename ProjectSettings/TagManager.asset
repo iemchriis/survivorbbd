@@ -11,6 +11,7 @@ TagManager:
   - FxTemporaire
   - Vision
   - Resource
+  - Friendly
   layers:
   - Default
   - TransparentFX

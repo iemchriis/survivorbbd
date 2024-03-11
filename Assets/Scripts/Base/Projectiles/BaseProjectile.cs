@@ -7,9 +7,9 @@ public class BaseProjectile : MonoBehaviour
 {
     protected Rigidbody rb;
 
-    [SerializeField] protected float projectileVelocity;
+    [SerializeField]protected float projectileVelocity;
 
-    protected int damage;
+    [SerializeField]protected int damage;
     protected bool isCrit;
     
 
@@ -41,7 +41,12 @@ public class BaseProjectile : MonoBehaviour
         if(other.CompareTag("Enemy"))
         {
             Debug.Log("Enemy Hit");
-            other.GetComponent<EnemyScript>().TakeDamage(damage);
+            other.GetComponent<IDamagable>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+        else if(other.CompareTag("Player"))
+        {
+            other.GetComponent<IDamagable>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }

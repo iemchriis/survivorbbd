@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: d148bd46a5a4c4e4d96a7c02442100fc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.28
+      value: 10.49
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: d148bd46a5a4c4e4d96a7c02442100fc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a358082dc2e6c2646aee9be4fa6f3c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetName: 
+  isHackable: 0
   projectile: {fileID: 5309274888430301421, guid: a43a051a3f082d240a72c77b7cec46a3, type: 3}
   target: {fileID: 0}
   firePoint: {fileID: 8236013247792937453}
@@ -209,3 +211,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e4fb2d9731f4c4c8a5e1e3467d7409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
+  health: 100
+  hpSlider: {fileID: 0}
+  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
+  destroyFX: {fileID: 613306789889174018, guid: 42aa6a5603e6dfd40ae1991b3780c2c3, type: 3}
+  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
+  exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
+  burnEffect: {fileID: 0}
