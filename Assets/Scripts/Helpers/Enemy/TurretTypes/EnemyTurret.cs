@@ -81,6 +81,19 @@ public class EnemyTurret : MonoBehaviour
             target = other.transform;
         }
     }
+
+    protected void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag(TargetName))
+        {
+            target = other.transform;
+
+            if(other.GetComponent<CharacterBase>().IsDead())
+            {
+                target = null;
+            }
+        }
+    }
     protected void OnTriggerExit(Collider other)
     {
         if (other.CompareTag(TargetName))

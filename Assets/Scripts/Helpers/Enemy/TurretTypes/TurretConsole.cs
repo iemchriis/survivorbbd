@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurretConsole : MonoBehaviour
 {
     public EnemyTurret[] turrets;
-
+    public Slider consoleSlider;
     public float targetTime = 10f;
     public float currentTime;
     public bool isHacked;
+
+    private void Start()
+    {
+        consoleSlider.maxValue = targetTime;
+        consoleSlider.minValue = currentTime;
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -18,6 +25,7 @@ public class TurretConsole : MonoBehaviour
                 return;
 
             currentTime += Time.deltaTime;
+            consoleSlider.value = currentTime;
             if(currentTime >= targetTime)
             {
                 Debug.Log("Hacked");

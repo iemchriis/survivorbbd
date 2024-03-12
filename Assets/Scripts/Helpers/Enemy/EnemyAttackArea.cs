@@ -8,9 +8,9 @@ public class EnemyAttackArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") || other.CompareTag("Friendly"))
         {
-            var player = other.GetComponent<PlayerHealth>();
+            var player = other.GetComponent<IDamagable>();
             if(player != null)
             {
                 Debug.Log("Player Hit");

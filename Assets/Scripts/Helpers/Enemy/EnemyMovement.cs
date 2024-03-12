@@ -48,7 +48,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
 
                     if(distance < distanceToChase)
                     {
-                        navmesh.destination = target.position;
+                        navmesh.SetDestination(target.position);
                     }
                 }
                 Vector3 fleeDirection = transform.position - target.position;
@@ -75,8 +75,20 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
             transform.LookAt(target.position);
 
         }
+
+        if(target == null)
+        {
+            SetTargetToPlayer();
+           
+        }
     }
 
+    public void SetTargetToPlayer()
+    {
+        target = GameManager.Instance.targeting.transform.parent;
+        health.Animator.SetBool("Attack", false);
+        Debug.Log("Switching to Player");
+    }
 
     public void ApplySlowEffect(int debuffAmount, float debuffDuration)
     {
