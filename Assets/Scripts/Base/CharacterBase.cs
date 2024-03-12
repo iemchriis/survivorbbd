@@ -100,7 +100,8 @@ public abstract class CharacterBase : MonoBehaviour
     {
         GetComponent<BoxCollider>().enabled = false;    
         isDead = true;
-        DeathFx();
+        Invoke("DeathFx", 1);
+      //  DeathFx();
     }
 
 

@@ -27,6 +27,7 @@ public class PlayerHealth : CharacterBase, IDamagable
             Death();
             AudioManager.Instance.PlaySFX("Hit");
             GameUIManager.Instance.ShowGameOver();
+            gameObject.SetActive(false);
         }
     }
 

@@ -59,12 +59,22 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
                     if (fleeDirection.magnitude < 4.0)
                     {
                         // Calculate the target position by adding the flee direction to the AI's position
-                        Vector3 dirtoPlayer = transform.position - target.position;
+                       // Vector3 dirtoPlayer = transform.position - target.position;
 
-                        Vector3 targetPosition = transform.position + dirtoPlayer;
+                     //   Vector3 targetPosition = transform.position + dirtoPlayer;
 
                         // Move the AI to the target position
-                        navmesh.SetDestination(targetPosition);
+                       // navmesh.SetDestination(targetPosition);
+
+                        fleeDirection = transform.position - target.position;
+                        Vector3 fleeDestination = transform.position + fleeDirection.normalized * 4;
+
+                        // Use NavMesh to find a valid flee destination
+                        NavMeshHit hit;
+                        NavMesh.SamplePosition(fleeDestination, out hit, 4, NavMesh.AllAreas);
+
+                        // Set agent destination to the flee destination
+                        navmesh.SetDestination(hit.position);
                     }
                 }
 
