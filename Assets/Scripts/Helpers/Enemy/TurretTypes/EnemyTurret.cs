@@ -7,14 +7,15 @@ using UnityEngine;
 public class EnemyTurret : MonoBehaviour
 {
 
-
-    //[SerializeField] private float attackRange;
     public string TargetName;
     public bool isHackable;
 
     [SerializeField] private GameObject projectile;
     [SerializeField] private Transform target;
     [SerializeField] protected Transform firePoint;
+   
+    [SerializeField] protected GameObject turretTemp;
+    [SerializeField] protected Material allyMaterial;
    
     [Space]
     [SerializeField] protected float fireRate;
@@ -69,6 +70,7 @@ public class EnemyTurret : MonoBehaviour
         target = null;
         TargetName = "Enemy";
         this.transform.parent.tag = "Friendly";
+        turretTemp.GetComponent<Renderer>().material = allyMaterial;
     }
 
     

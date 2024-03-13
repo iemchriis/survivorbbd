@@ -21,21 +21,35 @@ public class RocketProjectile : BaseProjectile
 
     public override void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy"))
         {
             var enemy = other.GetComponent<IDamagable>();
-            if(enemy != null)
+            if (enemy != null)
             {
                 // stop projectile
                 rb.velocity = Vector3.zero;
                 // activate AOE Damage
                 aoeEffect.SetActive(true);
                 enemy.TakeDamage(damage, CheckIfCrit());
-                
+
                 Destroy(this.gameObject, 0.5f);
             }
 
-          
+
+        }
+        else if (other.CompareTag("Player") || other.CompareTag("Friendly"))
+        {
+            var enemy = other.GetComponent<IDamagable>();
+            if (enemy != null)
+            {
+                // stop projectile
+                rb.velocity = Vector3.zero;
+                // activate AOE Damage
+                aoeEffect.SetActive(true);
+                enemy.TakeDamage(damage);
+
+                Destroy(this.gameObject, 0.5f);
+            }
         }
     }
 }
