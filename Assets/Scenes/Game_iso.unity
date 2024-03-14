@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.009904144, g: 0.0040119365, b: 0.0070714206, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1081,7 +1081,7 @@ RectTransform:
   m_Children:
   - {fileID: 874989898}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1279,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6527970413183659663, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6527970413183659663, guid: f9a739d3c6ef936469585709e3e42ebe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3396,7 +3396,7 @@ RectTransform:
   m_Children:
   - {fileID: 684229822}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3648,68 +3648,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &587586272
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 55.620373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12.409325
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3637191387960578426, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4121416976527543232, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-      propertyPath: m_Name
-      value: Transport_Drop_Melee_Enemy_Blue
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 854163322691598435, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8ac10944adcd18d47947122bde7d359d, type: 3}
 --- !u!1 &597923617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,7 +3752,7 @@ RectTransform:
   - {fileID: 549808331}
   - {fileID: 352964954}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5268,6 +5206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turrets: []
+  consoleSlider: {fileID: 0}
   targetTime: 10
   currentTime: 0
   isHacked: 0
@@ -5356,7 +5295,7 @@ Transform:
   m_Children:
   - {fileID: 688585243}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 48, z: 0}
 --- !u!43 &789683492
 Mesh:
@@ -6919,7 +6858,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1064388576
 Mesh:
@@ -9569,7 +9508,7 @@ Transform:
   - {fileID: 39831844}
   - {fileID: 1837429880}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1457365752
 MonoBehaviour:
@@ -11108,7 +11047,7 @@ Transform:
   - {fileID: 692840612}
   - {fileID: 1249580038}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751605698
 GameObject:
@@ -11795,7 +11734,7 @@ PrefabInstance:
       objectReference: {fileID: 870407533}
     - target: {fileID: 5240134857097339573, guid: 9f3041ad5e654cf42aadd93df925c77d, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5240134857097339573, guid: 9f3041ad5e654cf42aadd93df925c77d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12502,7 +12441,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1962089622
 GameObject:

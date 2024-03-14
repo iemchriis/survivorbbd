@@ -226,8 +226,8 @@ MonoBehaviour:
   id: 
   health: 100
   hpSlider: {fileID: 0}
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
-  destroyFX: {fileID: 0}
+  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
+  destroyFX: {fileID: 8079832359638643002, guid: dd863254bb1cb19419204b7d4f570798, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}

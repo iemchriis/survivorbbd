@@ -124,7 +124,7 @@ MonoBehaviour:
   spawnPoint:
   - {fileID: 8941686612103609293}
   waitTime: 0
-  spawnCount: 5
+  spawnCount: 1
 --- !u!208 &5171902175088594012
 NavMeshObstacle:
   m_ObjectHideFlags: 0
