@@ -6,6 +6,7 @@ public class LootBlast : MonoBehaviour
 {
     public GameObject loot;
     public int numOfLoots;
+    public float burstDelay = 0.15f;
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -13,7 +14,7 @@ public class LootBlast : MonoBehaviour
         {
             GameObject tempLoot = Instantiate(loot);
             tempLoot.transform.position = transform.position;
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(burstDelay);
         }
     }
 

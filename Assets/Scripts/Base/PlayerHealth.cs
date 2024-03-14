@@ -31,6 +31,14 @@ public class PlayerHealth : CharacterBase, IDamagable
         }
     }
 
+    public void AddHealth(int value)
+    {
+        Debug.Log("Health");
+        health += value;
+
+        hpSlider.value += value;
+    }
+
     public void TakeDamageOverTime(int damage, float duration, int tickTime)
     {
         throw new System.NotImplementedException();

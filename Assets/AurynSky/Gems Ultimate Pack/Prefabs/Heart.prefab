@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4787206311682254959, guid: fae5f6d786a09b44a81356b1bc35cd5a, type: 3}
+      propertyPath: value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4787206311682254959, guid: fae5f6d786a09b44a81356b1bc35cd5a, type: 3}
+      propertyPath: lootType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2055577245761883649, guid: fae5f6d786a09b44a81356b1bc35cd5a, type: 3}
       propertyPath: m_Enabled
       value: 0

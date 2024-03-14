@@ -7,6 +7,7 @@ public class LootDrop : MonoBehaviour
     public LootType lootType;
 
     private Vector3 velocity = Vector3.up;
+    public int value;
     private Rigidbody rb;
     private Vector3 startPosition;
    
@@ -52,6 +53,11 @@ public class LootDrop : MonoBehaviour
         {
             case LootType.GEM:
                 PlayerDataManager.Instance.AddPlayerCoins();
+                break;
+
+            case LootType.HEALTH:
+                Debug.Log("HealthAdded");
+                GameObject.FindAnyObjectByType<PlayerHealth>().AddHealth(value);
                 break;
 
         }
