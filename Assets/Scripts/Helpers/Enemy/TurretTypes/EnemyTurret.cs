@@ -55,9 +55,12 @@ public class EnemyTurret : MonoBehaviour
     {
         GameObject go = Instantiate(projectile, firePoint.position, Quaternion.identity);
 
-        var rb = go.GetComponent<Rigidbody>();
+        var proj = go.GetComponent<BaseProjectile>();
 
-        rb.AddForce(firePoint.forward * projectileVelocity, ForceMode.Impulse);
+        proj.SetProjectileStats(10, 20f,false, transform.parent.tag);
+
+        proj.ShootProjectile(firePoint.forward);
+        //rb.AddForce(firePoint.forward * projectileVelocity, ForceMode.Impulse);
 
     }
 

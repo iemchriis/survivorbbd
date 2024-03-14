@@ -8,7 +8,7 @@ public class BaseProjectile : MonoBehaviour
     protected Rigidbody rb;
 
     [SerializeField]protected float projectileVelocity;
-
+    protected string shooter; 
     [SerializeField]protected int damage;
     protected bool isCrit;
     
@@ -23,11 +23,12 @@ public class BaseProjectile : MonoBehaviour
 
  
 
-    public virtual void SetProjectileStats(int dmg, float projVelocity, bool isCrit = false)
+    public virtual void SetProjectileStats(int damage, float projectileVelocity, bool isCrit = false, string shooter = "Player")
     {
-        damage = dmg;
-        projectileVelocity = projVelocity;
+        this.damage = damage;
+        this.projectileVelocity = projectileVelocity;
         this.isCrit = isCrit;
+        this.shooter = shooter;
     }
 
     public virtual void ShootProjectile(Vector3 direction)
@@ -40,12 +41,18 @@ public class BaseProjectile : MonoBehaviour
     {
         if(other.CompareTag("Enemy"))
         {
+            if (shooter == "Enemy")
+                return;
+
             Debug.Log("Enemy Hit");
             other.GetComponent<IDamagable>().TakeDamage(damage);
             Destroy(gameObject);
         }
         else if(other.CompareTag("Player"))
         {
+            if (shooter == "Player")
+                return;
+
             other.GetComponent<IDamagable>().TakeDamage(damage);
             Destroy(gameObject);
         }

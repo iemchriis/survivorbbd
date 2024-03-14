@@ -23,6 +23,9 @@ public class RocketProjectile : BaseProjectile
     {
         if (other.CompareTag("Enemy"))
         {
+            if (shooter == "Enemy")
+                return;
+
             var enemy = other.GetComponent<IDamagable>();
             if (enemy != null)
             {
@@ -39,6 +42,9 @@ public class RocketProjectile : BaseProjectile
         }
         else if (other.CompareTag("Player") || other.CompareTag("Friendly"))
         {
+            if (shooter == "Player" || shooter == "Friendly")
+                return;
+
             var enemy = other.GetComponent<IDamagable>();
             if (enemy != null)
             {

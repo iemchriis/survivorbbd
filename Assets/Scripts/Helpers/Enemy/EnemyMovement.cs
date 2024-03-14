@@ -55,6 +55,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
 
                 if (enemyType == EnemyType.FLEE)
                 {
+                    health.Animator.SetBool("Walking2", true);
                     Debug.Log(fleeDirection.magnitude < 4.0);
                     if (fleeDirection.magnitude < 4.0)
                     {
