@@ -40,6 +40,7 @@ public class PlayerPoisonBomb : MonoBehaviour
             Vector3 newPos = Random.onUnitSphere + transform.position;
             newPos.y += 3;
             GameObject bomb = Instantiate(Poison, transform.position, Quaternion.identity);
+            bomb.transform.parent = LevelGenerator.Instance.GetLevelParent();
             yield return new WaitForSeconds(0.5f);
 
         }

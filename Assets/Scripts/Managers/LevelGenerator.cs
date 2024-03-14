@@ -22,6 +22,8 @@ public class LevelGenerator : MonoBehaviour
     private int currentPowerup;
     private int currentLevel;
 
+    public Transform currentParent;
+
     private Level activeLevel;
 
     private Vector3 spawnPos = new Vector3(0, 0, 0); ///new Vector3(45.38131f, -9.046906f, 4.755415f);
@@ -47,6 +49,11 @@ public class LevelGenerator : MonoBehaviour
         return activeLevel.playerSpawn;
     }
 
+    public Transform GetLevelParent()
+    {
+        return currentParent.transform;
+    }
+
 
     public void SpawnNewLevel()
     {
@@ -55,15 +62,27 @@ public class LevelGenerator : MonoBehaviour
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
         Fade.SetActive(true);
-        
-        activeLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
-        GameObject go = Instantiate(activeLevel.gameObject, spawnPos, activeLevel.transform.rotation);
 
-        
+        GetNewLevel();
         navMeshSurface.RemoveData();
         Invoke(nameof(BuildLevel), 0.1f);
         Invoke(nameof(SpawnEnemies), 0.5f);
 
+    }
+
+    void GetNewLevel()
+    {
+        Level newLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
+
+        while (activeLevel == newLevel)
+        {
+
+            newLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
+        }
+
+        activeLevel = newLevel;
+        GameObject go = Instantiate(activeLevel.gameObject, spawnPos, activeLevel.transform.rotation);
+        currentParent = go.transform;
     }
 
     private void BuildLevel()

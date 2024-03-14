@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerHealth : CharacterBase, IDamagable
 {
     
@@ -26,9 +27,16 @@ public class PlayerHealth : CharacterBase, IDamagable
         {
             Death();
             AudioManager.Instance.PlaySFX("Hit");
-            GameUIManager.Instance.ShowGameOver();
+            // GameUIManager.Instance.ShowGameOver();
+            Invoke("LoadBack", 3);
             gameObject.SetActive(false);
         }
+    }
+
+
+    void LoadBack()
+    {
+        SceneManager.LoadScene("WeaponSelection");
     }
 
     public void AddHealth(int value)
