@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5540306533580185237, guid: bf7a0b0eac96d9c4fa90abe22fb68fac, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5540306533580185237, guid: bf7a0b0eac96d9c4fa90abe22fb68fac, type: 3}
       propertyPath: m_LocalScale.x
@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ea87be89d44e3fa48bea7118a89839aa, type: 2}
+    - target: {fileID: 9125074300481176349, guid: bf7a0b0eac96d9c4fa90abe22fb68fac, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -121,9 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 10000
+  health: 500
   hpSlider: {fileID: 0}
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
   destroyFX: {fileID: 0}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 4545758718704240142, guid: 43124a0739d4b004080bc0a478f54d6e, type: 3}
@@ -226,4 +230,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 2
-  distanceToChase: 0
+  distanceToChase: 3
+  target: {fileID: 0}
