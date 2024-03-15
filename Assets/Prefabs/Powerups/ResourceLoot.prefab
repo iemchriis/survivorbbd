@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1595637411383987453}
   m_Layer: 0
   m_Name: ResourceLoot
-  m_TagString: Untagged
+  m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loot: {fileID: 5383767383701136345, guid: 4364dbe4cdc52534180e56a86dd49945, type: 3}
   numOfLoots: 5
+  burstDelay: 0.15

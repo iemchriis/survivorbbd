@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2549209151841646113
 MonoBehaviour:
@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ab38493c6d4534a928bcbf3a8bb2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: {fileID: 1000010714891294, guid: 5a0537415d4017c4fad7a4986f502dc1, type: 3}
+  loot: {fileID: 2094296372526006209, guid: fae5f6d786a09b44a81356b1bc35cd5a, type: 3}
   numOfLoots: 5
+  burstDelay: 0.15

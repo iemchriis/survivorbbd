@@ -1164,6 +1164,7 @@ GameObject:
   - component: {fileID: 1093643569271980735}
   - component: {fileID: 1361857222673749098}
   - component: {fileID: 5703120302092751556}
+  - component: {fileID: -1092806727621560700}
   m_Layer: 0
   m_Name: Transport_Drop_Melee_Enemy_Orange
   m_TagString: Enemy
@@ -1187,7 +1188,7 @@ Transform:
   - {fileID: 1285524114485230381}
   - {fileID: 7311368298525914981}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4434021355014554787
 Animator:
@@ -1223,9 +1224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 100
+  health: 500
   hpSlider: {fileID: 0}
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
   destroyFX: {fileID: 0}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 2157683385999266409, guid: e3ad8e203324d4348bb9208a9e58f0fe, type: 3}
@@ -1315,6 +1316,21 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: 27c6f9ef48784ca4282686a9d42755f8, type: 3}
   Arrow: {fileID: 2800000, guid: 3783f195e2c8dc84cb1461fbe881e9cb, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &-1092806727621560700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289249205282932031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 2
+  distanceToChase: 12
+  target: {fileID: 0}
 --- !u!1 &6478441667044563758
 GameObject:
   m_ObjectHideFlags: 0

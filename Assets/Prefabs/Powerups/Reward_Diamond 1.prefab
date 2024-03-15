@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8526141824575239878}
   - component: {fileID: 5887901916754117132}
   - component: {fileID: 3653535218950535807}
-  - component: {fileID: 5198216952233540839}
   - component: {fileID: 3648825340651619757}
+  - component: {fileID: 2411663356661831488}
   m_Layer: 9
   m_Name: Reward_Diamond 1
   m_TagString: Resource
@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 6726106889331637425}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!33 &8526141824575239878
 MeshFilter:
@@ -108,7 +108,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.014637927, y: 0.010033084, z: 0.014637936}
   m_Center: {x: -0.000000002561137, y: -0.004587979, z: -0.0000000044237822}
---- !u!54 &5198216952233540839
+--- !u!114 &3648825340651619757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5383767383701136345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dab57198e0e172544994c52ea098a85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootType: 0
+  value: 5
+--- !u!54 &2411663356661831488
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,19 +149,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3648825340651619757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5383767383701136345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dab57198e0e172544994c52ea098a85d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootType: 0
 --- !u!1 &6727620402651396387
 GameObject:
   m_ObjectHideFlags: 0

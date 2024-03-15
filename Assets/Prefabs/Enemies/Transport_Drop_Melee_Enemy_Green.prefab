@@ -121,9 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 100
+  health: 500
   hpSlider: {fileID: 0}
-  damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
   destroyFX: {fileID: 0}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 1263353222758848266, guid: 4b1ce1c84e067d2429bd51996d3d256b, type: 3}
@@ -225,5 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 1
-  distanceToChase: 14
+  enemyType: 2
+  distanceToChase: 12
+  target: {fileID: 0}

@@ -230,5 +230,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 2
-  distanceToChase: 3
+  distanceToChase: 12
   target: {fileID: 0}
