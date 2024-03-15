@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2094296372526006209}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootType: 1
-  value: 50
+  value: 25
 --- !u!65 &7856930326986445527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,8 +144,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1679075, y: 1.9989895, z: 2.0693667}
-  m_Center: {x: 0.001488179, y: -0.030390842, z: -0.046597417}
+  m_Size: {x: 2.1679075, y: 2.2465897, z: 2.3959966}
+  m_Center: {x: 0.0014882088, y: -0.040572822, z: 0.11671758}
 --- !u!54 &5818564444318529011
 Rigidbody:
   m_ObjectHideFlags: 0
