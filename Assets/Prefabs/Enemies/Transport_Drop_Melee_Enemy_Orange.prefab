@@ -1165,6 +1165,7 @@ GameObject:
   - component: {fileID: 1361857222673749098}
   - component: {fileID: 5703120302092751556}
   - component: {fileID: -1092806727621560700}
+  - component: {fileID: 7479124097159656025}
   m_Layer: 0
   m_Name: Transport_Drop_Melee_Enemy_Orange
   m_TagString: Enemy
@@ -1331,6 +1332,18 @@ MonoBehaviour:
   enemyType: 2
   distanceToChase: 12
   target: {fileID: 0}
+--- !u!114 &7479124097159656025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289249205282932031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b38b18bc9839ab4cbb7c3dd677a7948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6478441667044563758
 GameObject:
   m_ObjectHideFlags: 0

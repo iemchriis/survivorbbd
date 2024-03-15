@@ -102,6 +102,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6910552001321535165, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5939319330271482219}
+    - targetCorrespondingSourceObject: {fileID: 6910552001321535165, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6232297006012896255}
   m_SourcePrefab: {fileID: 100100000, guid: 81cd6fbcbb764934aa90f4db28e88f3a, type: 3}
 --- !u!1 &3974175669633842368 stripped
 GameObject:
@@ -228,3 +231,15 @@ MonoBehaviour:
   enemyType: 2
   distanceToChase: 12
   target: {fileID: 0}
+--- !u!114 &6232297006012896255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3974175669633842368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b38b18bc9839ab4cbb7c3dd677a7948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

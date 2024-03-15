@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyScript: CharacterBase, IDamagable
 {
     private EnemyMovement movement;
-    private Animator animator;
+    protected Animator animator;
     
     public GameObject exp;
     protected bool hasDps;

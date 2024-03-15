@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TurretConsole : MonoBehaviour
 {
-    public EnemyTurret[] turrets;
+    public List<EnemyTurret> enemyTurrets = new List<EnemyTurret>();
     public Slider consoleSlider;
     public float targetTime = 10f;
     public float currentTime;
@@ -37,11 +37,16 @@ public class TurretConsole : MonoBehaviour
 
     void HackTurrets()
     {
-        for (int i = 0; i < turrets.Length; i++)
+        for (int i = 0; i < enemyTurrets.Count; i++)
         {
-            turrets[i].ChangeTarget();
+            enemyTurrets[i].ChangeTarget();
             GameManager.Instance.enemyCount--;
         }
+    }
+
+    public void RemoveFromList(EnemyTurret turret)
+    {
+        enemyTurrets.Remove(turret);    
     }
 
     

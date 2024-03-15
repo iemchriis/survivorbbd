@@ -14,7 +14,7 @@ public class StageSpawner : MonoBehaviour
    
     void Start()
     {
-        GameManager.Instance.enemyCount += spawnCount;
+        //GameManager.Instance.enemyCount += spawnCount;
        
     }
 
@@ -39,9 +39,9 @@ public class StageSpawner : MonoBehaviour
         {
             int rand = Random.Range(0, spawnPoint.Length);
             GameObject go = Instantiate(enemyPrefab, GetRandomWavePosition(rand), Quaternion.identity);
-
             //go.transform.position = GetRandomWavePosition(rand);
             go.transform.parent = transform;
+            GameManager.Instance.enemyCount++;
             yield return new WaitForSeconds(waitTime);
         }
     }

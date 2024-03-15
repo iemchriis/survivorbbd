@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/WeaponSelection.unity
     guid: 6a4380031c512434cb9c5015cf940779
   - enabled: 1
-    path: Assets/Scenes/Game 1.unity
-    guid: 4362de081949e93468da38db99be0897
-  - enabled: 1
     path: Assets/Scenes/Game_iso.unity
     guid: 44c92ed5c416860429fc7a59879a87e1
   m_configObjects: {}
