@@ -22516,6 +22516,30 @@ PrefabInstance:
       propertyPath: turrets.Array.data[4]
       value: 
       objectReference: {fileID: 5826044790771705432}
+    - target: {fileID: 1996122413271791166, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
+      propertyPath: enemyTurrets.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996122413271791166, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
+      propertyPath: enemyTurrets.Array.data[0]
+      value: 
+      objectReference: {fileID: 3713545090362106536}
+    - target: {fileID: 1996122413271791166, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
+      propertyPath: enemyTurrets.Array.data[1]
+      value: 
+      objectReference: {fileID: 5501721304187422659}
+    - target: {fileID: 1996122413271791166, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
+      propertyPath: enemyTurrets.Array.data[2]
+      value: 
+      objectReference: {fileID: 7368270582376745717}
+    - target: {fileID: 1996122413271791166, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
+      propertyPath: enemyTurrets.Array.data[3]
+      value: 
+      objectReference: {fileID: 1998562796575583082}
+    - target: {fileID: 1996122413271791166, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
+      propertyPath: enemyTurrets.Array.data[4]
+      value: 
+      objectReference: {fileID: 5826044790771705432}
     - target: {fileID: 2161211774367856573, guid: 8156c938910036546b6b694ce85a94e9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
