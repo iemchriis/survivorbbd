@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   Levels:
-  - {fileID: 5946218789791309249, guid: 371a01170ad2005448d79493991b3b9a, type: 3}
   - {fileID: -8129723420300118569, guid: 83230120f34b54840906ca79be1721e1, type: 3}
-  - {fileID: 5528135673371000211, guid: 02995c1a2b111d3488ebea73086f8567, type: 3}
-  - {fileID: 5563505994996477185, guid: 5148d35a638ba384d9a5ee969e80b365, type: 3}
