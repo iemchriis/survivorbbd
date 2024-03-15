@@ -58,6 +58,11 @@ public class LevelGenerator : MonoBehaviour
     public void SpawnNewLevel()
     {
         
+        if(currentLevel >= currentSequence.Sequence.Count)
+        {
+            currentLevel = 1;
+        }
+
         currentLevel++;
         GameManager.Instance.DeleteLevel();
         GameManager.Instance.SetCurrentLevel(null);
@@ -72,6 +77,9 @@ public class LevelGenerator : MonoBehaviour
 
     void GetNewLevel()
     {
+
+       
+
         Level newLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
 
         while (activeLevel == newLevel)
