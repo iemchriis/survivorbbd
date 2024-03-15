@@ -56,7 +56,7 @@ public class EnemyMovement : MonoBehaviour, ISlowed, IStunned
                 if (enemyType == EnemyType.FLEE)
                 {
                     health.Animator.SetBool("Walking2", true);
-                    Debug.Log(fleeDirection.magnitude < 4.0);
+                    //Debug.Log(fleeDirection.magnitude < 4.0);
                     if (fleeDirection.magnitude < 4.0)
                     {
                         // Calculate the target position by adding the flee direction to the AI's position

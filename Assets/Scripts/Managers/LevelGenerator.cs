@@ -78,15 +78,13 @@ public class LevelGenerator : MonoBehaviour
     void GetNewLevel()
     {
 
-       
-
         Level newLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
 
-        while (activeLevel == newLevel)
-        {
+        //while (activeLevel == newLevel)
+        //{
 
-            newLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
-        }
+        //    newLevel = currentSequence.Sequence[currentLevel].GetLevelFromList();
+        //}
 
         activeLevel = newLevel;
         GameObject go = Instantiate(activeLevel.gameObject, spawnPos, activeLevel.transform.rotation);
