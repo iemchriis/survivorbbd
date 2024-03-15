@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009904144, g: 0.0040119365, b: 0.0070714206, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4968,6 +4968,7 @@ MonoBehaviour:
   bossLevel: {fileID: 7952575903326855830, guid: 9aea11f51b5718e4cba85147bf1830f6, type: 3}
   Popup: {fileID: 688087901}
   Fade: {fileID: 352964949}
+  currentParent: {fileID: 1850970779}
 --- !u!4 &725647039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1732556349878676618, guid: 1c122c9cbb9d744439e916bc56afdb3f, type: 3}

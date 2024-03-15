@@ -48,6 +48,7 @@ public class PlayerBomb : MonoBehaviour
             newPos.y += 3;
             Bomb bomb = Instantiate(Bombs, transform.position, Quaternion.identity);
             bomb.setTarget(newPos);
+            bomb.transform.parent = LevelGenerator.Instance.GetLevelParent();
             yield return new WaitForSeconds(0.5f);
 
         }
