@@ -44,7 +44,7 @@ public class BaseProjectile : MonoBehaviour
             if (shooter == "Enemy")
                 return;
 
-            Debug.Log("Enemy Hit");
+            
             other.GetComponent<IDamagable>().TakeDamage(damage);
             Destroy(gameObject);
         }

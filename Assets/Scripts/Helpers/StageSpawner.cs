@@ -11,17 +11,21 @@ public class StageSpawner : MonoBehaviour
     public float waitTime = 1;
 
     public int spawnCount;
-   
-    void Start()
-    {
-        //GameManager.Instance.enemyCount += spawnCount;
-       
-    }
-
+  
     public void StartSpawnWave()
     {
-        Debug.Log("Spawn Wave");
-        StartCoroutine(CoSpawnWave());
+
+        //StartCoroutine(CoSpawnWave());
+        for (int i = 0; i < spawnCount; i++)
+        {
+            int rand = Random.Range(0, spawnPoint.Length);
+            GameObject go = Instantiate(enemyPrefab, GetRandomWavePosition(rand), Quaternion.identity);
+            //go.transform.position = GetRandomWavePosition(rand);
+            go.transform.parent = transform;
+            Debug.Log("Spawn Wave");
+            GameManager.Instance.enemyCount++;
+            //yield return new WaitForSeconds(waitTime);
+        }
     }
 
 
@@ -41,6 +45,7 @@ public class StageSpawner : MonoBehaviour
             GameObject go = Instantiate(enemyPrefab, GetRandomWavePosition(rand), Quaternion.identity);
             //go.transform.position = GetRandomWavePosition(rand);
             go.transform.parent = transform;
+            Debug.Log("Spawn Wave");
             GameManager.Instance.enemyCount++;
             yield return new WaitForSeconds(waitTime);
         }

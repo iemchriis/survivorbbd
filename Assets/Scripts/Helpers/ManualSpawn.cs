@@ -8,7 +8,7 @@ public class ManualSpawn : MonoBehaviour
     void Start()
     {
         GameManager.Instance.enemyCount++;
-        Debug.Log("Counted");
+        Debug.Log("Added Transports");
     }
 
     

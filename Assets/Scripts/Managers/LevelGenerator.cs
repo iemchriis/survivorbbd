@@ -20,7 +20,7 @@ public class LevelGenerator : MonoBehaviour
 
 
     private int currentPowerup;
-    private int currentLevel;
+    [SerializeField]private int currentLevel;
 
     public Transform currentParent;
 
@@ -58,10 +58,10 @@ public class LevelGenerator : MonoBehaviour
     public void SpawnNewLevel()
     {
         
-        if(currentLevel >= currentSequence.Sequence.Count)
-        {
-            currentLevel = 1;
-        }
+        //if(currentLevel >= currentSequence.Sequence.Count)
+        //{
+        //    currentLevel = 1;
+        //}
 
         currentLevel++;
         GameManager.Instance.DeleteLevel();
@@ -70,8 +70,9 @@ public class LevelGenerator : MonoBehaviour
 
         GetNewLevel();
         navMeshSurface.RemoveData();
+        
         Invoke(nameof(BuildLevel), 0.1f);
-        Invoke(nameof(SpawnEnemies), 0.5f);
+        Invoke(nameof(SpawnEnemies), 1f);
 
     }
 

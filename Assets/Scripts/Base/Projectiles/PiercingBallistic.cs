@@ -34,7 +34,7 @@ public class PiercingBallistic : BaseProjectile
                 enemy.TakeDamage(damage, CheckIfCrit());
                 if (pierceCount <= 0)
                 {
-                    Debug.Log("Pierce Ended");
+                   
                     Destroy(gameObject);
                 }
             }

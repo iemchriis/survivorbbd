@@ -13,7 +13,7 @@ public class EnemyAttackArea : MonoBehaviour
             var player = other.GetComponent<IDamagable>();
             if(player != null)
             {
-                Debug.Log("Player Hit");
+                
                 player.TakeDamage(damage);
             }
         }

@@ -26,8 +26,8 @@ public class EnemyTurret : MonoBehaviour
     {
         TargetName = "Player";
         fireTime = fireRate;
+        Debug.Log("Added to Level");
         GameManager.Instance.enemyCount++;
-        Debug.Log("Added to enemy count");
     }
 
 
