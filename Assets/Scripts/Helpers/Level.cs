@@ -14,7 +14,7 @@ public class Level : MonoBehaviour
     public Transform playerSpawn;
 
 
-    private void Start()
+    private void Awake()
     {
         stageSpawners = GetComponentsInChildren<StageSpawner>();
         GameManager.Instance.SetCurrentLevel(this);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0097078, g: 0.0039305673, b: 0.0069246497, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3181,6 +3181,7 @@ MonoBehaviour:
   selection: {fileID: 1249580039}
   targeting: {fileID: 309145223}
   enemyCount: 0
+  currentLevel: {fileID: 0}
 --- !u!4 &465342435
 Transform:
   m_ObjectHideFlags: 0
@@ -4968,6 +4969,7 @@ MonoBehaviour:
   bossLevel: {fileID: 7952575903326855830, guid: 9aea11f51b5718e4cba85147bf1830f6, type: 3}
   Popup: {fileID: 688087901}
   Fade: {fileID: 352964949}
+  currentLevel: 0
   currentParent: {fileID: 1850970779}
 --- !u!4 &725647039 stripped
 Transform:
@@ -5217,9 +5219,17 @@ PrefabInstance:
       propertyPath: spawnCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8364874115908363244, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8081,6 +8091,10 @@ PrefabInstance:
     - target: {fileID: 6371059701061521367, guid: e8758d3f2b8894e4eb1b876ab9bfe00b, type: 3}
       propertyPath: spawnCount
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364874115908363244, guid: e8758d3f2b8894e4eb1b876ab9bfe00b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: e8758d3f2b8894e4eb1b876ab9bfe00b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13240,9 +13254,17 @@ PrefabInstance:
       propertyPath: spawnCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8364874115908363244, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8941686612103609293, guid: ccfb28c33ae3ed24ba88e5be7fb95ddd, type: 3}
       propertyPath: m_LocalPosition.z
