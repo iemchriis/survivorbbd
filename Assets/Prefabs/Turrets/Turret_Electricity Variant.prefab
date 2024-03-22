@@ -147,12 +147,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 
-  health: 0
+  health: 500
   hpSlider: {fileID: 0}
   damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
   destroyFX: {fileID: 613306789889174018, guid: 42aa6a5603e6dfd40ae1991b3780c2c3, type: 3}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
-  exp: {fileID: 0}
+  exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
   burnEffect: {fileID: 0}
   turret: {fileID: 3291421960729010711}
   console: {fileID: 0}
