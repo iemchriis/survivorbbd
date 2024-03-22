@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
        selection.SelectWeapon();
-      
+       SpawnEnemiesOnLevel();
     }
 
    
@@ -59,7 +59,6 @@ public class GameManager : MonoBehaviour
     public void SetCurrentLevel(Level level)
     {
         currentLevel = level;
-        SpawnEnemiesOnLevel();
     }
 
     

@@ -29,6 +29,16 @@ public class EnemyScript: CharacterBase, IDamagable
 
     }
 
+    void OnEnable()
+    {
+        PowerEvents.current.OnBomb += Death;
+    }
+
+    void OnDisable()
+    {
+        PowerEvents.current.OnBomb -= Death;
+    }
+
     void Update()
     {
         DebuffTimer();
@@ -109,7 +119,8 @@ public class EnemyScript: CharacterBase, IDamagable
             GameManager.Instance.CheckEnemyCount();
 
             LevelGenerator.Instance.SpawnPowerup(transform);
-            animator.SetTrigger("isDead");
+            if (animator != null) { animator.SetTrigger("isDead"); }
+
             Destroy(gameObject, 2);
             
 

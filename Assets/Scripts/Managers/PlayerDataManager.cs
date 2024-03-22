@@ -11,6 +11,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public int premiumCoins;
     public int playerCoins;
+    public int bomb;
     public static PlayerDataManager Instance { get; set; }
 
 

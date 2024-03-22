@@ -15,7 +15,7 @@ public class GameUIManager : MonoBehaviour
 
     public GameObject UpgradePanel;
     public GameObject gameOverPanel;
-    public GameObject selectionPanel;
+    public GameObject selectionPanel, bombButton, bombScreen;
 
   
     public static GameUIManager Instance { get; set; }
@@ -36,6 +36,7 @@ public class GameUIManager : MonoBehaviour
     void Start()
     {
         elapsedTime = 0f;
+        bombButton.SetActive(PlayerDataManager.Instance.bomb == 1);
     }
 
     void Update()
@@ -43,6 +44,20 @@ public class GameUIManager : MonoBehaviour
         
             elapsedTime += Time.deltaTime;
             UpdateTimerText();  
+    }
+
+
+    public void BombFunction()
+    {
+        StartCoroutine(CoBomb());
+    }
+    IEnumerator CoBomb()
+    {
+        bombScreen.SetActive(true);
+        bombButton.SetActive(false);
+        PowerEvents.current.TriggerBomb();
+        yield return new WaitForSeconds(0.3f);
+        bombScreen.SetActive(false);
     }
 
     void UpdateTimerText()
