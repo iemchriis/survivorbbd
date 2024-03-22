@@ -3125,6 +3125,7 @@ MonoBehaviour:
   selection: {fileID: 1249580039}
   targeting: {fileID: 309145223}
   enemyCount: 0
+  currentLevel: {fileID: 0}
 --- !u!4 &465342435
 Transform:
   m_ObjectHideFlags: 0
@@ -4427,6 +4428,8 @@ MonoBehaviour:
   UpgradePanel: {fileID: 1317269128}
   gameOverPanel: {fileID: 1105051035}
   selectionPanel: {fileID: 755226708}
+  bombButton: {fileID: 0}
+  bombScreen: {fileID: 0}
 --- !u!4 &668164279
 Transform:
   m_ObjectHideFlags: 0
@@ -5019,6 +5022,7 @@ MonoBehaviour:
   bossLevel: {fileID: 7952575903326855830, guid: 9aea11f51b5718e4cba85147bf1830f6, type: 3}
   Popup: {fileID: 688087901}
   Fade: {fileID: 352964949}
+  currentLevel: 0
   currentParent: {fileID: 0}
 --- !u!4 &725647039 stripped
 Transform:
@@ -5081,111 +5085,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret_Electricity Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 4529841532339343155, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 8921688684848107185, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
+      propertyPath: console
       value: 
-      objectReference: {fileID: 2100000, guid: dcc549c455101c74cbefe65f22911ce3, type: 2}
+      objectReference: {fileID: 3714817112374136608}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4529841532336917973, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1417731651}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4529841532337345009, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 734940242}
-    - targetCorrespondingSourceObject: {fileID: 4529841532337345009, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 734940241}
-    - targetCorrespondingSourceObject: {fileID: 4529841532337345013, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 734940243}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
---- !u!1 &734940237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4529841532337345009, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-  m_PrefabInstance: {fileID: 734940236}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &734940238 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4529841532337345011, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-  m_PrefabInstance: {fileID: 734940236}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &734940239 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4529841532336917973, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-  m_PrefabInstance: {fileID: 734940236}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &734940240 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4529841532337345013, guid: 205763f5a40d9bd41952f4c534b4276f, type: 3}
-  m_PrefabInstance: {fileID: 734940236}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &734940241
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734940237}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &734940242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734940237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e4fb2d9731f4c4c8a5e1e3467d7409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 
-  health: 0
-  hpSlider: {fileID: 0}
-  damageFX: {fileID: 1750940742320366, guid: ec1383a81f8b26e41bd5795fba065567, type: 3}
-  destroyFX: {fileID: 613306789889174018, guid: 42aa6a5603e6dfd40ae1991b3780c2c3, type: 3}
-  damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
-  exp: {fileID: 0}
-  burnEffect: {fileID: 0}
-  turret: {fileID: 734940243}
-  console: {fileID: 3714817112374136608}
---- !u!114 &734940243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734940240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a358082dc2e6c2646aee9be4fa6f3c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetName: 
-  isHackable: 0
-  projectile: {fileID: 667565355365552573, guid: 03268e088ce69e54b845fc19c6cf9fcf, type: 3}
-  target: {fileID: 0}
-  firePoint: {fileID: 1417731651}
-  turretTemp: {fileID: 734940238}
-  allyMaterial: {fileID: 2100000, guid: 54caaafa7f5bfe646898629928805a96, type: 2}
-  fireRate: 0
-  projectileVelocity: 0
 --- !u!1 &755226708
 GameObject:
   m_ObjectHideFlags: 0
@@ -9617,37 +9525,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415899222}
   m_CullTransparentMesh: 1
---- !u!1 &1417731650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1417731651}
-  m_Layer: 0
-  m_Name: firepoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1417731651
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417731650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.269, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 734940239}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457365749
 GameObject:
   m_ObjectHideFlags: 0

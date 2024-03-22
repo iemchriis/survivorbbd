@@ -14,8 +14,8 @@ public class SlowProjectile : BaseProjectile
             AudioManager.Instance.PlaySFX("Laser");
             Debug.Log("Enemy Hit");
 
-            var enemyHealth = other.GetComponent<EnemyScript>();
-            var enemyMovement = other.GetComponent<EnemyMovement>();
+            var enemyHealth = other.GetComponent<IDamagable>();
+            var enemyMovement = other.GetComponent<ISlowed>();
 
             enemyHealth.TakeDamage(damage);
             enemyMovement.ApplySlowEffect(slowAmount, slowDuration);
@@ -23,7 +23,19 @@ public class SlowProjectile : BaseProjectile
         }
         else if(other.CompareTag("Player"))
         {
+            var slow = other.GetComponent<ISlowed>();
             
+            if(slow != null)
+            {
+                slow.ApplySlowEffect(slowAmount,slowDuration);    
+            }
+
+            var dmg = other.GetComponent<IDamagable>();
+
+            if(dmg != null)
+            {
+                dmg.TakeDamage(damage);
+            }
         }
     }
 

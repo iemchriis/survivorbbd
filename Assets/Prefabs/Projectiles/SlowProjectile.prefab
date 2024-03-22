@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8847012290415110645
 MeshFilter:
@@ -146,5 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5110020af9f398c4b87eb38c5a1daf28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileVelocity: 0
-  slowDuration: 5
+  projectileVelocity: 20
+  damage: 5
+  slowAmount: 5
+  slowDuration: 3

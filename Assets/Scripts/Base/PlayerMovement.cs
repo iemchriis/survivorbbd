@@ -81,12 +81,16 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
 
     public void ApplySlowEffect(int debuffAmount, float debuffDuration)
     {
-        throw new System.NotImplementedException();
+        StartCoroutine(ApplySlowEffectAsync(debuffAmount,debuffDuration));
     }
 
     public IEnumerator ApplySlowEffectAsync(int debuffAmount, float debuffDuration)
     {
-        throw new System.NotImplementedException();
+        float ms = moveSpeed;
+        moveSpeed -= debuffAmount;
+        yield return new WaitForSeconds(debuffDuration);
+        moveSpeed = ms;
+
     }
 
     public void ApplyStun(float stunDuration)

@@ -49,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 36215181e56dda44b8bb066f0715cfd9, type: 3}
       propertyPath: m_LocalScale.x
@@ -199,6 +199,8 @@ MonoBehaviour:
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
   burnEffect: {fileID: 0}
+  turret: {fileID: 1585232412751501332}
+  console: {fileID: 0}
 --- !u!65 &7462687961146889517
 BoxCollider:
   m_ObjectHideFlags: 0
