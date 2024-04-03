@@ -52,9 +52,22 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
 
     void MovePlayer()
     {
-        rb.velocity = new Vector3(joystick.Horizontal * moveSpeed, rb.velocity.y, joystick.Vertical * moveSpeed);
 
-        if(rb.velocity.z != 0 || rb.velocity.x != 0)
+
+
+
+
+#if UNITY_ANDROID
+
+        rb.velocity = new Vector3(joystick.Horizontal * moveSpeed, rb.velocity.y, joystick.Vertical * moveSpeed);
+#endif
+
+
+#if UNITY_EDITOR
+        Debug.Log(Input.GetAxis("Horizontal"));
+        rb.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
+#endif
+        if (rb.velocity.z != 0 || rb.velocity.x != 0)
         {
             animator.SetBool("isRunning", true);
         }
