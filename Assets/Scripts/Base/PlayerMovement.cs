@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private FixedJoystick joystick;
+    [SerializeField] private FixedJoystick rotJoystick;
 
     public float moveSpeed;
 
@@ -87,7 +88,7 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
         if(joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
 
-            transform.rotation = Quaternion.LookRotation(rb.velocity);
+            transform.rotation = Quaternion.LookRotation(rotJoystick.Direction);
             transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
         }
     }
