@@ -13,10 +13,13 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
 
     public float moveSpeed;
 
+    public bool isMobile;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         moveSpeed = (float)PlayerDataManager.Instance.GetSpeedValue();
+        SetControls();
     }
 
     private void Update()
@@ -24,7 +27,21 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
         LookAtEnemy();
     }
 
-  
+    void SetControls()
+    {
+#if UNITY_ANDROID
+
+        isMobile = true;
+#endif
+
+
+#if UNITY_EDITOR
+        isMobile = false;
+        joystick.gameObject.SetActive(false);
+#endif
+    }
+
+
 
     private void FixedUpdate()
     {
@@ -58,16 +75,18 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
 
 
 
-#if UNITY_ANDROID
+        if (isMobile)
+        {
+            rb.velocity = new Vector3(joystick.Horizontal * moveSpeed, rb.velocity.y, joystick.Vertical * moveSpeed);
 
-        rb.velocity = new Vector3(joystick.Horizontal * moveSpeed, rb.velocity.y, joystick.Vertical * moveSpeed);
-#endif
 
+        }
+        else
+        {
+            rb.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
 
-#if UNITY_EDITOR
-        Debug.Log(Input.GetAxis("Horizontal"));
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, rb.velocity.y, Input.GetAxis("Vertical") * moveSpeed);
-#endif
+        }
+
         if (rb.velocity.z != 0 || rb.velocity.x != 0)
         {
             animator.SetBool("isRunning", true);
