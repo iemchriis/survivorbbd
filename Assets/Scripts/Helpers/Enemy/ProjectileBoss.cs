@@ -36,6 +36,7 @@ public class ProjectileBoss : MonoBehaviour
             }
             throwTimer = 0f; // Reset the timer
         }
+        transform.LookAt(player);
     }
 
     public void SpawnMinions()
