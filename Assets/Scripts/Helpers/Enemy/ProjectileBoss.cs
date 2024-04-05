@@ -12,6 +12,7 @@ public class ProjectileBoss : MonoBehaviour
     public float throwSpeed = 10f;
     int attackCount;
     public int requiredAttacksToSummon, summonCount;
+    public BossType bossType;
     public Animator anim;
 
     private void Awake()
@@ -39,11 +40,42 @@ public class ProjectileBoss : MonoBehaviour
 
     public void SpawnMinions()
     {
-        for(int i = 0; i < summonCount; i++ )
+        if (bossType == BossType.SPAWN)
         {
-            Vector3 randomPosition = Random.insideUnitSphere + transform.position;
-            GameObject go = Instantiate(summonPrefab, transform.position, Quaternion.identity);
-            go.transform.position = new Vector3(randomPosition.x, transform.position.y, randomPosition.z);
+            for (int i = 0; i < summonCount; i++)
+            {
+                Vector3 randomPosition = Random.insideUnitSphere + transform.position;
+                GameObject go = Instantiate(summonPrefab, transform.position, Quaternion.identity);
+                go.transform.position = new Vector3(randomPosition.x, transform.position.y, randomPosition.z);
+            }
+        }
+        else
+        {
+
+
+
+            // Spawn bullets with a spread
+            for (int i = 0; i < 10; i++)
+            {
+                Rigidbody projectileRb = Instantiate(projectilePrefab.GetComponent<Rigidbody>(), throwPoint.position, throwPoint.rotation);
+
+                float c = Random.Range(0, 90);
+                if (projectileRb != null)
+                {
+                    Vector3 target = new Vector3(player.position.x, player.position.y, c);
+                    Vector3 toPlayer = target - throwPoint.position;
+
+                    // Calculate the time of flight using the y-component of the displacement and the gravity
+                    float timeOfFlight = Mathf.Sqrt(2 * toPlayer.y / Mathf.Abs(Physics.gravity.y));
+
+                    // Calculate the initial velocity needed for the projectile to reach the player
+                    Vector3 throwVelocity = toPlayer.normalized * throwSpeed;
+
+                    projectileRb.AddForce(throwVelocity, ForceMode.VelocityChange);
+
+                }
+            }
+           
         }
     }
 
@@ -94,3 +126,8 @@ public class ProjectileBoss : MonoBehaviour
     }
 }
 
+public enum BossType
+{
+    SPAWN,
+    SCATTER
+}

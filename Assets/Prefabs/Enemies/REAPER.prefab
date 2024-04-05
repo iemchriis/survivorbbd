@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6297291898645465523}
   - component: {fileID: 3034066186409484178}
   - component: {fileID: 7405346364450329947}
+  - component: {fileID: 4488958041057011638}
   m_Layer: 0
   m_Name: REAPER
   m_TagString: Enemy
@@ -53,12 +54,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 250
+  hpSlider: {fileID: 0}
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
-  damage: 15
-  hpSlider: {fileID: 0}
-  hasStatusEffect: 0
   burnEffect: {fileID: 7556116353631730522}
 --- !u!195 &8472547934628873602
 NavMeshAgent:
@@ -166,6 +166,21 @@ MonoBehaviour:
   Icon: {fileID: 2800000, guid: a3bec04e12cfd714cb4ff85844e4c92e, type: 3}
   Arrow: {fileID: 2800000, guid: 3783f195e2c8dc84cb1461fbe881e9cb, type: 3}
   Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &4488958041057011638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4004173429861921271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61e0e2f0fb605940a9f571f4b503535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: 0
+  distanceToChase: 10
+  target: {fileID: 0}
 --- !u!1001 &3826994099950090110
 PrefabInstance:
   m_ObjectHideFlags: 0
