@@ -10,7 +10,7 @@ public class ProjectileBoss : MonoBehaviour
     public float throwRate = 2f; // Time between throws in seconds
     private float throwTimer = 0f;
     public float throwSpeed = 10f;
-    int attackCount;
+    public int attackCount;
     public int requiredAttacksToSummon, summonCount;
     public BossType bossType;
     public Animator anim;
