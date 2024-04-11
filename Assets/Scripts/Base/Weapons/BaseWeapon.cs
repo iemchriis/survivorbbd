@@ -5,27 +5,31 @@ using UnityEngine;
 public class BaseWeapon : MonoBehaviour
 {
     //public WeaponHolder holder;
-    [SerializeField]protected GameObject bulletPrefab;
-    [SerializeField]protected Transform firePos;
-    [HideInInspector]public WeaponDatas weaponData;
- 
-    [SerializeField]protected float fireTime = 0;
+    protected PlayerMovement m_Movement;
+    [SerializeField] protected GameObject bulletPrefab;
+    [SerializeField] protected Transform firePos;
+    [HideInInspector] public WeaponDatas weaponData;
+
+    [SerializeField] protected float fireTime = 0;
 
     public bool canFire;
 
-    
+
 
     public virtual void Initialize()
     {
+        m_Movement = GetComponentInParent<PlayerMovement>();
         firePos = this.transform;
 
-        if(GameManager.Instance != null)
+        if (GameManager.Instance != null)
             GameManager.Instance.targeting.weapon = this;
     }
 
 
     public virtual void CanFire(float rateOfFire)
     {
+       
+
         if (canFire)
         {
             fireTime -= Time.deltaTime;

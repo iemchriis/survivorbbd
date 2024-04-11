@@ -16,6 +16,9 @@ public class BallisticWeapon : BaseWeapon
 
     private void Update()
     {
+        if (m_Movement.rotJoystick.Vertical == 0 || m_Movement.rotJoystick.Horizontal == 0)
+            return;
+
         CanFire(ballisticData.GetCurrentFireRate());
     }
 

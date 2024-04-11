@@ -27,7 +27,7 @@ public class WeaponHolder : MonoBehaviour
         if(vision.nearestEnemy == null)
             return;
 
-        transform.LookAt(vision.nearestEnemy.transform);
+        //transform.LookAt(vision.nearestEnemy.transform);
     }
     public void SetWeaponStats(int _weaponDamage, string _weaponType)
     {

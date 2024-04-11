@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
     [SerializeField] private PlayerVision vision;
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private FixedJoystick joystick;
-    [SerializeField] private FixedJoystick rotJoystick;
+    public FixedJoystick joystick;
+    public FixedJoystick rotJoystick;
 
     public float moveSpeed;
 
@@ -57,11 +57,13 @@ public class PlayerMovement : MonoBehaviour, ISlowed, IStunned
         }
         else
         {
-            Vector3 enemyDirection = new Vector3(vision.nearestEnemy.transform.position.x,
-                                                    transform.position.y,
-                                                    vision.nearestEnemy.transform.position.z);
+            //Vector3 enemyDirection = new Vector3(vision.nearestEnemy.transform.position.x,
+            //                                        transform.position.y,
+            //                                        vision.nearestEnemy.transform.position.z);
 
-            transform.LookAt(enemyDirection);
+            //transform.LookAt(enemyDirection);
+
+            LookDirection();
         }
             
 
