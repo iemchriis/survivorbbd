@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da767c35c86fed47b828d8d76b36e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1674245100510967567, guid: 7e744257b0919374090a903ecd440aa5, type: 3}
+  projectilePrefab: {fileID: 7091895602189394694, guid: 3d3324f89094ed740bec4dbb9161b8af, type: 3}
   summonPrefab: {fileID: 5716962323418415684, guid: 36f5028ba4efec64c9bb76458e15bf5e, type: 3}
   throwPoint: {fileID: 4697183845130612438}
   player: {fileID: 0}
