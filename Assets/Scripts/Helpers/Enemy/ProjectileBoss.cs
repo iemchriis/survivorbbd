@@ -15,7 +15,7 @@ public class ProjectileBoss : MonoBehaviour
     public BossType bossType;
     public Animator anim;
 
-    private void Awake()
+    private void Start()
     {
         player = GameManager.Instance.targeting.transform.parent;
     }
