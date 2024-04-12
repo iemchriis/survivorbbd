@@ -2178,7 +2178,7 @@ GameObject:
   - component: {fileID: 8055570209613586706}
   m_Layer: 0
   m_Name: Crawler_Projectile_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2214,12 +2214,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 100
+  hpSlider: {fileID: 0}
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
   damageTxt: {fileID: 4807674361176778705, guid: b0ab7eb1798d27140ae24303876d951d, type: 3}
   exp: {fileID: 4792157527413005753, guid: 17bf7b7e08b50cd4a88c2c0cc96d45bc, type: 3}
-  damage: 10
-  hpSlider: {fileID: 0}
-  hasStatusEffect: 0
   burnEffect: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
 --- !u!114 &8601288062013678526
 MonoBehaviour:
@@ -2239,8 +2238,10 @@ MonoBehaviour:
   player: {fileID: 0}
   throwRate: 2
   throwSpeed: 10
+  attackCount: 0
   requiredAttacksToSummon: 10000
   summonCount: 0
+  bossType: 0
   anim: {fileID: 0}
 --- !u!195 &6612254534876491175
 NavMeshAgent:

@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 7520733951884856132}
   m_Layer: 0
   m_Name: Boss_MechMediumMechStrikerBlack
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,8 +796,10 @@ MonoBehaviour:
   player: {fileID: 0}
   throwRate: 2
   throwSpeed: 10
+  attackCount: 0
   requiredAttacksToSummon: 0
   summonCount: 0
+  bossType: 0
   anim: {fileID: 0}
 --- !u!114 &4511940690637353073
 MonoBehaviour:
@@ -813,12 +815,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 0
+  hpSlider: {fileID: 0}
   damageFX: {fileID: 0}
+  destroyFX: {fileID: 0}
   damageTxt: {fileID: 0}
   exp: {fileID: 0}
-  damage: 0
-  hpSlider: {fileID: 0}
-  hasStatusEffect: 0
   burnEffect: {fileID: 0}
 --- !u!195 &5945496815368477859
 NavMeshAgent:

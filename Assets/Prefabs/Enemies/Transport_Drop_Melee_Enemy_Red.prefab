@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transport_Drop_Melee_Enemy_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 8658954639846588949, guid: cc279f80c7da7774d8edafda3aa582b1, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

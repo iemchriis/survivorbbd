@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_Mech_Summon
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 28723f10c2a8e094a9351e892f5271b8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -110,12 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   health: 100
+  hpSlider: {fileID: 0}
   damageFX: {fileID: 194062, guid: 8c27aeead6d968e4ba986702d6b84335, type: 3}
+  destroyFX: {fileID: 0}
   damageTxt: {fileID: 0}
   exp: {fileID: 0}
-  damage: 0
-  hpSlider: {fileID: 0}
-  hasStatusEffect: 0
   burnEffect: {fileID: 0}
 --- !u!114 &2762463164561689581
 MonoBehaviour:
@@ -135,8 +138,10 @@ MonoBehaviour:
   player: {fileID: 0}
   throwRate: 2
   throwSpeed: 10
+  attackCount: 0
   requiredAttacksToSummon: 0
   summonCount: 0
+  bossType: 0
   anim: {fileID: 0}
 --- !u!195 &1355494552032411488
 NavMeshAgent:
