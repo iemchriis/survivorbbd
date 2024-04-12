@@ -115,6 +115,7 @@
     <Compile Include="Assets\Scripts\Helpers\Enemy\TurretTypes\EnemyTurret.cs" />
     <Compile Include="Assets\Scripts\Base\Weapons\RocketWeapon.cs" />
     <Compile Include="Assets\Scripts\Helpers\Enemy\EnemyVision.cs" />
+    <Compile Include="Assets\TriggerExplosion.cs" />
     <Compile Include="Assets\ShowUIScript.cs" />
     <Compile Include="Assets\Scripts\Helpers\CameraFollow.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
